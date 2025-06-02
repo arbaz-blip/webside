@@ -100,7 +100,7 @@ const JobApplication = () => {
 
       console.log('Form Data:', Object.fromEntries(formData));
 
-      const response = await fetch('http://localhost:8081/recruitment/admin/save_application.php', {
+      const response = await fetch('http://54.235.226.82/recruitment/admin/save_application.php', {
         method: 'POST',
         body: formData,
       });
