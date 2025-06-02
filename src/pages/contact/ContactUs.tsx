@@ -1,0 +1,258 @@
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Button, Card, Col, Container, Row, Modal } from 'react-bootstrap';
+import FeatherIcon from 'feather-icons-react';
+import OfficeCard from 'components/shared/Office';
+import { FormInput } from 'components/form';
+import { offices } from './data';
+
+const ContactUs = () => {
+    const [showSuccessModal, setShowSuccessModal] = useState(false);
+    const [showErrorModal, setShowErrorModal] = useState(false);
+
+    const successClose = () => setShowSuccessModal(false);
+    const errorClose = () => setShowErrorModal(false);
+
+    const schemaResolver = yupResolver(
+        yup.object().shape({
+            business: yup.string().required('Please enter business name'),
+            fname: yup.string().required('Please enter first name'),
+            lname: yup.string().required('Please enter last name'),
+            email: yup.string().required('Please enter email').email('Please enter a valid Email'),
+            message: yup.string().required('Please enter message'),
+        })
+    );
+
+    const methods = useForm({ resolver: schemaResolver });
+    const {
+        handleSubmit,
+        register,
+        control,
+        formState: { errors },
+    } = methods;
+
+    const form = useRef(null);
+    // service_a9njwqk
+    const sendEmail = async () => {
+        try {
+            if (form.current) {
+                const result = await emailjs.sendForm('service_cy0b6yc', 'template_5x8jb8h', form.current, 't5t-h48zRsZEmoh6H');
+                setShowSuccessModal(true);
+                console.log(result.text);
+            } else {
+                setShowErrorModal(true);
+                console.error('Form ref is not properly initialized.');
+            }
+        } catch (error: any) {
+            setShowErrorModal(true);
+            console.log(error.text);
+        }
+    };
+
+
+    const onSubmit = async () => {
+        await sendEmail();
+        methods.reset();
+    };
+
+    return (
+        <section className="section pb-lg-7 py-4 position-relative">
+            <Container>
+                <Row className="align-items-center">
+                    <Col lg={6}>
+                        <OfficeCard office={offices[1]} />
+                    </Col>
+
+                    <Col lg={6}>
+                        <div style={{ position: 'relative', overflow: 'hidden', width: '100%', paddingTop: '100%' }}>
+                            <iframe
+                                title="Dubai Office"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.4679491982592!2d55.26419767521115!3d25.187436977717212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69d3bb4198df%3A0xa2db82f588c4c7fb!2sThe%20Binary%20by%20OMNIYAT!5e0!3m2!1sen!2s!4v1705384607513!5m2!1sen!2s"
+                                style={{
+                                    position: 'absolute',
+                                    top: '0',
+                                    left: '0',
+                                    width: '100%',
+                                    height: '100%',
+                                    border: '0',
+                                }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </Col>
+                </Row>
+
+                <Row className="align-items-center">
+                    <Col lg={6} className="order-1 order-md-0">
+                        <div style={{ position: 'relative', overflow: 'hidden', width: '100%', paddingTop: '100%' }}>
+                            <iframe
+                                title="Lahore Office"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d850.693151200423!2d74.40065196957399!3d31.475440898389664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391907e3853df6b9%3A0x9884636ad1ffe162!2sCinergie%20Digital%20(Pvt.)%20Ltd.!5e0!3m2!1sen!2sus!4v1705385027231!5m2!1sen!2sus"
+                                style={{
+                                    position: 'absolute',
+                                    top: '0',
+                                    left: '0',
+                                    width: '100%',
+                                    height: '100%',
+                                    border: '0',
+                                }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </Col>
+
+                    <Col lg={6} className="order-0 order-md-1">
+                        <OfficeCard office={offices[0]} />
+                    </Col>
+                </Row>
+                <Row className="align-items-center">
+                    <Col lg={1}></Col>
+                    <Col lg={10}>
+                        <Card className="shadow-none">
+                            <Card.Body className="p-xl-5 p-0">
+                                <h2 className="mb-2 mt-0 fw-medium">Ready to Connect?</h2>
+                                <p className="mb-5">
+                                    Drop us a note by filling out the form below. We're eager to connect with you and
+                                    will be in touch shortly.
+                                </p>
+
+                                <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                    <Row>
+                                        <Col lg={12}>
+                                            <FormInput
+                                                type="text"
+                                                name="business"
+                                                label="Business Name"
+                                                placeholder="Your Business Name"
+                                                containerClass={'mb-3'}
+                                                register={register}
+                                                errors={errors}
+                                                control={control}
+                                            />
+                                        </Col>
+                                        <Col md={6}>
+                                            <FormInput
+                                                type="text"
+                                                name="fname"
+                                                label="First Name"
+                                                placeholder="Your First Name"
+                                                containerClass={'mb-3'}
+                                                register={register}
+                                                errors={errors}
+                                                control={control}
+                                            />
+                                        </Col>
+                                        <Col md={6}>
+                                            <FormInput
+                                                type="text"
+                                                name="lname"
+                                                label="Last Name"
+                                                placeholder="Your Last Name"
+                                                containerClass={'mb-3'}
+                                                register={register}
+                                                errors={errors}
+                                                control={control}
+                                            />
+                                        </Col>
+                                        <Col lg={12}>
+                                            <FormInput
+                                                type="email"
+                                                name="email"
+                                                label="Email Name"
+                                                placeholder="Your Email"
+                                                containerClass={'mb-3'}
+                                                register={register}
+                                                errors={errors}
+                                                control={control}
+                                            />
+                                        </Col>
+                                        <Col lg={12}>
+                                            <FormInput
+                                                type="textarea"
+                                                name="message"
+                                                label="Message"
+                                                placeholder="Type Your message..."
+                                                rows={5}
+                                                containerClass={'mb-3'}
+                                                register={register}
+                                                errors={errors}
+                                                control={control}
+                                            />
+                                        </Col>
+                                        <Col lg="auto" className="mb-0 mx-auto">
+                                            <Button type="submit">
+                                                Send
+                                                <span className="icon icon-xs text-white ms-1">
+                                                    <FeatherIcon icon="send" />
+                                                </span>
+                                            </Button>
+                                        </Col>
+                                    </Row>
+                                </form>
+
+                                {/* Success Modal */}
+                                <Modal
+                                    show={showSuccessModal}
+                                    onHide={() => setShowSuccessModal(false)}
+                                    size="sm"
+                                    centered>
+                                    <Modal.Header
+                                        onHide={() => setShowSuccessModal(false)}
+                                        closeButton
+                                        className="border-0 pb-0"
+                                    />
+                                    <Modal.Body className="text-center">
+                                        <span className="icon icon-lg text-success">
+                                            <FeatherIcon icon="check-circle" className="icon-dual-success" />
+                                        </span>
+                                        <h4 className="text-success mt-0">Application Sent</h4>
+                                        <p className="mx-auto text-muted">
+                                            Thank you for your application! We've received it and will process it
+                                            shortly.
+                                        </p>
+                                        <div className="mt-4">
+                                            <Button variant="white btn-sm" onClick={successClose}>
+                                                <FeatherIcon icon="arrow-left" className="icon-xs me-1" /> Back
+                                            </Button>
+                                        </div>
+                                    </Modal.Body>
+                                </Modal>
+
+                                {/* Error Modal */}
+                                <Modal show={showErrorModal} onHide={() => setShowErrorModal(false)} size="sm" centered>
+                                    <Modal.Header
+                                        onHide={() => setShowErrorModal(false)}
+                                        closeButton
+                                        className="border-0 pb-0"
+                                    />
+                                    <Modal.Body className="text-center">
+                                        <span className="icon icon-md text-danger">
+                                            <FeatherIcon icon="alert-octagon" className="icon-dual-danger" />
+                                        </span>
+                                        <h4 className="text-danger mt-0">Something went wrong.</h4>
+                                        <p className="mx-auto text-muted mt-2">
+                                            We are unable to process your request at the moment. Our appologies, try
+                                            again in a few minutes.
+                                        </p>
+                                        <div className="mt-4">
+                                            <Button variant="white btn-sm" onClick={errorClose}>
+                                                <FeatherIcon icon="arrow-left" className="icon-xs me-1" /> Back
+                                            </Button>
+                                        </div>
+                                    </Modal.Body>
+                                </Modal>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+    );
+};
+
+export default ContactUs;

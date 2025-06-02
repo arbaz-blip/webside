@@ -1,0 +1,162 @@
+/*
+Template Name: Prompt Kit
+Author: CoderThemes
+Version: 1.0.0
+Website: https://coderthemes.com/
+Contact: support@coderthemes.com
+File: Main Css File
+*/
+
+// FONTS
+@import 'custom/fonts';
+
+//CORE FILES
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import 'skins/default/variables';
+@import 'skins/default/custom-variables';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
+// general
+@import 'custom/general';
+
+// components
+@import 'components/accordions';
+@import 'components/alerts';
+@import 'components/badge';
+@import 'components/backgrounds';
+@import 'components/breadcrumb';
+@import 'components/buttons';
+@import 'components/card';
+@import 'components/dropdown';
+@import 'components/forms';
+@import 'components/modal';
+@import 'components/navbar';
+@import 'components/nav';
+@import 'components/pagination';
+@import 'components/popover';
+@import 'components/progress';
+@import 'components/reboot';
+@import 'components/tables';
+@import 'components/type';
+@import 'components/helper';
+@import 'components/list';
+@import 'components/widgets';
+@import 'components/custom-checkbox';
+@import 'components/custom-radio';
+@import 'components/print';
+@import 'components/preloader';
+
+// custom plugins
+@import 'custom/plugins/rateit';
+@import 'custom/plugins/gallery';
+@import 'custom/plugins/daterange';
+@import 'custom/plugins/leaflet';
+@import 'custom/plugins/jarallex';
+@import 'custom/plugins/swiper';
+@import 'custom/plugins/lightbox';
+@import 'custom/plugins/aos';
+
+// structure
+@import 'custom/structure/sidenav';
+@import 'custom/structure/footer';
+
+// custom components
+@import 'custom/components/icons';
+@import 'custom/components/avatar';
+@import 'custom/components/ribbon';
+
+// theme components
+@import 'custom/components/header';
+@import 'custom/components/hero';
+@import 'custom/components/features';
+@import 'custom/components/testimonials';
+
+// pages
+@import 'custom/pages/docs';
+@import 'custom/pages/portfolio';
+@import 'custom/pages/gallery';
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: semiBold;
+    font-weight: 600;
+    src: url('../fonts/RobotoSlab-SemiBold.ttf') format('truetype');
+}
+
+h1 {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.heroBanner .swiper-slide {
+    > div {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .container {
+        position: relative;
+        z-index: 10;
+    }
+
+    .overlay {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+
+        // background-image: url('../images/slide-1-anim.png');
+        // background-size: 200%;
+        // background-position: 0 150%;
+        // background-repeat: no-repeat;
+        // animation-name: moveBg;
+        // animation-duration: 10s;
+        // animation-fill-mode: forwards;
+        // animation-iteration-count: 1;
+        // animation-timing-function: linear;
+    }
+}
+// @keyframes moveBg{
+//     0%{
+//         background-position: 0% 150%;
+//     }
+//     100%{
+//         background-position: 100% 150%;
+//     }
+// }
+
+.link-with-arrow .icon-xxs {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.link-with-arrow:hover .icon-xxs {
+    transform: translateX(5px);
+}
+
+
+.heroBanner .swiper-slide .img-container img {
+    width: auto;
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+@media only screen and (max-width: 1199px) {
+    .heroBanner .swiper-slide {
+        text-align: center;
+    }
+
+    .heroBanner .swiper-slide .d-flex h1 {
+        font-size: 30px;
+    }
+    .heroBanner .swiper-slide {
+        > div {
+            padding-top: 100px;
+        }
+    }
+    .heroBanner .swiper-slide .d-flex p {
+        font-size: 16px;
+    }
+}
