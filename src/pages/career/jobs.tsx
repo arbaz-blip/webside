@@ -11,7 +11,7 @@ const JobListings = ({ jobParameters }: JobProps) => {
     const navigate = useNavigate()
 
     const applyHandle = (jobParam: JobParameter, id: any) => {
-        console.log("Hello World", jobParam)
+
         navigate(`/job-application/${id}`, { state: jobParam });
     }
 
@@ -32,7 +32,7 @@ const JobListings = ({ jobParameters }: JobProps) => {
                                 <Card.Title ><h4>{jobParameter.title}</h4></Card.Title>
                                 <Card.Text>
                                     {jobParameter.location}
-                                    
+
                                 </Card.Text>
 
                             </Card.Body>

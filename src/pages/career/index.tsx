@@ -21,13 +21,13 @@ const Blog = () => {
     const [loading, setLoading] = useState<boolean>(true)
 
     const fetchJobs = async (): Promise<void> => {
-        console.log(`http://recruitment.test/api/jobs`)
+        // console.log(`http://recruitment.test/api/jobs`)
         try {
             const response = await axios.get("https://54.235.226.82/recruitment/admin/api_jobs.php")
             const jobsData: JobParameter[] = response.data.data
             setJobs(jobsData)
-            console.log("Job data: ", jobsData)
-            console.log("Test")
+            // console.log("Job data: ", jobsData)
+
 
         }
         catch (err) {
@@ -43,7 +43,7 @@ const Blog = () => {
         fetchJobs()
     }, [])
 
-    console.log("Data: ", jobs)
+    // console.log("Data: ", jobs)
 
     if (loading) {
         return <Spinner animation='border' />

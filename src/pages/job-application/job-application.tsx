@@ -62,7 +62,7 @@ const JobApplication = () => {
   const jobParam = location.state as JobParameter;
   const form = useRef<HTMLFormElement>(null);
 
-  console.log('location.state:', location.state);
+  // console.log('location.state:', location.state);
 
   const sendApplication = async (data: any) => {
     try {
@@ -71,8 +71,7 @@ const JobApplication = () => {
         throw new Error('Job ID is missing. Please select a job to apply for.');
       }
 
-      console.log('Form data before sending:', data);
-      console.log('Salary Package:', data.salaryPackage);
+      // console.log('Form data before sending:', data);
 
       const formData = new FormData();
       formData.append('job_id', jobParam.job_id.toString());
@@ -98,7 +97,7 @@ const JobApplication = () => {
         }));
       formData.append('screening_questions', JSON.stringify(screeningAnswers));
 
-      console.log('Form Data:', Object.fromEntries(formData));
+      // console.log('Form Data:', Object.fromEntries(formData));
 
       const response = await fetch('https://54.235.226.82/recruitment/admin/save_application.php', {
         method: 'POST',
@@ -107,7 +106,7 @@ const JobApplication = () => {
 
       if (!response.ok) {
         const text = await response.text();
-        console.error('Non-JSON response:', text);
+        // console.error('Non-JSON response:', text);
         throw new Error(`Server returned ${response.status}: ${text}`);
       }
 
@@ -131,10 +130,10 @@ const JobApplication = () => {
 
   const onSubmit = async (data: any) => {
     if (!data) {
-      console.log('Form is empty');
+      // console.log('Form is empty');
       return;
     }
-    console.log('Form data submitted:', data);
+    // console.log('Form data submitted:', data);
     await sendApplication(data);
   };
 
@@ -142,7 +141,7 @@ const JobApplication = () => {
   try {
     if (jobParam?.screening_questions) {
       const rawQuestions: RawScreeningQuestion[] = JSON.parse(jobParam.screening_questions);
-      console.log('Raw screening questions:', rawQuestions);
+
 
       screeningQuestions = rawQuestions
         .filter((q) => q.question_text)
@@ -171,7 +170,7 @@ const JobApplication = () => {
           };
         });
 
-      console.log('Normalized screening questions:', screeningQuestions);
+
     }
   } catch (error) {
     console.error('Error parsing screening questions:', error);
