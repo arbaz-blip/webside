@@ -31,7 +31,11 @@ const JobListings = ({ jobParameters }: JobProps) => {
                             <Card.Body>
                                 <Card.Title ><h4>{jobParameter.title}</h4></Card.Title>
                                 <Card.Text>
+                                    <strong>Location: </strong>
                                     {jobParameter.location}
+                                    <br />
+                                    <strong>Salary: </strong>
+                                    {jobParameter.salary_package}
 
                                 </Card.Text>
 
