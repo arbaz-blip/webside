@@ -188,7 +188,15 @@ const JobApplication = () => {
         <p><strong>Location:</strong> {jobParam.location}</p>
         <p><strong>Salary Range:</strong> {jobParam.salary_package}</p>
         <p><strong>Experience Required:</strong> {jobParam.description}</p>
-        <p><strong>Benefits:</strong> {jobParam.perks}</p>
+        <p><strong>Benefits:</strong></p>
+        <ul>
+          {jobParam.perks
+            ?.replace(/&#13;&#10;|&#10;|&#13;|\r\n|\r|\n/g, '\n')  // Normalize all newlines
+            .split('\n')                                           // Split into lines
+            .map((line, index) =>
+              line.trim() ? <li key={index}>{line.trim()}</li> : null
+            )}
+        </ul>
         <p><strong>Reference:</strong> {jobParam.reference}</p>
         <div className="job-requirements mt-3">
           <div className="html-content" dangerouslySetInnerHTML={{ __html: jobParam.requirements }} />
