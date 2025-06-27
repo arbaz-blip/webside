@@ -99,7 +99,7 @@ const JobApplication = () => {
 
       // console.log('Form Data:', Object.fromEntries(formData));
 
-      const response = await fetch('https://54.235.226.82/recruitment/admin/save_application.php', {
+      const response = await fetch('https://api.cinergiedigital.com/recruitment/admin/save_application.php', {
         method: 'POST',
         body: formData,
       });
