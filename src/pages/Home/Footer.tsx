@@ -97,7 +97,7 @@ const Footer = () => {
                                                 Nintex
                                             </Link>
                                         </li>
-                                        <li className="my-2">
+                                        {/* <li className="my-2">
                                             <Link to="/solutions/yellow-ai" className="text-muted">
                                                 Yellow ai
                                             </Link>
@@ -106,7 +106,7 @@ const Footer = () => {
                                             <Link to="/solutions/ibm" className="text-muted">
                                                 IBM
                                             </Link>
-                                        </li>
+                                        </li> */}
                                         <li className="my-2">
                                             <Link to="/solutions/bct" className="text-muted">
                                                 BCT

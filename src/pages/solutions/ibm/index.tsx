@@ -27,7 +27,7 @@ const Blog = () => {
                 />
             </div>
 
-            <Solution />
+            {/* <Solution /> */}
 
             <Connect
                 title="Get In Touch"
