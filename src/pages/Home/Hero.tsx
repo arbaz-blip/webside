@@ -6,16 +6,25 @@ import Typist from 'react-text-typist';
 // swiper
 import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import { useEffect, useState } from 'react';
 
 // images
 import singlestore from 'assets/images/hero/singlestore.png';
-import ibm from 'assets/images/hero/ibm.png';
-import yellowai from 'assets/images/hero/yellowai.png';
+// import ibm from 'assets/images/hero/ibm.png';
+// import yellowai from 'assets/images/hero/yellowai.png';
 import spotfire from 'assets/images/hero/spotfire.png';
 import { HashLink } from 'react-router-hash-link';
 
 
 const SwiperSlider = () => {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     const swiperConfig = {
         slidesPerView: 1,
         loop: true,
@@ -26,19 +35,23 @@ const SwiperSlider = () => {
             '768': { slidesPerView: 1 },
         },
         roundLengths: true,
+        observer: true,
+        observeParents: true,
     };
 
-    return (
-        <Swiper modules={[Autoplay]} {...swiperConfig}>
-            {([singlestore, yellowai, ibm, spotfire] || []).map((img, index) => {
-                return (
-                    <SwiperSlide key={index.toString()}>
-                        <img src={img} alt="" className="img-fluid rounded-lg" />
+    const images = [singlestore, spotfire];
+
+    return isMounted ? (
+        <div style={{ maxWidth: '400px', margin: '0 auto' }}>
+            <Swiper modules={[Autoplay]} {...swiperConfig}>
+                {images.map((img, index) => (
+                    <SwiperSlide key={index}>
+                        <img src={img} alt="" className="img-fluid rounded-lg" style={{ width: '100%', height: 'auto' }} />
                     </SwiperSlide>
-                );
-            })}
-        </Swiper>
-    );
+                ))}
+            </Swiper>
+        </div>
+    ) : null;
 };
 
 const Hero = () => {
@@ -52,9 +65,9 @@ const Hero = () => {
                                 Elevate Your Business Future With {<br />}
                                 <Typist
                                     className="highlight highlight-orange d-inline-block"
-                                    sentences={[    
+                                    sentences={[
                                         'SingleStore',
-                                        'Yellow.ai',
+                                        // 'Yellow.ai',
                                         'Maximo Manage',
                                         'Spotfire',
                                     ]}

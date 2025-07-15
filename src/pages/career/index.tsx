@@ -46,7 +46,12 @@ const Blog = () => {
     // console.log("Data: ", jobs)
 
     if (loading) {
-        return <Spinner animation='border' />
+        return (<div className="d-flex justify-content-center align-items-center vh-100">
+            <div className="d-flex flex-column align-items-center gap-2">
+                <Spinner animation="border" variant="primary" role="status" />
+                <div>Loading...</div>
+            </div>
+        </div>)
     }
 
     return (
@@ -80,7 +85,7 @@ const Blog = () => {
                     buttonClass="btn-white text-white btn-sm"
                 />
 
-                <Hero />
+                {/* <Hero /> */}
             </div>
 
             {/* <Team teamMembers={teamMembers} /> */}

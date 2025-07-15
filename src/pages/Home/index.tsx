@@ -32,7 +32,7 @@ const Home = () => {
 
             <DigitalCapabilities capabilities={capabilities} />
             <div id="backing"></div>
-            
+
             <Partnerships partners={partners} />
 
             <Services />

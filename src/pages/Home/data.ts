@@ -1,7 +1,7 @@
 import { Feature, Partner, Capabilities, Hero } from './types';
 
 import tibco from 'assets/images/brands/tibco.png';
-import yellowai from 'assets/images/brands/yellowai.png';
+// import yellowai from 'assets/images/brands/yellowai.png';
 import akinon from 'assets/images/brands/akinon.png';
 import singlestore from 'assets/images/brands/singlestore.png';
 import nintex from 'assets/images/brands/nintex.png';
@@ -91,12 +91,12 @@ const partners: Partner[] = [
         description: 'Real-time data integration and analytics leader for streamlined business decision-making.',
         url: '/solutions/tibco',
     },
-    {
-        appLogo: yellowai,
-        app: 'Yellow.ai',
-        description: 'Transforming engagement with advanced chatbot-driven AI for streamlined interactions.',
-        url: '/solutions/yellow-ai',
-    },
+    // {
+    //     appLogo: yellowai,
+    //     app: 'Yellow.ai',
+    //     description: 'Transforming engagement with advanced chatbot-driven AI for streamlined interactions.',
+    //     url: '/solutions/yellow-ai',
+    // },
     {
         appLogo: akinon,
         app: 'Akinon',
@@ -115,12 +115,12 @@ const partners: Partner[] = [
         description: 'Simplifying business processes through intuitive and efficient workflow automation solutions.',
         url: '/solutions/nintex',
     },
-    {
-        appLogo: ibm,
-        app: 'IBM',
-        description: 'Pioneering innovation with advanced technology solutions for businesses worldwide.',
-        url: '/solutions/ibm',
-    },
+    // {
+    //     appLogo: ibm,
+    //     app: 'IBM',
+    //     description: 'Pioneering innovation with advanced technology solutions for businesses worldwide.',
+    //     url: '/solutions/ibm',
+    // },
     {
         appLogo: bahwen,
         app: 'Bahwan Cybertek',
@@ -154,30 +154,30 @@ const solutions: Hero[] = [
         color: 'white',
         more: 'Explore Data Mastery',
     },
-    {
-        logo: yellowHero,
-        logoSize: '100px',
-        title: 'Yellow.ai',
-        backgroundColor: 'linear-gradient(to bottom, #FFFADA, #F8E27C)',
-        heading: 'Enchancing Experiences with Yellow.ai Chatbot.',
-        description:
-            'Transform customer interactions with Yellow.ai – where AI-powered conversations redefine engagement. Elevate experiences, boost efficiency, and stay ahead in the era of intelligent customer interactions.',
-        link: '/solutions/yellow-ai',
-        color: 'dark',
-        more: 'Explore Yellow.ai Chatbot',
-    },
-    {
-        logo: ibmHero,
-        title: 'IBM',
-        logoSize: '100px',
-        backgroundColor: 'linear-gradient(to bottom, #162A36, #59B5A0)',
-        heading: "Maximize Potential with IBM Licenses.",
-        description:
-            'Unlock innovation and efficiency with IBM licenses. Elevate your business capabilities, streamline operations, and harness the power of cutting-edge technology for unparalleled success.',
-        link: '/solutions/ibm',
-        color: 'white',
-        more: 'Explore IBM Innovations',
-    },
+    // {
+    //     logo: yellowHero,
+    //     logoSize: '100px',
+    //     title: 'Yellow.ai',
+    //     backgroundColor: 'linear-gradient(to bottom, #FFFADA, #F8E27C)',
+    //     heading: 'Enchancing Experiences with Yellow.ai Chatbot.',
+    //     description:
+    //         'Transform customer interactions with Yellow.ai – where AI-powered conversations redefine engagement. Elevate experiences, boost efficiency, and stay ahead in the era of intelligent customer interactions.',
+    //     link: '/solutions/yellow-ai',
+    //     color: 'dark',
+    //     more: 'Explore Yellow.ai Chatbot',
+    // },
+    // {
+    //     logo: ibmHero,
+    //     title: 'IBM',
+    //     logoSize: '100px',
+    //     backgroundColor: 'linear-gradient(to bottom, #162A36, #59B5A0)',
+    //     heading: "Maximize Potential with IBM Licenses.",
+    //     description:
+    //         'Unlock innovation and efficiency with IBM licenses. Elevate your business capabilities, streamline operations, and harness the power of cutting-edge technology for unparalleled success.',
+    //     link: '/solutions/ibm',
+    //     color: 'white',
+    //     more: 'Explore IBM Innovations',
+    // },
     {
         logo: nintexHero,
         title: 'Nintex',

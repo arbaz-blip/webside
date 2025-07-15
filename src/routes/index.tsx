@@ -11,7 +11,7 @@ const digitalplatformcomponents = React.lazy(() => import('../pages/digital-plat
 const digitalplatformoutcomes = React.lazy(() => import('../pages/digital-platform-outcomes'));
 const tibco = React.lazy(() => import('../pages/solutions/tibco'));
 const singlestore = React.lazy(() => import('../pages/solutions/singlestore'));
-const yellow = React.lazy(() => import('../pages/solutions/yellow-ai'));
+// const yellow = React.lazy(() => import('../pages/solutions/yellow-ai'));
 const ibm = React.lazy(() => import('../pages/solutions/ibm'));
 const nintex = React.lazy(() => import('../pages/solutions/nintex'));
 const bct = React.lazy(() => import('../pages/solutions/bct'));
@@ -44,7 +44,7 @@ const AllRoutes = () => {
             children: [
                 { path: 'tibco', element: <LoadComponent component={tibco} /> },
                 { path: 'singlestore', element: <LoadComponent component={singlestore} /> },
-                { path: 'yellow-ai', element: <LoadComponent component={yellow} /> },
+                // { path: 'yellow-ai', element: <LoadComponent component={yellow} /> },
                 { path: 'ibm', element: <LoadComponent component={ibm} /> },
                 { path: 'nintex', element: <LoadComponent component={nintex} /> },
                 { path: 'bct', element: <LoadComponent component={bct} /> },

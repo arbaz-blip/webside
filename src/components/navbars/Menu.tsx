@@ -316,7 +316,7 @@ const Menu = ({ navClass, buttonClass, showDownload }: MenuProps) => {
                             </NavLink>
                         </Nav.Item>
 
-                        <Nav.Item as="li">
+                        {/* <Nav.Item as="li">
                             <hr className="my-2" />
                         </Nav.Item>
 
@@ -327,9 +327,9 @@ const Menu = ({ navClass, buttonClass, showDownload }: MenuProps) => {
                                 className={classNames('nav-link', ({ ...isActive }) => isActive && 'active')}>
                                 Yellow.ai
                             </NavLink>
-                        </Nav.Item>
+                        </Nav.Item> */}
 
-                        <Nav.Item as="li">
+                        {/* <Nav.Item as="li">
                             <hr className="my-2" />
                         </Nav.Item>
 
@@ -340,7 +340,7 @@ const Menu = ({ navClass, buttonClass, showDownload }: MenuProps) => {
                                 className={classNames('nav-link', ({ ...isActive }) => isActive && 'active')}>
                                 IBM
                             </NavLink>
-                        </Nav.Item>
+                        </Nav.Item> */}
 
                         <Nav.Item as="li">
                             <hr className="my-2" />
