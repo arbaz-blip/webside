@@ -2,7 +2,20 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 const Hero = () => {
     return (
-        <section className="hero-4 pb-5 pt-8 pt-lg-6 pb-lg-8">
+        <section
+    className="hero-4 pb-5 pt-8 pt-lg-6 pb-lg-8"
+    style={{
+        position: 'relative',
+        zIndex: 2,
+        minHeight: '85vh', // 👈 Fix height here
+        display: 'flex',
+        alignItems: 'center', // vertically center
+        padding: '6rem 2rem',
+          
+            overflow: 'hidden',
+    }}
+>
+
             <Container>
                 <Row className="justify-content-center">
                     <Col lg={7} className="text-center position-relative">

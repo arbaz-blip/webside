@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
 import FeatherIcon from 'feather-icons-react';
+import "./footer.css";
 import Logo from 'assets/images/official.svg';
 import { HashLink } from 'react-router-hash-link';
 
@@ -78,7 +79,7 @@ const Footer = () => {
                                 </div>
                             </Col>
 
-                            <Col xs="auto">
+                            {/* <Col xs="auto">
                                 <div className="ps-md-5">
                                     <h5 className="text-dark mb-4 fw-semibold">Links</h5>
                                     <ul className="list-unstyled">
@@ -96,7 +97,7 @@ const Footer = () => {
                                             <Link to="/solutions/nintex" className="text-muted">
                                                 Nintex
                                             </Link>
-                                        </li>
+                                        </li> */}
                                         {/* <li className="my-2">
                                             <Link to="/solutions/yellow-ai" className="text-muted">
                                                 Yellow ai
@@ -107,7 +108,7 @@ const Footer = () => {
                                                 IBM
                                             </Link>
                                         </li> */}
-                                        <li className="my-2">
+                                        {/* <li className="my-2">
                                             <Link to="/solutions/bct" className="text-muted">
                                                 BCT
                                             </Link>
@@ -119,7 +120,7 @@ const Footer = () => {
                                         </li>
                                     </ul>
                                 </div>
-                            </Col>
+                            </Col> */}
                         </Row>
                     </Col>
                 </Row>

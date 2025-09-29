@@ -1,54 +1,77 @@
 import { Navbar1 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
-
-import Hero from './Hero';
-
-import hero from 'assets/images/dpc/b86f020a-5c32-44dc-b185-881ffa49e15d.webp';
 import Footer from 'pages/Home/Footer';
 import Platform from './Platform';
 import Connect from 'components/shared/Connect';
 
+const heroVideo = require('../../assets/videos/life-at-cinergie-digital.mp4');
+
 const Blog = () => {
     return (
         <>
-            <div
-                className="bg-gradient2"
+            {/* Hero Section with Video Background */}
+            <section
+                className="position-relative"
                 style={{
-                    background: `url(${hero})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    position: 'relative',
+                    height: '100vh', // Full screen hero
+                    overflow: 'hidden',
                 }}
             >
-                <div
-                    className="overlay"
+                {/* Video Background */}
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="position-absolute w-100 h-100"
                     style={{
-                        position: 'absolute',
+                        objectFit: 'cover',
                         top: 0,
                         left: 0,
-                        width: '100%',
-                        height: '100%',
-                        background: 'rgba(0, 0, 0, 0.4)',
-                        backdropFilter: 'blur(0.3px)',
+                        zIndex: -2,
                     }}
+                >
+                    <source src={heroVideo} type="video/mp4" />
+                </video>
+
+                {/* Dark Overlay for contrast */}
+                <div
+                    className="position-absolute top-0 start-0 w-100 h-100"
+                        style={{
+                                    color: "#fff",
+                                    textShadow: "2px 2px 6px rgba(238, 236, 236, 0.6)", // soft black shadow
+                                }}
                 ></div>
 
-                <Navbar1
-                    hideSearch
-                    fixedWidth
-                    navClass="navbar-dark zindex-10"
-                    buttonClass="btn-white text-white btn-sm"
-                />
+                {/* Navbar and Hero Text */}
+                <div style={{ zIndex: 1, position: 'relative' }}>
+                             <Navbar1
+                      hideSearch
+                      fixedWidth
+                      navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
+                      buttonClass="btn-white text-white btn-sm"
+                  />
 
-                <Hero />
-            </div>
+                    <div className="d-flex flex-column align-items-center justify-content-center text-white text-center px-3" style={{ height: '80vh' }}>
+                        <h1 className="hero-title" style={{  color: "#fff",textShadow: '2px 2px 6px rgba(21, 20, 20, 1)' }}>
+                            Digital Platform Outcomes
+                        </h1>
+                        <p className="mt-3 fs-5 fw-bold" style={{ maxWidth: '800px', textShadow: '1px 1px 3px rgba(0, 0, 0, 1)' }}>
+                            We enable technology-driven capabilities of an enterprise to effectively leverage digital
+                            technologies to transform its operations, increase efficiency, and deliver enhanced value to
+                            its customers.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
+            {/* Rest of the Page */}
             <Platform />
-
-            <Connect title="Get In Touch" description="Get in touch with us today to learn more about how we can help you succeed with these digital capabilities through our solutions and services." />
-
+            <Connect
+                title="Get In Touch"
+                description="Get in touch with us today to learn more about how we can help you succeed with these digital capabilities through our solutions and services."
+            />
             <Footer />
-
             <BackToTop />
         </>
     );

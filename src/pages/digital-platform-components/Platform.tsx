@@ -1,102 +1,52 @@
-import { Col, Container, Row } from 'react-bootstrap';
-import bpm from 'assets/images/dpc/processmanagement.webp';
-import rpa from 'assets/images/dpc/roboticprocessautomation.webp';
-import eip from 'assets/images/dpc/Enterprise Integration Platform.webp';
-import api from 'assets/images/dpc/API Management Platform.webp';
-import bdp from 'assets/images/dpc/Big Data Platform.webp';
-import va from 'assets/images/dpc/Visual Analytics.webp';
-import sa from 'assets/images/dpc/Streaming Analysis.webp';
-import ai from 'assets/images/dpc/ai.webp';
 
-interface PlatformData {
-  image: string;
-  title: string;
-  description: string;
-}
+import React from 'react';
+import "./styles.css";
 
-const platforms: PlatformData[] = [
-  {
-    image: bpm,
-    title: 'Business Process Management (BPM)',
-    description:
-      'Solution that automates and manages the end-to-end processes within an organization, with the goal of improving efficiency, reducing costs, and increasing process visibility. Covers key areas like process modeling, execution, monitoring, optimization and governance.',
-  },
-  {
-    image: rpa,
-    title: 'Robotic Process Automation (RPA)',
-    description:
-      'Automates repetitive and routine tasks that are typically performed by human workers. Benefits of RPA include increased efficiency and productivity, improved accuracy, reduced costs, and increased compliance with regulations. Free up human workers to focus on higher-value tasks and enable organizations to scale their operations.',
-  },
-  {
-    image: eip,
-    title: 'Enterprise Integration Platform (EIP)',
-    description:
-      'Technology solution that enables the integration and coordination of multiple systems and applications within an organization. The goal of an EIP is to ensure that information flows seamlessly between different systems and applications, enabling data to be shared and accessed by multiple users and systems.',
-  },
-  {
-    image: api,
-    title: 'API Management Platform',
-    description:
-      'The goal of an API Management Platform is to provide a centralized and unified approach to managing APIs, which can improve efficiency, security, and innovation. Provides the tools, capabilities, and infrastructure to manage APIs throughout their lifecycle.',
-  },
-  {
-    image: bdp,
-    title: 'Big Data Platform',
-    description:
-      'Provides a centralized solution for managing, processing, and analyzing big data, which can support data-driven decision making and drive business value. The platform enables organizations to process and analyze data in real-time, providing insights and business opportunities that would otherwise go unnoticed.',
-  },
-  {
-    image: va,
-    title: 'Visual Analytics',
-    description:
-      'Provides visual representations and interactive tools to explore, analyze, and make sense of complex data. The goal of advanced visual analytics is to enable users to quickly and easily gain insights and find patterns in large and complex data sets that might not be immediately apparent.',
-  },
-  {
-    image: sa,
-    title: 'Streaming Analytics',
-    description:
-      'Real-time processing and analysis of data as it is generated and delivered in a continuous stream, rather than being stored and analyzed in batch mode. The goal of streaming analytics is to provide organizations with the ability to quickly identify and respond to business opportunities and risks, by analyzing data in real-time.',
-  },
-  {
-    image: ai,
-    title: 'Conversational AI',
-    description:
-      'Can be used in a variety of applications, including customer service, sales, and marketing. Provides a more convenient and efficient customer experience, by allowing users to access information and services using natural language and can also help to reduce costs by automating repetitive tasks.',
-  },
-];
+const ValuesAndTimeline = () => {
+    return (
+        <div className="container">
+            {/* Our Values and Foundation */}
+            <section className="values-section">
+                <h2>Our Values and Foundation</h2>
+                <p>Transparent sprints, secure engineering, measurable ROI</p>
+             </section>
 
-const Platform = () => {
-  return (
-    <>
-      <section className="pt-lg-6 pt-4 pb-lg-6 pb-5 position-relative overflow-hidden">
-        <Container>
-          {platforms.map((platform, index) => (
-            <Row key={index} className="align-items-center mb-6 pb-lg-5">
-              <Col
-                lg={6}
-                xs={12}
-                className={`order-1 order-md-${index % 2 === 0 ? 0 : 1}`}
-                data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
-                data-aos-duration="1500">
-                <div className="mb-4 mb-lg-0 text-center">
-                  <h1 className="display-4 fw-medium mb-3">{platform.title}</h1>
-                  <p className="text-muted mx-auto mb-4 pb-3">{platform.description}</p>
-                </div>
-              </Col>
-              <Col
-                lg={{ span: 5, offset: 1 }}
-                xs={12}
-                className={`order-0 order-md-${index % 2 === 0 ? 1 : 0}`}
-                data-aos={index % 2 === 0 ? 'fade-left' : 'fade-right'}
-                data-aos-duration="1500">
-                <img src={platform.image} alt={platform.title} className="img-fluid d-flex mx-auto" />
-              </Col>
-            </Row>
-          ))}
-        </Container>
-      </section>
-    </>
-  );
+            <section className='values-section'>
+              <div className="icon-grid">
+      <div className="icon-box"><div className="icon">✔</div><p><strong>Outcomes First</strong><br />Measured in ROI, not tasks closed.</p></div>
+      <div className="icon-box"><div className="icon">☀</div><p><strong>Transparency Always</strong><br />Open sprints, clear docs, audit trails.</p></div>
+      <div className="icon-box"><div className="icon">🛡</div><p><strong>Security by Default</strong><br />Encryption and access controls everywhere.</p></div>
+      <div className="icon-box"><div className="icon">⇅</div><p><strong>Build for Change</strong><br />Modular, maintainable, scalable architecture.</p></div>
+      <div className="icon-box"><div className="icon">🔗</div><p><strong>One Team Mindset</strong><br />Embedded pods with shared accountability.</p></div>
+      <div className="icon-box"><div className="icon"></div><p><strong>Responsible AI</strong><br />Fairness checks and explainable AI models.</p></div>
+      <div className="icon-box"><div className="icon">↻</div><p><strong>Operational Excellence</strong><br />SLO <br />s, on-call, and continuous improvement.</p></div>
+      <div className="icon-box"><div className="icon">⬆</div><p><strong>Stewardship of Spend</strong><br />FinOps discipline, predictable costs, clear ROI.</p></div>
+    </div>
+                          </section>
+
+
+                          
+  <div className="timeline-section">
+    <h2>Cinergie’s Proven Approach</h2>
+    <div className="timeline-top">
+      <div className="timeline-step"><div className="duration">1–2 Weeks</div><div className="circle step1">1</div></div>
+      <div className="timeline-step"><div className="duration">2–3 Weeks</div><div className="circle step2">2</div></div>
+      <div className="timeline-step"><div className="duration">6–10 Weeks</div><div className="circle step3">3</div></div>
+      <div className="timeline-step"><div className="duration">1–2 Weeks</div><div className="circle step4">4</div></div>
+    </div>
+    <div className="timeline-bar"></div>
+    <div className="timeline-bottom">
+      <div className="stage"><div className="stage-title">Stage & Discovery</div><div className="stage-desc">Roadmaps, audits, and tailored tech recommendations.</div></div>
+      <div className="stage"><div className="stage-title">Design & Architecture</div><div className="stage-desc">User flows, specs, and scalable architecture blueprints.</div></div>
+      <div className="stage"><div className="stage-title">Development & Integration</div><div className="stage-desc">Iterative builds, seamless integrations, rigorous testing.</div></div>
+      <div className="stage"><div className="stage-title">Deploy & Optimize</div><div className="stage-desc">Smooth go-live, team training, and performance improvements.</div></div>
+    </div>
+  </div>
+  </div>
+  
+            
+            
+    );
 };
 
-export default Platform;
+export default ValuesAndTimeline;

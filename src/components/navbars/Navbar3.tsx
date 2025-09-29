@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
 // components
-import Menu from './Menu';
+// import Menu from './Menu';
 
 // images
 import logo from '../../assets/images/official.svg';
@@ -55,7 +55,16 @@ const Navbar3 = ({ isSticky, navClass, buttonClass, fixedWidth }: Navbar3Props) 
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Menu navClass="mx-auto" buttonClass={buttonClass ? buttonClass : 'btn-primary'} />
+             <Nav className="ms-auto">
+                            <Nav.Link href="/" className="px-3">Home</Nav.Link>
+                            <Nav.Link href="/career" className="px-3">Career</Nav.Link>
+                            <Nav.Link href="/contact" className="px-3">Contact</Nav.Link>
+                            <Nav.Link href="/Industries" className="px-3">Industries</Nav.Link>
+                            <Nav.Link href="/services" className="px-3">Services</Nav.Link>
+                            <Nav.Link href="/digital-platform-components" className="px-3">About Us</Nav.Link>
+                            <Nav.Link href="/team" className="px-3">resources</Nav.Link>
+                                                </Nav>
+
                         <Nav as="ul" className="align-items-lg-center">
                             <Nav.Item as="li">
                                 <Link

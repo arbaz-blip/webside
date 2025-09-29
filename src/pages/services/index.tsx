@@ -1,9 +1,9 @@
 import { Navbar1 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 
-import Hero from './Hero';
+// import Hero from './Hero';
 
-import hero from 'assets/images/services/8d13e852-3947-4072-afff-e1cddd1a5a53.webp';
+// import hero from 'assets/images/services/8d13e852-3947-4072-afff-e1cddd1a5a53.webp';
 import Footer from 'pages/Home/Footer';
 import Services from './Services';
 import Connect from 'components/shared/Connect';
@@ -14,7 +14,7 @@ const Blog = () => {
             <div
                 className="bg-gradient2"
                 style={{
-                    background: `url(${hero})`,
+                    // background: `url(${hero})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     position: 'relative',
@@ -33,14 +33,14 @@ const Blog = () => {
                     }}
                 ></div>
 
-                <Navbar1
-                    hideSearch
-                    fixedWidth
-                    navClass="navbar-dark zindex-10"
-                    buttonClass="btn-white text-white btn-sm"
-                />
+              <Navbar1
+    hideSearch
+    fixedWidth
+    navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
+    buttonClass="btn-white text-white btn-sm"
+/>
 
-                <Hero />
+                {/* <Hero /> */}
             </div>
 
             <Services />

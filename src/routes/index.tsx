@@ -8,14 +8,14 @@ const career = React.lazy(() => import('../pages/career'));
 const jobapplication = React.lazy(() => import('../pages/job-application'));
 const contact = React.lazy(() => import('../pages/contact'));
 const digitalplatformcomponents = React.lazy(() => import('../pages/digital-platform-components'));
-const digitalplatformoutcomes = React.lazy(() => import('../pages/digital-platform-outcomes'));
-const tibco = React.lazy(() => import('../pages/solutions/tibco'));
-const singlestore = React.lazy(() => import('../pages/solutions/singlestore'));
-// const yellow = React.lazy(() => import('../pages/solutions/yellow-ai'));
-const ibm = React.lazy(() => import('../pages/solutions/ibm'));
-const nintex = React.lazy(() => import('../pages/solutions/nintex'));
-const bct = React.lazy(() => import('../pages/solutions/bct'));
-const akinon = React.lazy(() => import('../pages/solutions/akinon'));
+const digitalplatformoutcomes = React.lazy(() => import('../pages/Industries'));
+// const tibco = React.lazy(() => import('../pages/solutions/tibco'));
+// const singlestore = React.lazy(() => import('../pages/solutions/singlestore'));
+// // const yellow = React.lazy(() => import('../pages/solutions/yellow-ai'));
+// const ibm = React.lazy(() => import('../pages/solutions/ibm'));
+// const nintex = React.lazy(() => import('../pages/solutions/nintex'));
+// const bct = React.lazy(() => import('../pages/solutions/bct'));
+// const akinon = React.lazy(() => import('../pages/solutions/akinon'));
 
 const loading = () => <div className=""></div>;
 
@@ -39,18 +39,18 @@ const AllRoutes = () => {
             path: '/services',
             element: <LoadComponent component={services} />
         },
-        {
-            path: 'solutions',
-            children: [
-                { path: 'tibco', element: <LoadComponent component={tibco} /> },
-                { path: 'singlestore', element: <LoadComponent component={singlestore} /> },
-                // { path: 'yellow-ai', element: <LoadComponent component={yellow} /> },
-                { path: 'ibm', element: <LoadComponent component={ibm} /> },
-                { path: 'nintex', element: <LoadComponent component={nintex} /> },
-                { path: 'bct', element: <LoadComponent component={bct} /> },
-                { path: 'akinon', element: <LoadComponent component={akinon} /> },
-            ],
-        },
+        // {
+        //     path: 'solutions',
+        //     children: [
+        //         { path: 'tibco', element: <LoadComponent component={tibco} /> },
+        //         { path: 'singlestore', element: <LoadComponent component={singlestore} /> },
+        //         // { path: 'yellow-ai', element: <LoadComponent component={yellow} /> },
+        //         { path: 'ibm', element: <LoadComponent component={ibm} /> },
+        //         { path: 'nintex', element: <LoadComponent component={nintex} /> },
+        //         { path: 'bct', element: <LoadComponent component={bct} /> },
+        //         { path: 'akinon', element: <LoadComponent component={akinon} /> },
+        //     ],
+        // },
         {
             path: '/contact',
             element: <LoadComponent component={contact} />
@@ -72,7 +72,7 @@ const AllRoutes = () => {
             element: <LoadComponent component={digitalplatformcomponents} />
         },
         {
-            path: '/digital-platform-outcomes',
+            path: '/Industries',
             element: <LoadComponent component={digitalplatformoutcomes} />
         },
     ]);

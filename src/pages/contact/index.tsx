@@ -1,7 +1,8 @@
 import { Navbar5 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 
-import hero from '../../assets/images/8db13d32-6404-4bb6-9ded-96ff18af265d.webp';
+import hero from '../../assets/images/cinergie-digital-contact-hero-background.jpg.jpg';
+
 
 import Hero from './Hero';
 import ContactUs from './ContactUs';
@@ -32,13 +33,12 @@ const Contact = () => {
                     }}
                 ></div>
 
-                <Navbar5
-                    navClass="navbar-dark zindex-10"
-                    hideSearch
-                    
-                    fixedWidth
-                    buttonClass="btn-outline-primary btn-sm"
-                />
+                         <Navbar5
+    hideSearch
+    fixedWidth
+    navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
+    buttonClass="btn-white text-white btn-sm"
+/>
 
                 <Hero />
             </div>

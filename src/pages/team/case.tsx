@@ -1,0 +1,36 @@
+import React from 'react';
+import './style.css';
+import timerImg from '../../assets/images/real-time-order-tracking-dashboard-supply-chain-cinergie-digital.jpg'; // Import the image
+
+const Resources = () => {
+  return (
+    <>
+      <button id="scrollTopBtn" title="Go to top">↑</button>
+
+      <section className="resources-section">
+        <div className="resources-container">
+          <h2>Explore Cinergie Digital’s Blogs, Guides & Case Studies</h2>
+          <div className="resources-grid">
+            <div className="left-column">
+              <div className="resource-card">
+                <div className="card-image">
+                  <img src="images/digital-transformation-background.jpg" alt="Blog post on digital transformation strategies" />
+                  <div className="metric-badge">TOP RATED</div>
+                </div>
+                <div className="resource-content">
+                  <h3>Digital Transformation Strategies</h3>
+                  <p>Learn how to implement effective digital transformation strategies for your enterprise.</p>
+                  <a href="/blogs/digital-transformation" className="cta-link">Read More →</a>
+                </div>
+              </div>
+
+             
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Resources;

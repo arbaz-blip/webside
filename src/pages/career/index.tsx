@@ -5,8 +5,10 @@ import Hero from './Hero';
 import { JobParameter } from './types';
 import axios from "axios";
 import { Spinner } from 'react-bootstrap';
-import hero from 'assets/images/4b7001f0-21bb-4aad-b685-e4d0210f26cd.webp';
+import hero from 'assets/images/cinergie-digital-join-our-team.jpg.jpg';
 import Footer from 'pages/Home/Footer';
+
+import Connect from 'components/shared/Connect';
 // import Team from './Team';
 // import { teamMembers } from './data';
 // import { jobListings } from './data'
@@ -69,28 +71,29 @@ const Blog = () => {
                     className="overlay"
                     style={{
                         position: 'absolute',
-                        top: 0,
-                        left: 0,
+                        top: 50,
+                        left: 50,
                         width: '100%',
                         height: '100%',
-                        background: 'rgba(0, 0, 0, 0.5)',
-                        backdropFilter: 'blur(0.5px)',
+                        
+                        
                     }}
                 ></div>
 
-                <Navbar1
-                    hideSearch
-                    fixedWidth
-                    navClass="navbar-dark zindex-10"
-                    buttonClass="btn-white text-white btn-sm"
-                />
+                          <Navbar1
+    hideSearch
+    fixedWidth
+    navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
+    buttonClass="btn-white text-white btn-sm"
+/>
 
-                {/* <Hero /> */}
+                <Hero />
             </div>
 
             {/* <Team teamMembers={teamMembers} /> */}
 
             <Job jobParameters={jobs} />
+             <Connect title="Get In Touch" description="Get in touch with us today to learn more about how we can help you unlock the full potential of your organization through our IT services." />
             <Footer />
 
             <BackToTop />

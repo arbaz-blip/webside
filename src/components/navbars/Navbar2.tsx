@@ -54,25 +54,37 @@ const Navbar2 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Na
                         <img src={logo} height="30" className="d-inline-block align-top" alt="" />
                     </Navbar.Brand>
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        {!hideSearch && (
-                            <Nav className="align-items-lg-center d-flex">
-                                <Nav.Item as="li">
-                                    <form id="search" className="form-inline d-none d-sm-flex me-lg-3">
-                                        <div className="form-control-with-hint ms-lg-2 ms-xl-4">
-                                            <input
-                                                type="text"
-                                                className="form-control"
-                                                id="search-input"
-                                                placeholder="What are you looking for?"
-                                            />
-                                            <span className="form-control-feedback uil uil-search fs-16"></span>
-                                        </div>
-                                    </form>
-                                </Nav.Item>
-                            </Nav>
-                        )}
+    {!hideSearch && (
+        <Nav className="align-items-lg-center d-flex me-auto">
+            <Nav.Item as="li">
+                <form id="search" className="form-inline d-none d-sm-flex me-lg-3">
+                    <div className="form-control-with-hint ms-lg-2 ms-xl-4">
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="search-input"
+                            placeholder="What are you looking for?"
+                        />
+                        <span className="form-control-feedback uil uil-search fs-16"></span>
+                    </div>
+                </form>
+            </Nav.Item>
+        </Nav>
+    )}
 
-                    </Navbar.Collapse>
+    <Nav className="ms-auto">
+                            <Nav.Link href="/" className="px-3">Home</Nav.Link>
+                            <Nav.Link href="/career" className="px-3">Career</Nav.Link>
+                            <Nav.Link href="/contact" className="px-3">Contact</Nav.Link>
+                            <Nav.Link href="/Industries" className="px-3">Industries</Nav.Link>
+                            <Nav.Link href="/services" className="px-3">Services</Nav.Link>
+                            <Nav.Link href="/digital-platform-components" className="px-3">About Us</Nav.Link>
+                            <Nav.Link href="/team" className="px-3">resources</Nav.Link>
+                                                </Nav>
+</Navbar.Collapse>
+
+
+                    
                 </Container>
             </Navbar>
         </header>

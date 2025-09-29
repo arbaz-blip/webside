@@ -1,7 +1,7 @@
 import { Container, Card, Row, Col } from 'react-bootstrap';
 import { JobParameter } from './types';
 import { useNavigate } from 'react-router-dom';
-import './JobListings.css'; // (optional, for cleaner styles)
+// import './JobListings.css'; // (optional, for cleaner styles)
 
 type JobProps = {
     jobParameters: JobParameter[];
