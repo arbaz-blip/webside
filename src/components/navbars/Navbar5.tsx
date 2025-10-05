@@ -1,9 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import classNames from 'classnames';
-
-// components
-// import Menu from './Menu';
+import "./navbar.css";
 
 // images
 import logo from '../../assets/images/official.svg';
@@ -17,30 +15,45 @@ type Navbar1Props = {
     hideSearch?: boolean;
 };
 
-const Navbar1 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Navbar1Props) => {
+const Navbar5 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Navbar1Props) => {
+    const [scrolled, setScrolled] = useState(false);
 
-    // on scroll add navbar class
     useEffect(() => {
+        if (!isSticky) return;
+
         const btnTop = document.getElementById('btn-back-to-top');
         const navbar = document.getElementById('sticky');
-        window.addEventListener('scroll', (e) => {
-            e.preventDefault();
+
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Show back-to-top button
             if (btnTop) {
-                if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
-                    btnTop.classList.add('show');
-                } else {
-                    btnTop.classList.remove('show');
-                }
+                btnTop.classList.toggle('show', scrollTop >= 50);
             }
+
+            // Add sticky class
             if (navbar) {
-                if (document.body.scrollTop >= 240 || document.documentElement.scrollTop >= 240) {
-                    navbar.classList.add('navbar-sticky');
-                } else {
-                    navbar.classList.remove('navbar-sticky');
-                }
+                navbar.classList.toggle('navbar-sticky', scrollTop >= 100);
             }
-        });
-    }, []);
+
+            // Toggle background based on scroll position
+            setScrolled(scrollTop >= 100);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [isSticky]);
+
+    // Combine default navClass with scroll-based background change
+       const combinedNavClass = classNames(
+        'topnav-menu',
+        navClass,
+        scrolled ? 'navbar-light bg-white shadow-sm' : 'navbar-transparent text-white'
+    );
+
+    const logoSrc = scrolled ? logo : logoLight;
+
 
     return (
         <header>
@@ -48,13 +61,13 @@ const Navbar1 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Na
                 id={isSticky ? 'sticky' : ''}
                 collapseOnSelect
                 expand="lg"
-                className={classNames('topnav-menu', navClass)}
+                className={combinedNavClass}
             >
                 <Container fluid={!fixedWidth}>
                     <Navbar.Brand href="/" className="logo">
-                        <img src={logo} height="40" className="align-top logo-dark" alt="Cinergie Digital" />
-                        <img src={logoLight} height="40" className="align-top logo-light" alt="Cinergie Digital" />
-                    </Navbar.Brand>
+    <img src={logoSrc} height="40" className="align-top" alt="Cinergie Digital" />
+</Navbar.Brand>
+
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
@@ -78,14 +91,13 @@ const Navbar1 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Na
                         )}
                         <Nav className="ms-auto">
                             <Nav.Link href="/" className="px-3">Home</Nav.Link>
-                            <Nav.Link href="/career" className="px-3">Career</Nav.Link>
-                            <Nav.Link href="/contact" className="px-3">Contact</Nav.Link>
-                            <Nav.Link href="/Industries" className="px-3">Industries</Nav.Link>
-                            <Nav.Link href="/services" className="px-3">Services</Nav.Link>
                             <Nav.Link href="/digital-platform-components" className="px-3">About Us</Nav.Link>
-                            <Nav.Link href="/team" className="px-3">resources</Nav.Link>
-                                                </Nav>
-
+                            <Nav.Link href="/Industries" className="px-3">Industries</Nav.Link>
+                            <Nav.Link href="/career" className="px-3">Career</Nav.Link>
+                            <Nav.Link href="/services" className="px-3">Services</Nav.Link>
+                            <Nav.Link href="/team" className="px-3">Resources</Nav.Link>
+                            <Nav.Link href="/contact" className="px-3">Contact</Nav.Link>
+                        </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
@@ -93,4 +105,4 @@ const Navbar1 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Na
     );
 };
 
-export default Navbar1;
+export default Navbar5;

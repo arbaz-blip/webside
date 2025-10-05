@@ -7,7 +7,8 @@ import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
     return (
-        <div className="pt-5 pb-3 position-relative bg-light">
+        <div className="pt-5 pb-3 position-relative bg-dark-blue">
+
             <Container>
                 <Row>
                     <Col lg={6}>
@@ -33,7 +34,7 @@ const Footer = () => {
                         <Row>
                             <Col xs="auto">
                                 <div className="ps-md-5">
-                                    <h5 className="text-dark mb-4 fw-semibold">Get In Touch</h5>
+                                    <h5 className= "white" style={{ color: "white" }}>Get In Touch</h5>
                                     <ul className="list-unstyled">
                                         <li className="my-1">
                                             <a href="mailto:info@cinergiedigital.com" className="text-muted">
@@ -51,7 +52,7 @@ const Footer = () => {
                             </Col>
                             <Col xs="auto">
                                 <div className="ps-md-5">
-                                    <h5 className="text-dark mb-4 fw-semibold">Company</h5>
+                                    <h5 className= "white" style={{ color: "white" }}>Company</h5>
                                     <ul className="list-unstyled">
                                         <li className="my-2">
                                             <HashLink to="/#whatwedo" className="text-muted">

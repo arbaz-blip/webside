@@ -1,3 +1,4 @@
+/* Grid Container */
 .features-grid {
   display: flex;
   gap: 2rem;
@@ -6,92 +7,54 @@
   margin-top: 2rem;
 }
 
+/* Feature Cards */
 .feature-card {
   flex: 1 1 30%;
-  border: 1px solid #c30f0f;
-  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
   text-align: center;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: #ffffff;
   transition: box-shadow 0.3s ease;
+  color: #000; /* Force black text */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .feature-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.how-we-deliver-section {
-  margin-top: 4rem;
+/* Icon Styling */
+.icon-wrapper {
+  margin-bottom: 1rem;
 }
 
-.delivery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.delivery-item {
-  background: #f9f9f9;
-  padding: 1rem;
-  border-radius: 6px;
-}
-
-.delivery-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.case-studies-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.case-study {
-  padding: 0.75rem 1rem;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.case-study-banner {
-  margin-top: 2rem;
-  position: relative;
-}
-
-.image-overlay {
-  position: relative;
-}
-
-.image-overlay img {
-  width: 200%;
-  border-radius: 8px;
-}
-
-.overlay-content,
-.overlay-content-light {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  color: white;
-  max-width: 400px;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  border-radius: 8px;
-}
-
-.overlay-content-light {
-  background: rgba(255, 255, 255, 0.8);
+.feature-icon {
   color: #000;
+  font-size: 2rem;
 }
 
-.read-story {
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: bold;
-  color: inherit;
-  text-decoration: underline;
+/* Optional: Dark section background if needed */
+.bg-dark-blue {
+  background-color: #0B121D;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.dark-section .card-body,
+.dark-section .card-body h5,
+.dark-section .card-body p {
+  color: #080808;
+}
+
+.dark-section .text-muted {
+  color: #161010 !important;
+}
+.dark-section .feature-title,
+.dark-section .feature-text {
+  color: #130d0d;
+}
+
+.dark-section .feature-text {
+  color: #130f0f; /* softer white for muted */
 }

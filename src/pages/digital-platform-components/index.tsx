@@ -1,9 +1,11 @@
-import { Navbar1 } from 'components/navbars';
+import { Navbar5 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 import Footer from 'pages/Home/Footer';
 import Platform from './Platform';
+import Timeline from './timeline';
 import Connect from 'components/shared/Connect';
 
+import "./styles.css";
 const heroVideo = require('../../assets/videos/life-at-cinergie-digital.mp4');
 
 const Blog = () => {
@@ -15,6 +17,10 @@ const Blog = () => {
                 style={{
                     height: '100vh', // Full screen hero
                     overflow: 'hidden',
+                    
+                        
+                        fontFamily: 'Garet'
+                    
                 }}
             >
                 {/* Video Background */}
@@ -45,18 +51,20 @@ const Blog = () => {
 
                 {/* Navbar and Hero Text */}
                 <div style={{ zIndex: 1, position: 'relative' }}>
-                             <Navbar1
-                      hideSearch
-                      fixedWidth
-                      navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
-                      buttonClass="btn-white text-white btn-sm"
-                  />
+                  <Navbar5
+                        isSticky={true}
+                        hideSearch
+                  
+                      />
 
                     <div className="d-flex flex-column align-items-center justify-content-center text-white text-center px-3" style={{ height: '80vh' }}>
-                        <h1 className="hero-title" style={{  color: "#fff",textShadow: '2px 2px 6px rgba(21, 20, 20, 1)' }}>
+                        <h1 className="hero-title" style={{  color: "#fff",textShadow: '2px 2px 6px rgba(21, 20, 20, 1)'  ,
+                        
+                        fontFamily: 'Garet'
+                    }} >
                             Digital Platform Outcomes
                         </h1>
-                        <p className="mt-3 fs-5 fw-bold" style={{ maxWidth: '800px', textShadow: '1px 1px 3px rgba(0, 0, 0, 1)' }}>
+                        <p className="mt-3 fs-5 fw-bold" style={{ maxWidth: '1000px', textShadow: '1px 1px 3px rgba(0, 0, 0, 1)' }}>
                             We enable technology-driven capabilities of an enterprise to effectively leverage digital
                             technologies to transform its operations, increase efficiency, and deliver enhanced value to
                             its customers.
@@ -67,6 +75,7 @@ const Blog = () => {
 
             {/* Rest of the Page */}
             <Platform />
+            <Timeline />
             <Connect
                 title="Get In Touch"
                 description="Get in touch with us today to learn more about how we can help you succeed with these digital capabilities through our solutions and services."

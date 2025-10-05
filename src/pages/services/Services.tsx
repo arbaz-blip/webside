@@ -148,7 +148,7 @@ const Services = () => {
                         <li key={i}>{item}</li>
                       ))}
                     </ul>
-                    <a href="contact.html" className="cta-link">Learn More →</a>
+                    <a href="/contact" className="cta-link">Learn More →</a>
                   </div>
                 </div>
               ))}
@@ -167,7 +167,7 @@ const Services = () => {
                         <li key={i}>{item}</li>
                       ))}
                     </ul>
-                    <a href="contact.html" className="cta-link">Learn More →</a>
+                    <a href="/contact" className="cta-link">Learn More →</a>
                   </div>
                 </div>
               ))}

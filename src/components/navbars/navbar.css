@@ -1,0 +1,18 @@
+.navbar-transparent {
+  background-color: transparent !important;
+  color: white !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-transparent .nav-link {
+  color: white !important;
+}
+
+.navbar-transparent .navbar-brand,
+.navbar-transparent .navbar-toggler {
+  color: white !important;
+}
+
+.navbar-light.bg-white {
+  transition: all 0.3s ease;
+}

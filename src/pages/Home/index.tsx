@@ -3,21 +3,23 @@ import Navbar5 from 'components/navbars/Navbar5';
 import Footer from './Footer';
 import Connect from 'components/shared/Connect';
 import WhyChooseCinergie from './WhyChooseCinergie';
-import ValueDelivered from "./ValueDelivered";
-const homeVideo = require('../../assets/videos/enterprise-it-consulting-and-ai-automation.mp4'); // ✅ Adjust path if needed
+import ValueDelivered from './ValueDelivered';
+import "./Home.css";
+const homeVideo = require('../../assets/videos/enterprise-it-consulting-and-ai-automation.mp4');
 
 const Home = () => {
     return (
         <>
-            {/* Hero Video Section */}
+            {/* Hero Section */}
             <section
                 className="position-relative"
                 style={{
-                    height: '100vh',
+                    minHeight: '100vh',
                     overflow: 'hidden',
+                    fontFamily: 'Garet'
                 }}
             >
-                {/* Video Background */}
+                {/* Background Video */}
                 <video
                     autoPlay
                     loop
@@ -32,58 +34,71 @@ const Home = () => {
                     }}
                 >
                     <source src={homeVideo} type="video/mp4" />
-                    Your browser does not support the video tag.
                 </video>
 
-                {/* Dark overlay */}
+                {/* Dark Overlay */}
                 <div
                     className="position-absolute top-0 start-0 w-100 h-100"
                     style={{
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
                         zIndex: -1,
+                        fontFamily: 'Garet'
                     }}
                 ></div>
 
-                {/* Navbar and centered content */}
-                <div style={{ zIndex: 1, position: 'relative' }}>
-                              <Navbar5
-    hideSearch
-    fixedWidth
-    navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
-    buttonClass="btn-white text-white btn-sm"
-/>
+                {/* Navbar */}
+<Navbar5
+      isSticky={true}
+      hideSearch
 
-                    <div className="d-flex flex-column align-items-center justify-content-center text-white text-center px-3" style={{ height: '80vh' }}>
-                       <h1
-                                className="hero-title"
-                                style={{
-                                    color: "#fff",
-                                    textShadow: "2px 2px 6px rgba(0, 0, 0, 0.6)", // soft black shadow
-                                }}
-                                >
-                                One partner from strategy to steady state 
-                                </h1>
+    />
 
-                        <p className="mt-3 fs-5 fw-bold" style={{ maxWidth: '800px', textShadow: '1px 1px 3px rgba(15, 14, 14, 1)' }}>
-                            Cinergie Digital transforms how enterprises build, modernise, and run software through data-led advisory, modern engineering, and managed services with ROI you can measure.
-                        </p>
-                    </div>
-                </div>
-            </section>
-<WhyChooseCinergie />
-<ValueDelivered />
+  {/* Overlay Content */}
+  <div className="hero-overlay">
+    <div className="hero-content">
+      <h1 className="hero-title" style={{
+                        
+                        fontFamily: 'Garet'
+                    }}>
+        One Partner from Strategy to Steady State
+      </h1>
+
+      <p className="hero-subtitle" style={{
+                        
+                        fontFamily: 'Garet'
+                    }}>
+        Cinergie Digital transforms how enterprises build, modernise, and run software 
+        through data-led advisory, modern engineering, and managed services with ROI you can measure.
+      </p>
+
+      <div className="hero-stats">
+        {[
+          { number: '$2M+', label: 'Saved' },
+          { number: '12 wks', label: 'Avg. Delivery Time' },
+          { number: '15%', label: 'Annual Growth' },
+          { number: '95%', label: 'Positive Ratings' },
+        ].map((item, i) => (
+          <div key={i} className="stat-item">
+            <h2>{item.number}</h2>
+            <p>{item.label}</p>
+          </div>
+        ))}
+      </div>
+
+      <a href="contact" className="hero-btn">
+        Get in Touch →
+      </a>
+    </div>
+  </div>
+</section>
+
             {/* Other Sections */}
-            {/* Uncomment below sections when needed */}
-            {/* <WhatWeDo />
-            <About />
-            <DigitalCapabilities capabilities={capabilities} />
-            <Partnerships partners={partners} />
-            <Services />
-            <Features features={features} />
-            <Connect ... /> */}
-            <Connect title="Get In Touch" description="Get in touch with us today to learn more about how we can help you unlock the full potential of your organization through our IT services." />
-
-           
+            <WhyChooseCinergie />
+            <ValueDelivered />
+            <Connect
+                title="Get In Touch"
+                description="Get in touch with us today to learn more about how we can help you unlock the full potential of your organization through our IT services."
+            />
             <Footer />
             <BackToTop />
         </>

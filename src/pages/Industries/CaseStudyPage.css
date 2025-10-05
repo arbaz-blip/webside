@@ -1,0 +1,130 @@
+.detailed-case-study-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.breadcrumbs {
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.industry-section {
+  margin-bottom: 60px;
+  padding: 40px 0;
+}
+
+.hero-image img,
+.solution-image img,
+.why-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.stats-badge {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.badge {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.challenge-section,
+.solution-section {
+  display: flex;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.challenge-section ul,
+.solution-section ul {
+  flex: 1;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.solution-image {
+  flex: 1;
+}
+
+.proof-points {
+  margin: 40px 0;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.proof-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.why-matters-section {
+  margin: 40px 0;
+}
+
+.why-matters-section ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.section-divider {
+  border: none;
+  height: 1px;
+  background: #eee;
+  margin: 60px 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid #eee;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cta-button.secondary {
+  background-color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .challenge-section,
+  .solution-section {
+    flex-direction: column;
+  }
+  
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+}

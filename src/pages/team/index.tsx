@@ -33,13 +33,11 @@ const Blog = () => {
                         backdropFilter: 'blur(0.5px)',
                     }}
                 ></div>
+<Navbar1
+      isSticky={true}
+      hideSearch
 
-              <Navbar1
-    hideSearch
-    fixedWidth
-    navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
-    buttonClass="btn-white text-white btn-sm"
-/>
+    />
 
                 {/* <Hero /> */}
             </div>

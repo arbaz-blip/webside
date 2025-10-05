@@ -59,7 +59,7 @@ const ContactUs = () => {
     };
 
     return (
-        <section className="section pb-lg-7 py-4 position-relative">
+        <section className="section">
             <Container>
                 <Row className="align-items-center">
                     <Col lg={6}>

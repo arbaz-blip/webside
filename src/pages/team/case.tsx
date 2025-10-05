@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
-import timerImg from '../../assets/images/real-time-order-tracking-dashboard-supply-chain-cinergie-digital.jpg'; // Import the image
-
+import { Link } from 'react-router-dom';
+import coverImage from '../../assets/images/real-time-order-tracking-dashboard-supply-chain-cinergie-digital.png';
 const Resources = () => {
   return (
     <>
@@ -14,17 +14,15 @@ const Resources = () => {
             <div className="left-column">
               <div className="resource-card">
                 <div className="card-image">
-                  <img src="images/digital-transformation-background.jpg" alt="Blog post on digital transformation strategies" />
+                  <img src={coverImage} alt="Blog post on digital transformation strategies" />
                   <div className="metric-badge">TOP RATED</div>
                 </div>
                 <div className="resource-content">
                   <h3>Digital Transformation Strategies</h3>
-                  <p>Learn how to implement effective digital transformation strategies for your enterprise.</p>
-                  <a href="/blogs/digital-transformation" className="cta-link">Read More →</a>
+                  <p>Learn ow to implement effective digital transformation strategies for your enterprise.</p>
+                 <a href="/real-time-order-stream">Read More →</a>
                 </div>
               </div>
-
-             
             </div>
           </div>
         </div>

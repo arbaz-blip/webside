@@ -21,35 +21,35 @@ const caseStudies = [
     title: "+45% Faster Lead Response",
     desc: "Customer 360 delivered in under 90 days with governed data integration.",
     img: bsfiImg,
-    link: "/case-studies/bsfi",
+    link: "/case-studies/bfsi",
   },
   {
     category: "T&L",
     title: "+90% Audit Compliance",
-    desc: "ERP, CRM, and RPA enabled complete process transparency.",
+    desc: "Unified revenue recognition with ERP, CRM, and RPA for accurate, audit-ready operations.",
     img: transportImg,
-    link: "/case-studies/transport",
+    link: "/case-studies/transportlogistics",
   },
   {
     category: "Healthcare",
     title: "3X Customer Value",
-    desc: "AI-driven patient insights led to measurable ROI.",
+    desc: "Scheduling, secure messaging, and telehealth integration reduced administrative overhead while improving patient engagement.",
     img: healthcareImg,
     link: "/case-studies/healthcare",
   },
   {
     category: "Enterprise Delivery",
     title: "2X Faster Releases",
-    desc: "DevOps and QA automation accelerated software delivery.",
+    desc: "Dashboards, SLOs, and quality gates cut production issues by 70% and keep rollbacks safe.",
     img: enterpriseImg,
-    link: "/case-studies/enterprise",
+    link: "/case-studies/enterprisedelivery",
   },
   {
     category: "Retail & Ecommerce",
     title: "Go Live in 10 Weeks",
-    desc: "ERP implementation delivered a rapid time-to-market.",
+    desc: "Enterprise storefront with the scalable catalogs, optimized checkout, and performance tuning.",
     img: retailImg,
-    link: "/case-studies/retail",
+    link: "/case-studies/retailecommerce",
   },
 ];
 
@@ -111,15 +111,15 @@ const ValueDelivered: React.FC = () => {
                   <div
                     className={idx % 2 === 0 ? "text-start" : "text-end"}
                   >
-                    <h3 className="fw-bold text-white mb-2">{study.title}</h3>
+                    <h3 className="fw-bold text-white mb-2 underline-heading">{study.title}</h3>
+
+
                     <p className="text-white-50 mb-3">{study.desc}</p>
                     <div>
-                      <a
-                        href={study.link}
-                        className="btn btn-light btn-lg fw-semibold"
-                      >
-                        Read Story →
-                      </a>
+   <a href={study.link} className="read-story-box-button">
+  Read Story →
+</a>
+
                     </div>
                   </div>
                 </div>

@@ -2,7 +2,7 @@ import { Navbar5 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 
 import hero from '../../assets/images/cinergie-digital-contact-hero-background.jpg.jpg';
-
+import "./contact.css";
 
 import Hero from './Hero';
 import ContactUs from './ContactUs';
@@ -18,6 +18,11 @@ const Contact = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     position: 'relative',
+                    filter: `
+                        brightness(0.9)
+                        contrast(1.15)
+                        saturate(0.9)
+                        hue-rotate(-5deg)`
                 }}
             >
                 <div
@@ -34,11 +39,11 @@ const Contact = () => {
                 ></div>
 
                          <Navbar5
-    hideSearch
-    fixedWidth
-    navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
-    buttonClass="btn-white text-white btn-sm"
-/>
+  
+      isSticky={true}
+      hideSearch
+
+    />
 
                 <Hero />
             </div>

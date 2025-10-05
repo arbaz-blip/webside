@@ -1,4 +1,4 @@
-import { Navbar1 } from 'components/navbars';
+import { Navbar5 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 import { useEffect, useState } from 'react';
 import Hero from './Hero';
@@ -80,12 +80,11 @@ const Blog = () => {
                     }}
                 ></div>
 
-                          <Navbar1
-    hideSearch
-    fixedWidth
-    navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
-    buttonClass="btn-white text-white btn-sm"
-/>
+   <Navbar5
+      isSticky={true}
+      hideSearch
+
+    />
 
                 <Hero />
             </div>

@@ -1,4 +1,6 @@
+// src/pages/case-studies/index.tsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./styles.css";
 import bsfiImg from '../../assets/images/bsfi-data-migration-faster-lead-response.jpg.jpg';
 import transportImg from '../../assets/images/transport-logistics-audit-compliance.jpg.jpg';
@@ -6,9 +8,10 @@ import healthcareImg from '../../assets/images/healthcare-ai-analytics-roi.jpg.j
 import retailImg from '../../assets/images/retail-ecommerce-go-live-10-weeks.jpg.jpg';
 import enterpriseImg from '../../assets/images/enterprise-devops-faster-releases.jpg.jpg';
 
-const Industries = () => {
-  const industries = [
+const CaseStudies = () => {
+  const caseStudies = [
     {
+      slug: "bfsi",
       title: "BFSI",
       desc: [
         "Banking & Financial Services",
@@ -21,6 +24,7 @@ const Industries = () => {
       badge: "180% ROI",
     },
     {
+      slug: "transportlogistics",
       title: "Transport & Logistics",
       desc: [
         "Fleet Management & Route Optimization",
@@ -33,6 +37,7 @@ const Industries = () => {
       badge: "+90% AUDIT COMPLIANCE",
     },
     {
+      slug: "healthcare",
       title: "Healthcare",
       desc: [
         "Patient Data Security & HIPAA/GDPR Compliance",
@@ -45,6 +50,7 @@ const Industries = () => {
       badge: "+80% PREDICTIVE ACCURACY",
     },
     {
+      slug: "retailecommerce",
       title: "Retail & Ecommerce",
       desc: [
         "Omnichannel Experience & Unified Customer View",
@@ -57,6 +63,7 @@ const Industries = () => {
       badge: "GO LIVE IN 10 WEEKS",
     },
     {
+      slug: "enterprisedelivery",
       title: "Enterprise Delivery",
       desc: [
         "DevOps Automation & CI/CD Pipelines",
@@ -74,49 +81,57 @@ const Industries = () => {
     <>
       <button id="scrollTopBtn" title="Go to top">↑</button>
 
-      <section className="resources-section">
-        <div className="resources-container">
-          <h2>Empower Your Industry with Cinergie’s Enterprise IT Services</h2>
+      <section className="resources-section bg-dark-blue">
+        {/* Changed class name from resources-container to case-studies-container */}
+        <div className="case-studies-container" style={{
+                        
+                        fontFamily: 'Garet'
+                    }}>
+          <h2>Explore Our Case Studies</h2>
           <p className="hero-subtext">
-            Cinergie Digital partners with enterprises across banking, logistics, healthcare, retail, and beyond - delivering tailored IT solutions that drive measurable outcomes.
+            Discover how Cinergie Digital delivers transformative IT solutions across industries, driving measurable outcomes and business success.
           </p>
           <div className="resources-grid">
             <div className="left-column">
-              {industries.slice(0, 3).map((industry, index) => (
-                <div key={index} className="resource-card">
-                  <div className="card-image">
-                    <img src={industry.img} alt={industry.alt} />
-                    <div className="metric-badge">{industry.badge}</div>
+              {caseStudies.slice(0, 3).map((study, index) => (
+                <Link key={index} to={`/case-studies/${study.slug}`} className="resource-card-link">
+                  <div className="resource-card">
+                    <div className="card-image">
+                      <img src={study.img} alt={study.alt} />
+                      <div className="metric-badge">{study.badge}</div>
+                    </div>
+                    <div className="resource-content">
+                      <h3>{study.title}</h3>
+                      <ul>
+                        {study.desc.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                      <span className="cta-link">Learn More →</span>
+                    </div>
                   </div>
-                  <div className="resource-content">
-                    <h3>{industry.title}</h3>
-                    <ul>
-                      {industry.desc.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                    <a href="#" className="cta-link">Learn More →</a>
-                  </div>
-                </div>
+                </Link>
               ))}
             </div>
             <div className="right-column">
-              {industries.slice(3, 5).map((industry, index) => (
-                <div key={index + 3} className="resource-card">
-                  <div className="card-image">
-                    <img src={industry.img} alt={industry.alt} />
-                    <div className="metric-badge">{industry.badge}</div>
+              {caseStudies.slice(3, 5).map((study, index) => (
+                <Link key={index + 3} to={`/case-studies/${study.slug}`} className="resource-card-link">
+                  <div className="resource-card">
+                    <div className="card-image">
+                      <img src={study.img} alt={study.alt} />
+                      <div className="metric-badge">{study.badge}</div>
+                    </div>
+                    <div className="resource-content">
+                      <h3>{study.title}</h3>
+                      <ul>
+                        {study.desc.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                      <span className="cta-link">Learn More →</span>
+                    </div>
                   </div>
-                  <div className="resource-content">
-                    <h3>{industry.title}</h3>
-                    <ul>
-                      {industry.desc.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                    <a href="#" className="cta-link">Learn More →</a>
-                  </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -126,4 +141,4 @@ const Industries = () => {
   );
 };
 
-export default Industries;
+export default CaseStudies;

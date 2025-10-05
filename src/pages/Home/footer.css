@@ -1,0 +1,40 @@
+/* footer.css */
+.bg-dark-blue {
+  background-color: #0B121D;
+  color: white;
+}
+
+.bg-dark-blue a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.bg-dark-blue a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.bg-dark-blue .text-muted {
+  color: #bbbbbb !important;
+}
+
+.bg-dark-blue hr {
+  border-color: rgba(238, 231, 231, 0.1);
+}
+
+.bg-dark-blue h5 {
+  color: #ffffff;
+}
+
+.bg-dark-blue p {
+  color: #dddddd;
+}
+
+.bg-dark-blue .icon {
+  stroke: white;
+  transition: 0.3s ease;
+}
+
+.bg-dark-blue .icon:hover {
+  stroke: #00bfff;
+}

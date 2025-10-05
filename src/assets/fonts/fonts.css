@@ -1,0 +1,15 @@
+/* Garet Book (Regular) */
+@font-face {
+  font-family: 'Garet';
+  src: url('./Garet-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Garet Heavy (Bold) */
+@font-face {
+  font-family: 'Garet';
+  src: url('./Garet-Heavy.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

@@ -33,12 +33,11 @@ const Blog = () => {
                     }}
                 ></div>
 
-              <Navbar1
-    hideSearch
-    fixedWidth
-    navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
-    buttonClass="btn-white text-white btn-sm"
-/>
+ <Navbar1
+       isSticky={true}
+       hideSearch
+ 
+     />
 
                 {/* <Hero /> */}
             </div>

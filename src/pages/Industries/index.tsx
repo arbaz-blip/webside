@@ -1,9 +1,12 @@
-import { Navbar1 } from 'components/navbars';
+
 import BackToTop from 'components/BackToTop';
+import { Navbar1 } from 'components/navbars';
+
 // import Hero from './Hero';
 // import hero from 'assets/images/dpo/f4e7f30e-ea5a-4f87-8a56-0e7f2d93111a.webp';
 import Footer from 'pages/Home/Footer';
 import Platform from './Platform';
+
 import Connect from 'components/shared/Connect';
 
 const Blog = () => {
@@ -34,8 +37,8 @@ const Blog = () => {
              <Navbar1
     hideSearch
     fixedWidth
-    navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
-    buttonClass="btn-white text-white btn-sm"
+      isSticky={true}
+
 />
 {/* 
                 <Hero /> */}

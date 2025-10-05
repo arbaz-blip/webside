@@ -7,6 +7,7 @@ Contact: support@coderthemes.com
 File: Main Css File
 */
 
+
 // FONTS
 @import 'custom/fonts';
 
@@ -78,14 +79,22 @@ File: Main Css File
 @import 'custom/pages/gallery';
 
 @font-face {
-    font-family: 'Roboto Slab';
-    font-style: semiBold;
+    font-family: 'Garet-Book';
+   
     font-weight: 600;
-    src: url('../fonts/RobotoSlab-SemiBold.ttf') format('truetype');
+    src: url('../fonts/Garet-Book.ttf') format('truetype');
+    font-style: normal;font-style: normal;
+}
+@font-face {
+  font-family: 'Garet';
+  src: url('../fonts/Garet-Heavy.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 
+
 h1 {
-    font-family: 'Roboto Slab', sans-serif;
+    font-family: 'Garet-Book'
 }
 
 .heroBanner .swiper-slide {
@@ -159,4 +168,7 @@ h1 {
     .heroBanner .swiper-slide .d-flex p {
         font-size: 16px;
     }
+}
+body {
+  font-family: 'Garet';
 }

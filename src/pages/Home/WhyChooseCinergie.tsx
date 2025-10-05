@@ -139,9 +139,9 @@ const items = [
   return (
     <>
       {/* Why Choose Section */}
-      <section className="py-5" style={{ backgroundColor: "#0B121D" }}>
+      <section className="py-5" style={{ backgroundColor: "#0B121D"}}>
         <div className="container">
-          <h2 className="text-center mb-5 fw-bold">Why Choose Cinergie?</h2>
+          <h2 className="text-center mb-5 fw-bold"style={{ color: "white" }}>Why Choose Cinergie?</h2>
           <div className="row g-4">
             {items.map((item, index) => (
               <div className="col-md-4" key={index}>
@@ -152,23 +152,27 @@ const items = [
                     alt={item.alt}
                     style={{ height: "220px", objectFit: "cover" }}
                   />
-                  <div className="card-body text-center">
-                    <h5 className="fw-bold">{item.title}</h5>
-                    <p className="text-muted">{item.text}</p>
-                  </div>
+                <section className="dark-section">
+  <div className="card-body text-center">
+    <h5 className="fw-bold">{item.title}</h5>
+    <p className="text-muted">{item.text}</p>
+  </div>
+</section>
+
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+<section className="py-5 bg-dark-blue"style={{ color: "white" }}>
+  <div className="container">
+   <h2 className="text-center mb-5 fw-bold" style={{ color: "white" }}>
+  How Cinergie Digital Delivers Secure, Compliant & Reliable IT Solutions?
+</h2>
 
-      {/* Security, Compliance & Reliability Section */}
-      <section className="py-5 bg-white">
-        <div className="container">
-          <h2 className="text-center mb-5 fw-bold">
-            How Cinergie Digital Delivers Secure, Compliant & Reliable IT Solutions?
-          </h2>
+
+
 
           <div className="row g-4">
   {features.map((feature, idx) => (
@@ -192,8 +196,11 @@ const items = [
         <div className="mb-4 d-flex justify-content-center">
           <feature.Icon className={`${feature.color}`} size={48} />
         </div>
-        <h5 className="fw-bold mb-3">{feature.title}</h5>
-        <p className="text-muted">{feature.text}</p>
+     <section className="dark-section">
+  <h5 className="feature-title">{feature.title}</h5>
+  <p className="feature-text">{feature.text}</p>
+</section>
+
       </div>
     </div>
   ))}
