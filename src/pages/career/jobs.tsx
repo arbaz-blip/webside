@@ -20,7 +20,11 @@ const JobListings = ({ jobParameters }: JobProps) => {
 
     return (
         <Container className="py-5">
-            <h1 className="text-center mb-4">Current Job Openings</h1>
+            <h2 className="text-center mb-4 fw-bold" style={{
+                fontSize: '2.5rem',
+                fontWeight: 600,
+                fontFamily: 'Garet'
+            }}>Current Job Openings</h2>
             <Row className="g-4">
                 {jobParameters.map((jobParameter, index) => (
                     <Col key={index} xs={12} sm={6} md={6} lg={6}>
@@ -29,14 +33,23 @@ const JobListings = ({ jobParameters }: JobProps) => {
                             onClick={() => applyHandle(jobParameter, jobParameter.job_id)}
                         >
                             <Card.Body>
-                                <Card.Title as="h5" className="fw-bold mb-2">{jobParameter.title}</Card.Title>
-                                <Card.Text className="mb-1">
+                                <Card.Title as="h3" className="fw-medium subheading mb-2" style={{ fontFamily: 'Garet' }}>{jobParameter.title}</Card.Title>
+                                <Card.Text className="mb-1" style={{
+                                    fontSize: '1rem',
+                                    fontFamily: 'Garet'
+                                }}>
                                     <strong>Location:</strong> {jobParameter.location}
                                 </Card.Text>
-                                <Card.Text>
+                                <Card.Text style={{
+                                    fontSize: '1rem',
+                                    fontFamily: 'Garet'
+                                }}>
                                     <strong>Salary:</strong> {jobParameter.salary_package}
                                 </Card.Text>
-                                <div className="text-primary fw-semibold mt-2">Apply now →</div>
+                                <div className="text-primary fw-semibold mt-2" style={{
+                                    fontSize: '1rem',
+                                    fontFamily: 'Garet'
+                                }}>Apply now →</div>
                             </Card.Body>
                         </Card>
                     </Col>

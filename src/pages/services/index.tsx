@@ -1,4 +1,4 @@
-import { Navbar1 } from 'components/navbars';
+import { Navbar2 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 
 // import Hero from './Hero';
@@ -18,6 +18,7 @@ const Blog = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     position: 'relative',
+                    fontFamily: 'Garet'
                 }}
             >
                 <div
@@ -28,12 +29,12 @@ const Blog = () => {
                         left: 0,
                         width: '100%',
                         height: '100%',
-                        background: 'rgba(0, 0, 0, 0.5)',
+                        background: '#ffffff',
                         backdropFilter: 'blur(0.5px)',
                     }}
                 ></div>
 
- <Navbar1
+ <Navbar2
        isSticky={true}
        hideSearch
  
@@ -49,6 +50,9 @@ const Blog = () => {
             <Footer />
 
             <BackToTop />
+
+
+            
         </>
     );
 };

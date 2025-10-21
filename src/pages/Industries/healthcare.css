@@ -1,35 +1,49 @@
-/* src/pages/case-studies/healthcare.css */
-
-.case-study-page {
+/* .case-study-page {
+ 
   
-  line-height: 1.6;
   color: #333;
 }
 
 .hero-section {
-  text-align: center;
+  
   
   background-color: #ffffff;
 }
 
 .hero-content h1 {
   color: #070707; /* Dark blue color similar to the screenshot */
-  font-size: 4rem;
-  margin-bottom:0;
-  margin-left: 0;
-  padding-top: 80px;
+.hero-heading{
+    font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  
+  color: #fff;
+   margin-bottom: 1rem;
+  margin-top: 50px;
+   padding-left: 8%;  
 }
 
-.hero-image {
-  width: 100%;
-  height: 100vh;
-  display: block;
-  
- 
+.hero-description{
+    font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 900px;
+  color: #e0e0e0;
+  margin-bottom: 2.5rem;
+  padding-left: 8%; 
 }
+
+
+
+
+
+
+
+
+
+
 .metrics-section {
-          background-color: #2c5f7f; /* dark blue background */
-          height: 100vh;
+          background-color: #DBE9EE; /* dark background */
+          height: 90vh;
           display: flex;
           align-items: center;         
           justify-content: center;     
@@ -49,35 +63,44 @@
 
         /* Left Metrics */
         .metrics-left {
-          flex: 1 1 50%;
+          flex: 1 1 40%;
           text-align: left;
-          color: white;
+          color: rgb(15, 13, 13);
+          margin-top: 0%;
         }
 
         .metric-item {
-          font-size: 3.5rem;          /* Bigger for main metrics */
-          font-weight: bold;          /* BOLD text */
+          font-size: 3.2rem;          /* Updated to match h2 size */
+          font-weight: 500;          /* BOLD text */
           margin-bottom: 30px;        /* Spacing between lines */
           line-height: 1.2;           /* Adjusted for better spacing (original had 5, which was too large) */
-          text-transform: uppercase;  /* Match uppercase in image */
+          text-transform: uppercase; 
+           padding-left: 8%;  
+           color: rgb(15, 13, 13);
+           /* Match uppercase in image */
+        }
+        .metrics-descriptions{
+           padding-left: 8%;
+           font-size: 1.125rem;
         }
 
         .metrics-subtitle {
-          font-size: 1.5rem;          /* Smaller for the subtitle */
-          font-weight: normal;
-          margin-top: 20px;
+          font-size: 1rem;          /* Smaller for the subtitle */
+          font-weight: bold;
+          margin-top: 10px;
           line-height: 1.5;
         }
 
         /* Right Box */
       .metrics-right {
-  flex: 1 1 40%;
- background-color: #d1ecf1;  /* light blue background */
+  flex: 1 1 30%;
+ background-color: #C0D6DF;  /* grey background */
   padding: 50px 40px;
-  color: #2c5f7f;
-  font-size: 2rem;             /* larger paragraph */
+  color: #111;
+  font-size: 2rem;             /* Updated paragraph size */
   line-height: 1.6;
   border-radius: 4px;
+  
   font-weight: 400;
 }
         .metric-item{
@@ -86,28 +109,44 @@
 
 /* Challenge Section */
 .challenge-section {
+  height: 90vh;
+  display: flex;
+   padding-left: 8%;  
+  align-items: center;
   padding: 40px 20px;
+  background-color: #4F6D7A;
+  color: white;
+  font-size: 1.125rem; /* Updated to paragraph size */
 }
 
 .challenge-section h2 {
-  font-size: 2rem;
+  font-size: 3rem; /* Consistent h2 size */
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 100;
+}
+.challenge-section  p {
+  font-size: 2rem; /* Updated paragraph size */
   margin-bottom: 20px;
 }
 
 .challenge-section ul {
   list-style-type: disc;
+  font-size: 1.5rem; /* Updated to paragraph size */
   padding-left: 20px;
 }
 
 /* CSS Styles */
 .approach-blocks-section {
   padding: 60px 20px;
-  background-color: #bee5eb;
+  background-color: #C0D6DF;
+  color: black;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  font-size: 1.125rem; /* Updated to paragraph size */ 
 }
 
 .approach-block {
@@ -129,10 +168,10 @@
 }
 
 .approach-content h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 2.5rem; /* Updated to h2 size for consistency */
+  font-weight: 500;
   margin-bottom: 15px;
-  color: #2c5f7f;
+  color: #090808;
 }
 
 .approach-content ul {
@@ -143,12 +182,14 @@
 
 .approach-content ul li {
   margin-bottom: 8px;
-  color: #333;
+  color: #080707;
+  font-weight: 500;
   line-height: 1.6;
+  font-size: 1.125rem; /* Updated to paragraph size */
 }
 
 .approach-image {
-  background-color: #2c5f7f;
+  background-color: #a82e2e;
   border-radius: 4px;
   aspect-ratio: 16 / 9;
   overflow: hidden;
@@ -158,6 +199,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+      filter: 
+        brightness(0.9)
+        contrast(1.15)
+        saturate(0.9)
+        hue-rotate(-5deg)
+
+
 }
 
 /* Responsive Design */
@@ -173,126 +221,179 @@
   }
 }
 /* Proof of Value Section */
+/* proof-of-value.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #DBE9EE;
+}
+
 .proof-section {
-  padding: 40px 20px;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .proof-section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  text-align: center;
-  color: #333;
+    font-size: 2.5rem; /* Consistent h2 size */
+    font-weight: 500;
+    margin-bottom: 60px;
+    color: #1a1a1a;
+    text-align: center;
 }
 
 .proof-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
 }
 
-.proof-item {
-  text-align: center;
-  padding: 25px 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 180px; /* Fixed height for uniform size */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.proof-card {
+    background-color: #f8f9fa;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    border-bottom: 2px solid #342e2e;  /* Add this line for the thick bottom border */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
-.proof-item .icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  line-height: 1;
+.proof-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    border-color: #d1d5db;
 }
 
-.proof-item h3 {
-  font-size: 1.1rem;
-  margin: 0 0 8px 0;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-decoration: underline;
-  letter-spacing: 0.5px;
+.icon-circle {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.proof-item p {
-  font-size: 0.85rem;
-  margin: 0;
-  line-height: 1.3;
-  color: #666;
+.icon-circle svg {
+    width: 28px;
+    height: 28px;
 }
 
-.bugs-card {
-  background-color: #d1ecf1;
-  color: #2c5f7f;
+/* Icon color variations */
+.green-icon {
+    background-color: #dcfce7;
+    color: #10b981;
 }
 
-.releases-card {
-  background-color: #cce7ff;
-  color: #004085;
+.yellow-icon {
+    background-color: #fef3c7;
+    color: #f59e0b;
 }
 
-.lead-card {
-  background-color: #d4edda;
-  color: #155724;
+.blue-icon {
+    background-color: #dbeafe;
+    color: #3b82f6;
 }
 
-.reporting-card {
-  background-color: #fff3cd;
-  color: #856404;
+.indigo-icon {
+    background-color: #e0e7ff;
+    color: #6366f1;
 }
 
-.errors-card {
-  background-color: #f8d7da;
-  color: #721c24;
+.pink-icon {
+    background-color: #fce7f3;
+    color: #ec4899;
 }
 
-.audit-card {
-  background-color: #e2e3e5;
-  color: #383d41;
+.cyan-icon {
+    background-color: #cffafe;
+    color: #06b6d4;
 }
 
-/* Responsive for smaller screens */
+.card-content {
+    flex: 1;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.card-content p {
+    font-size: 1.125rem; /* Updated to paragraph size */
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .proof-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .proof-item {
-    height: auto;
-  }
+    .proof-section {
+        padding: 60px 15px;
+    }
+    
+    .proof-section h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .proof-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .proof-card {
+        padding: 24px;
+    }
 }
 /* Why It Matters Section */
 .why-matters-section {
-  padding: 40px 20px;
-  background-color: #f8f9fa;
+  padding: 20px 20px;
+  height: 90vh;
+  background-color: #4F6D7A;
+  margin-top: 5%;
+  font-size: 1.125rem; /* Updated to paragraph size */
+color: white;
+ 
 }
 
 .why-matters-section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Consistent h2 size */
   margin-bottom: 20px;
-  text-decoration: underline;
-  text-underline-offset: 8px;
+ 
+  margin-top: 10%;
   text-decoration-thickness: 2px;
+  color: white;
+  font-weight: 100;
 }
 
 .why-matters-section p {
   margin-bottom: 15px;
-  color: #333;
+  color: #f9f5f5;
   line-height: 1.6;
+   font-size: 1.125rem; /* Updated paragraph size */
 }
 
 .why-matters-section ul {
   list-style-type: disc;
   padding-left: 20px;
+   font-size: 1.125rem; /* Updated to paragraph size */
 }
 
 .why-matters-section ul li {
   margin-bottom: 10px;
-  color: #333;
+  color: #f9f5f5;
   line-height: 1.6;
 }
 
@@ -300,37 +401,40 @@
 
 /* Outcomes Section */
 .outcomes-section {
-  background-color: #f5f5f5;
+  background-color: #DBE9EE;
   padding: 60px 20px;
+  height: 90vh;
 }
 
 .outcomes-section h2 {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 2.5rem; /* Consistent h2 size */
+  font-weight: 600;
   margin-bottom: 30px;
-  color: #333;
+  margin-top: 5%;
+  color: black;
   text-align: center;
+  font-weight: 100;
 }
 
 .outcomes-section ul {
   list-style: none;
   padding-left: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .outcomes-section li {
-  font-size: 18px;
+  font-size: 1.25rem; /* Updated to paragraph size */
   padding: 25px;
-  background-color: white;
+  background-color: #C0D6DF;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  font-weight: 600;
-  color: #2c5f7f;
+  font-weight: 500;
+  color: #0e0d0d;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -343,7 +447,7 @@
 .cta-section {
   padding: 60px 20px;
   background-color: #f0f8ff;
-  background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23d1ecf1" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23e3f2fd" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
   position: relative;
   overflow: hidden;
 }
@@ -355,7 +459,7 @@
   left: 0;
   width: 100%;
   height: 100px;
-  background: radial-gradient(ellipse at bottom, transparent 0%, #d1ecf1 100%);
+  background: radial-gradient(ellipse at bottom, transparent 0%, #e3f2fd 100%);
   z-index: 1;
 }
 
@@ -376,15 +480,15 @@
 }
 
 .cta-card h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem; /* Consistent h2 size */
   margin-bottom: 15px;
-  color: #2c5f7f;
-  font-weight: bold;
+  color: #1976d2;
+  font-weight: 600;
   line-height: 1.3;
 }
 
 .cta-card p {
-  font-size: 1.1rem;
+  font-size: 1.125rem; /* Updated paragraph size */
   margin-bottom: 30px;
   color: #555;
   line-height: 1.6;
@@ -401,33 +505,34 @@
   padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.125rem; /* Updated to paragraph size */
   font-weight: 500;
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
 
 .cta-btn-primary {
-  background-color: #2c5f7f;
+  background-color: #1976d2;
   color: white;
-  border-color: #2c5f7f;
+  border-color: #1976d2;
 }
 
 .cta-btn-primary:hover {
-  background-color: #1b4b5f;
-  border-color: #1b4b5f;
+  background-color: #1565c0;
+  border-color: #1565c0;
   transform: translateY(-2px);
+  color: rgb(16, 13, 13);
 }
 
 .cta-btn-secondary {
   background-color: transparent;
-  color: #2c5f7f;
-  border-color: #2c5f7f;
+  color: #1976d2;
+  border-color: #1976d2;
 }
 
 .cta-btn-secondary:hover {
-  background-color: #2c5f7f;
-  color: white;
+  background-color: #1976d2;
+  color: rgb(18, 14, 14);
 }
 
 /* Responsive */
@@ -445,7 +550,7 @@
   }
   
   .cta-card p {
-    font-size: 1rem;
+    font-size: 1.125rem; /* Consistent */
   }
   
   .cta-buttons {
@@ -458,45 +563,8 @@
     max-width: 250px;
   }
 }
-/* Footer Section */
-.footer-section {
-  position: relative;
-  height: 200px;
-  color: #ffffff;
+.subheading {
+  font-size: 2.5rem; /* Updated to h2 size for consistency */
+  font-weight: 500;
+  font-family: 'Garet';
 }
-
-.footer-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-.proof-item .icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.proof-item .icon svg {
-  width: 100%;
-  height: 100%;
-  stroke-width: 2;
-}
-
-/* Color variations for each card */
-.bugs-card .icon { color: #10b981; } /* Green for growth/ROI */
-.releases-card .icon { color: #f59e0b; } /* Orange for speed/time */
-.lead-card .icon { color: #3b82f6; } /* Blue for compliance/security */
-.reporting-card .icon { color: #ec4899; } /* Pink for patient engagement */
-.errors-card .icon { color: #ef4444; } /* Red for security/lock */
-.audit-card .icon { color: #8b5cf6; } /* Purple for AI/intelligence */

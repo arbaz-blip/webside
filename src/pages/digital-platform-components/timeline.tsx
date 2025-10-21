@@ -6,15 +6,18 @@ export default function TimelineSection() {
       padding: '80px 20px',
       maxWidth: '1200px',
       margin: '0 auto',
-      fontFamily: 'Garet'
+      fontFamily: 'Garet',
+     
   
     }}>
       <h2 style={{
         fontSize: '2.5rem',
-        fontWeight: '300',
+        fontWeight: '600',
         textAlign: 'center',
         marginBottom: '80px',
-        color: '#1a1a1a'
+        color: '#1a1a1a',
+        fontFamily: 'Garet'
+          
       }}>
         Cinergie's Proven Approach
       </h2>
@@ -27,10 +30,11 @@ export default function TimelineSection() {
           left: '5%',
           right: '5%',
           height: '8px',
-          background: 'linear-gradient(to right, #4a4a4a 0%, #4a4a4a 33%, #bbb 33%, #bbb 66%, #ddd 66%, #ddd 100%)',
+          background: 'linear-gradient(to right, #0784a3 0%, #0784a3 33%, #3FAAD9 33%, #bbb 66%, #ddd 66%, #ddd 100%)',
           transform: 'translateY(-50%)',
           borderRadius: '4px',
-          zIndex: 1
+          zIndex: 0,
+             fontFamily: 'Garet'
         }} />
 
         {/* Timeline Items Container */}
@@ -39,16 +43,18 @@ export default function TimelineSection() {
           gridTemplateColumns: 'repeat(4, 1fr)',
           gap: '0',
           position: 'relative',
-          zIndex: 2
+          zIndex: 0,
+          fontFamily: 'Garet'
         }}>
           {/* Stage 1 - Top */}
           <div style={{ textAlign: 'center' }}>
             <div style={{ marginBottom: '40px' }}>
               <div style={{
-                fontSize: '0.9rem',
+                fontSize: '1.5rem',
                 fontWeight: '600',
                 marginBottom: '15px',
-                color: '#333'
+                color: '#333',
+                fontFamily: 'Garet'
               }}>
                 1-2 Weeks
               </div>
@@ -56,7 +62,7 @@ export default function TimelineSection() {
                 width: '70px',
                 height: '70px',
                 borderRadius: '50%',
-                background: '#4a4a4a',
+                background: '#0784a3',
                 color: 'white',
                 display: 'flex',
                 alignItems: 'center',
@@ -64,7 +70,8 @@ export default function TimelineSection() {
                 fontSize: '2rem',
                 fontWeight: '600',
                 margin: '0 auto',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                fontFamily: 'Garet'
               }}>
                 1
               </div>
@@ -74,28 +81,32 @@ export default function TimelineSection() {
             <div style={{
               width: '2px',
               height: '60px',
-              background: '#4a4a4a',
-              margin: '0 auto 20px'
+              background: '#3FAAD9',
+              margin: '0 auto 20px',
+              fontFamily: 'Garet'
             }} />
             
             {/* Stage Info - Bottom */}
             <div style={{
               padding: '20px',
-              textAlign: 'center'
+              textAlign: 'center',
+              fontFamily: 'Garet'
             }}>
               <div style={{
-                fontSize: '0.75rem',
+                fontSize: '1.5rem',
                 fontWeight: '700',
                 letterSpacing: '1px',
                 marginBottom: '8px',
-                color: '#333'
+                color: '#333',
+                fontFamily: 'Garet'
               }}>
                 STAGE
               </div>
               <div style={{
-                fontSize: '0.85rem',
+                fontSize: '1rem',
                 color: '#666',
-                lineHeight: '1.5'
+                lineHeight: '1.5',
+                fontFamily: 'Garet'
               }}>
                 Roadmaps, audit, tech recommendations
               </div>
@@ -108,21 +119,24 @@ export default function TimelineSection() {
             <div style={{
               padding: '20px',
               textAlign: 'center',
-              marginBottom: '20px'
+              marginBottom: '20px',
+              fontFamily: 'Garet'
             }}>
               <div style={{
-                fontSize: '0.75rem',
+                fontSize: '1.5rem',
                 fontWeight: '700',
                 letterSpacing: '1px',
                 marginBottom: '8px',
-                color: '#333'
+                color: '#333',
+                fontFamily: 'Garet'
               }}>
                 STAGE
               </div>
               <div style={{
-                fontSize: '0.85rem',
+                fontSize: '1rem',
                 color: '#666',
-                lineHeight: '1.5'
+                lineHeight: '1.5',
+                fontFamily: 'Garet'
               }}>
                 User flows, architecture, specs
               </div>
@@ -132,8 +146,9 @@ export default function TimelineSection() {
             <div style={{
               width: '2px',
               height: '60px',
-              background: '#666',
-              margin: '0 auto 20px'
+              background: '#3FAAD9',
+              margin: '0 auto 20px',
+              fontFamily: 'Garet'
             }} />
             
             <div>
@@ -141,7 +156,7 @@ export default function TimelineSection() {
                 width: '70px',
                 height: '70px',
                 borderRadius: '50%',
-                background: '#666',
+                background: '#0784a3',
                 color: 'white',
                 display: 'flex',
                 alignItems: 'center',
@@ -149,14 +164,16 @@ export default function TimelineSection() {
                 fontSize: '2rem',
                 fontWeight: '600',
                 margin: '0 auto 15px',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                fontFamily: 'Garet'
               }}>
                 2
               </div>
               <div style={{
-                fontSize: '0.9rem',
+                fontSize: '1.5rem',
                 fontWeight: '600',
-                color: '#333'
+                color: '#333',
+                fontFamily: 'Garet'
               }}>
                 2-3 Weeks
               </div>
@@ -167,10 +184,11 @@ export default function TimelineSection() {
           <div style={{ textAlign: 'center' }}>
             <div style={{ marginBottom: '40px' }}>
               <div style={{
-                fontSize: '0.9rem',
+                fontSize: '1.5rem',
                 fontWeight: '600',
                 marginBottom: '15px',
-                color: '#333'
+                color: '#333',
+                fontFamily: 'Garet'
               }}>
                 6-10 Weeks
               </div>
@@ -178,7 +196,7 @@ export default function TimelineSection() {
                 width: '70px',
                 height: '70px',
                 borderRadius: '50%',
-                background: '#bbb',
+                background: '#3FAAD9',
                 color: 'white',
                 display: 'flex',
                 alignItems: 'center',
@@ -186,7 +204,8 @@ export default function TimelineSection() {
                 fontSize: '2rem',
                 fontWeight: '600',
                 margin: '0 auto',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                boxShadow: '0 4px 6px #0784a3',
+                fontFamily: 'Garet'
               }}>
                 3
               </div>
@@ -196,8 +215,9 @@ export default function TimelineSection() {
             <div style={{
               width: '2px',
               height: '60px',
-              background: '#bbb',
-              margin: '0 auto 20px'
+              background: '#0784a3',
+              margin: '0 auto 20px',
+              fontFamily: 'Garet'
             }} />
             
             {/* Stage Info - Bottom */}
@@ -206,18 +226,20 @@ export default function TimelineSection() {
               textAlign: 'center'
             }}>
               <div style={{
-                fontSize: '0.75rem',
+                fontSize: '1.5rem',
                 fontWeight: '700',
                 letterSpacing: '1px',
                 marginBottom: '8px',
-                color: '#333'
+                color: '#333',
+                fontFamily: 'Garet'
               }}>
                 STAGE
               </div>
               <div style={{
-                fontSize: '0.85rem',
+                fontSize: '1rem',
                 color: '#666',
-                lineHeight: '1.5'
+                lineHeight: '1.5',
+                fontFamily: 'Garet'
               }}>
                 Go live, train, improve
               </div>
@@ -230,21 +252,24 @@ export default function TimelineSection() {
             <div style={{
               padding: '20px',
               textAlign: 'center',
-              marginBottom: '20px'
+              marginBottom: '20px',
+              fontFamily: 'Garet'
             }}>
               <div style={{
-                fontSize: '0.75rem',
+                fontSize: '1.5rem',
                 fontWeight: '700',
                 letterSpacing: '1px',
                 marginBottom: '8px',
-                color: '#333'
+                color: '#333',
+                fontFamily: 'Garet'
               }}>
                 STAGE
               </div>
               <div style={{
-                fontSize: '0.85rem',
+                fontSize: '1rem',
                 color: '#666',
-                lineHeight: '1.5'
+                lineHeight: '1.5',
+                fontFamily: 'Garet'
               }}>
                 Build, integrate, test
               </div>
@@ -254,8 +279,9 @@ export default function TimelineSection() {
             <div style={{
               width: '2px',
               height: '60px',
-              background: '#ccc',
-              margin: '0 auto 20px'
+              background: '#0784a3',
+              margin: '0 auto 20px',
+              fontFamily: 'Garet'
             }} />
             
             <div>
@@ -263,7 +289,7 @@ export default function TimelineSection() {
                 width: '70px',
                 height: '70px',
                 borderRadius: '50%',
-                background: '#ccc',
+                background: '#3FAAD9',
                 color: 'white',
                 display: 'flex',
                 alignItems: 'center',
@@ -271,14 +297,16 @@ export default function TimelineSection() {
                 fontSize: '2rem',
                 fontWeight: '600',
                 margin: '0 auto 15px',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                boxShadow: '0 4px 6px #3FAAD9',
+                fontFamily: 'Garet'
               }}>
                 4
               </div>
               <div style={{
-                fontSize: '0.9rem',
+                fontSize: '1.5rem',
                 fontWeight: '600',
-                color: '#333'
+                color: '#333',
+                fontFamily: 'Garet'
               }}>
                 1-2 Weeks
               </div>

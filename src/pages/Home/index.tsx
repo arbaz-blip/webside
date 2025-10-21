@@ -5,7 +5,9 @@ import Connect from 'components/shared/Connect';
 import WhyChooseCinergie from './WhyChooseCinergie';
 import ValueDelivered from './ValueDelivered';
 import "./Home.css";
-const homeVideo = require('../../assets/videos/enterprise-it-consulting-and-ai-automation.mp4');
+import HeroBackground from "../../assets/images/Hero-Background.png";
+import MainPageHeroBackgroundImage from "../../assets/images/MainPageHeroBackgroundImage.png";
+// const homeVideo = require('../../assets/videos/enterprise-it-consulting-and-ai-automation.mp4');
 
 const Home = () => {
     return (
@@ -15,33 +17,31 @@ const Home = () => {
                 className="position-relative"
                 style={{
                     minHeight: '100vh',
-                    overflow: 'hidden',
+                    
                     fontFamily: 'Garet'
                 }}
             >
-                {/* Background Video */}
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="position-absolute w-100 h-100"
-                    style={{
-                        objectFit: 'cover',
-                        top: 0,
-                        left: 0,
-                        zIndex: -2,
-                    }}
-                >
-                    <source src={homeVideo} type="video/mp4" />
-                </video>
+               {/* Background Image */}
+<div
+  className="hero-background-image position-absolute w-100 h-100"
+  style={{
+    backgroundImage: `url(${MainPageHeroBackgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    top: 0,
+    left: 0,
+    zIndex: -2,
+  }}
+></div>
+
 
                 {/* Dark Overlay */}
                 <div
                     className="position-absolute top-0 start-0 w-100 h-100"
                     style={{
-                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                        zIndex: -1,
+                        // backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                       
                         fontFamily: 'Garet'
                     }}
                 ></div>

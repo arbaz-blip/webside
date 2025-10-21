@@ -2,8 +2,8 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import FeatherIcon from 'feather-icons-react';
-
-import hero from 'assets/images/digital-transformation-background.jpg.jpg'; // ✅ imported as a module
+import "./connect.css";
+import hero from 'assets/images/digital-transformation-background.jpg.png'; // ✅ imported as a module
 
 interface ConnectProps {
     title: string;
@@ -42,9 +42,10 @@ const Connect: React.FC<ConnectProps> = ({
                             <h1 className={`${titleClassName} fw-medium`} style={{
                // optional dark overlay
                     
-                    color: 'white',
+                    color: 'black',
+                    
                 }}>{title}</h1>
-                            <p className="text-white mx-auto">{description}</p>
+                            <p className="text-black mx-auto">{description}</p>
 
                             <div className="text-center mt-5">
                                 <Link to="/contact" className="btn btn-primary">

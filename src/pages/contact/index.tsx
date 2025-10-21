@@ -22,7 +22,8 @@ const Contact = () => {
                         brightness(0.9)
                         contrast(1.15)
                         saturate(0.9)
-                        hue-rotate(-5deg)`
+                        hue-rotate(-5deg)`,
+                    fontFamily: 'Garet'
                 }}
             >
                 <div

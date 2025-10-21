@@ -1,4 +1,4 @@
-import { Navbar1 } from 'components/navbars';
+import { Navbar2 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 
 // import Hero from './Hero';
@@ -14,14 +14,15 @@ const Blog = () => {
     const location = useLocation();
     const jobParams = (location.state as JobParameter[]) || [];
     return (
-        <>
+         <>
             <div
                 className="bg-gradient2"
                 style={{
                     // background: `url(${hero})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'top',
+                    backgroundPosition: 'center',
                     position: 'relative',
+                    fontFamily: 'Garet'
                 }}
             >
                 <div
@@ -32,17 +33,16 @@ const Blog = () => {
                         left: 0,
                         width: '100%',
                         height: '100%',
-                        background: 'rgba(0, 0, 0, 0.5)',
+                         background: '#ffffff',
                         backdropFilter: 'blur(0.5px)',
                     }}
                 ></div>
 
-                <Navbar1
-                    hideSearch
-                    fixedWidth
-                    navClass="navbar-dark zindex-10"
-                    buttonClass="btn-white text-white btn-sm"
-                />
+ <Navbar2
+       isSticky={true}
+       hideSearch
+ 
+     />
 
                 {/* <Hero /> */}
             </div>

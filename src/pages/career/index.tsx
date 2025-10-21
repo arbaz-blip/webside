@@ -5,7 +5,7 @@ import Hero from './Hero';
 import { JobParameter } from './types';
 import axios from "axios";
 import { Spinner } from 'react-bootstrap';
-import hero from 'assets/images/cinergie-digital-join-our-team.jpg.jpg';
+import hero from 'assets/images/cinergie-digital-join-our-team.jpg.png';
 import Footer from 'pages/Home/Footer';
 
 import Connect from 'components/shared/Connect';
@@ -58,27 +58,27 @@ const Blog = () => {
 
     return (
         <>
-            <div
-                className="bg-gradient2"
-                style={{
-                    background: `url(${hero})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'top',
-                    position: 'relative',
-                }}
-            >
-                <div
-                    className="overlay"
-                    style={{
-                        position: 'absolute',
-                        top: 50,
-                        left: 50,
-                        width: '100%',
-                        height: '100%',
-                        
-                        
-                    }}
-                ></div>
+           <div
+  className="bg-gradient2"
+  style={{
+    background: `url(${hero})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center', // Changed from 'top' to 'center' to show people at the bottom
+    position: 'relative',
+     height: '95vh',
+     
+  }}
+>
+  <div
+    className="overlay"
+    style={{
+      position: 'absolute',
+      top: 50, // Assuming this is in px; if not, clarify unit (e.g., top: '50px')
+      width: '100%',
+      height: '100%',
+    //   background: 'rgba(0, 0, 0, 0.4)', // Add semi-transparent overlay for text readability if needed
+    }}
+  ></div>
 
    <Navbar5
       isSticky={true}

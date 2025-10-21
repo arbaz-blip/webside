@@ -59,7 +59,7 @@ const ContactUs = () => {
     };
 
     return (
-        <section className="section">
+        <section className="section" style={{ fontFamily: 'Garet' }}>
             <Container>
                 <Row className="align-items-center">
                     <Col lg={6}>
@@ -115,8 +115,12 @@ const ContactUs = () => {
                     <Col lg={10}>
                         <Card className="shadow-none">
                             <Card.Body className="p-xl-5 p-0">
-                                <h2 className="mb-2 mt-0 fw-medium">Ready to Connect?</h2>
-                                <p className="mb-5">
+                                <h2 className="mb-2 mt-0 fw-medium" style={{
+                                    fontSize: '2.5rem',
+                                    fontWeight: 600,
+                                    fontFamily: 'Garet'
+                                }}>Ready to Connect?</h2>
+                                <p className="mb-5" style={{ fontFamily: 'Garet' }}>
                                     Drop us a note by filling out the form below. We're eager to connect with you and
                                     will be in touch shortly.
                                 </p>
@@ -210,8 +214,12 @@ const ContactUs = () => {
                                         <span className="icon icon-lg text-success">
                                             <FeatherIcon icon="check-circle" className="icon-dual-success" />
                                         </span>
-                                        <h4 className="text-success mt-0">Application Sent</h4>
-                                        <p className="mx-auto text-muted">
+                                        <h4 className="text-success mt-0" style={{
+                                            fontSize: '1.5rem',
+                                            fontWeight: 500,
+                                            fontFamily: 'Garet'
+                                        }}>Application Sent</h4>
+                                        <p className="mx-auto text-muted" style={{ fontFamily: 'Garet' }}>
                                             Thank you for your application! We've received it and will process it
                                             shortly.
                                         </p>
@@ -234,8 +242,12 @@ const ContactUs = () => {
                                         <span className="icon icon-md text-danger">
                                             <FeatherIcon icon="alert-octagon" className="icon-dual-danger" />
                                         </span>
-                                        <h4 className="text-danger mt-0">Something went wrong.</h4>
-                                        <p className="mx-auto text-muted mt-2">
+                                        <h4 className="text-danger mt-0" style={{
+                                            fontSize: '1.5rem',
+                                            fontWeight: 500,
+                                            fontFamily: 'Garet'
+                                        }}>Something went wrong.</h4>
+                                        <p className="mx-auto text-muted mt-2" style={{ fontFamily: 'Garet' }}>
                                             We are unable to process your request at the moment. Our appologies, try
                                             again in a few minutes.
                                         </p>

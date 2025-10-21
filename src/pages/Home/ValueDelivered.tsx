@@ -1,39 +1,41 @@
 import React, { useState } from "react";
 import "./ValueDelivered.css";
-import bsfiImg from "../../assets/images/bsfi-data-migration-faster-lead-response.jpg.jpg";
-import transportImg from "../../assets/images/transport-logistics-audit-compliance.jpg.jpg";
-import healthcareImg from "../../assets/images/healthcare-ai-analytics-roi.jpg.jpg";
-import enterpriseImg from "../../assets/images/enterprise-devops-faster-releases.jpg.jpg";
-import retailImg from "../../assets/images/retail-ecommerce-go-live-10-weeks.jpg.jpg";
+import bfsiImg from "../../assets/images/bsfi-data-migration-faster-lead-response.jpg.png";
+import transportImg from "../../assets/images/transport-logistics-audit-compliance.jpg.png";
+import healthcareImg from "../../assets/images/healthcare-ai-analytics-roi.jpg.png";
+import enterpriseImg from "../../assets/images/enterprise-devops-faster-releases.jpg.png";
+import retailImg from "../../assets/images/retail-ecommerce-go-live-10-weeks.jpg.png";
 
 const categories = [
   "All",
-  "BSFI",
-  "T&L",
+  "BFSI",
+  "Transport & Logistics",
   "Healthcare",
   "Enterprise Delivery",
   "Retail & Ecommerce",
 ];
 
 const caseStudies = [
-  {
-    category: "BSFI",
-    title: "+45% Faster Lead Response",
-    desc: "Customer 360 delivered in under 90 days with governed data integration.",
-    img: bsfiImg,
-    link: "/case-studies/bfsi",
-  },
-  {
-    category: "T&L",
+    {
+    category: "Transport & Logistics",
     title: "+90% Audit Compliance",
     desc: "Unified revenue recognition with ERP, CRM, and RPA for accurate, audit-ready operations.",
     img: transportImg,
     link: "/case-studies/transportlogistics",
   },
   {
+    category: "BFSI",
+    title: "+45% Faster Lead Response",
+    desc: "Customer 360 delivered in under 90 days with governed data integration.",
+    img: bfsiImg,
+    link: "/case-studies/bfsi",
+  },
+
+  {
     category: "Healthcare",
     title: "3X Customer Value",
-    desc: "Scheduling, secure messaging, and telehealth integration reduced administrative overhead while improving patient engagement.",
+    desc: ["Modernized healthcare workflows with ", <br/>, "  scheduling and secure chat tools"],
+    
     img: healthcareImg,
     link: "/case-studies/healthcare",
   },
@@ -47,7 +49,7 @@ const caseStudies = [
   {
     category: "Retail & Ecommerce",
     title: "Go Live in 10 Weeks",
-    desc: "Enterprise storefront with the scalable catalogs, optimized checkout, and performance tuning.",
+    desc: "Enterprise storefront with scalable catalogs, optimized checkout, and performance tuning.",
     img: retailImg,
     link: "/case-studies/retailecommerce",
   },
@@ -64,13 +66,12 @@ const ValueDelivered: React.FC = () => {
   return (
     <section className="py-5 bg-blue">
       <div className="container text-center">
-        {/* Heading */}
         <h2 className="fw-bold mb-3">Value Delivered</h2>
-        <p className="text-muted fs-5 mb-4">
+        <p className="text-muted  mb-4">
           Real Client Success Stories in Aviation, Finance & Logistics
         </p>
 
-        {/* Category Filter Buttons */}
+        {/* Category Buttons */}
         <div className="d-flex flex-wrap justify-content-center gap-3 mb-5">
           {categories.map((cat) => (
             <button
@@ -87,41 +88,38 @@ const ValueDelivered: React.FC = () => {
           ))}
         </div>
 
-        {/* Case Study Cards */}
+        {/* Case Studies */}
         <div className="row g-0">
           {filteredStudies.map((study, idx) => (
             <div className="col-12 mb-4" key={idx}>
               <div
-                className="card border-0 shadow-sm rounded-4 overflow-hidden position-relative"
+                className="case-category-label position-relative overflow-hidden"
                 style={{
                   backgroundImage: `url(${study.img})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   height: "350px",
-                  width: "100%",
                 }}
               >
+                {/* Category name */}
+                <div className="category-name-overlay">{study.category}</div>
+
+                {/* Dark overlay for readability */}
+                <div className="case-overlay"></div>
+
+                {/* Text content */}
                 <div
-                  className="position-absolute bottom-0 w-100 p-4"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%)",
-                  }}
+                  className={`case-content position-absolute bottom-0 w-100 p-4 ${
+                    idx % 2 === 0 ? "text-start" : "text-end"
+                  }`}
                 >
-                  <div
-                    className={idx % 2 === 0 ? "text-start" : "text-end"}
-                  >
-                    <h3 className="fw-bold text-white mb-2 underline-heading">{study.title}</h3>
-
-
-                    <p className="text-white-50 mb-3">{study.desc}</p>
-                    <div>
-   <a href={study.link} className="read-story-box-button">
-  Read Story →
-</a>
-
-                    </div>
-                  </div>
+                  <h3 className="fw-bold text-white mb-2 underline-heading">
+                    {study.title}
+                  </h3>
+                  <p className="text-light mb-3">{study.desc}</p>
+                  <a href={study.link} className="read-story-box-button">
+                    Read Story →
+                  </a>
                 </div>
               </div>
             </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import "./WhyChooseCinergie.css";
-import provenLeadership from "../../assets/images/proven-leadership-it-consulting.jpg.jpg";
-import skilledProfessionals from "../../assets/images/skilled-professional-it-team.jpg.jpg";
-import tailoredSolutions from "../../assets/images/tailored-enterprise-solutions.jpg.jpg";
+import provenLeadership from "../../assets/images/Proven-Leadership.png";
+import skilledProfessionals from "../../assets/images/Skilled-Professionals.jpg";
+import tailoredSolutions from "../../assets/images/Tailored- Solutions.png";
 // Inline SVG icon components (no external icon library)
 const WhyChooseCinergie: React.FC = () => {
 const ShieldIcon: React.FC<{ className?: string; size?: number }> = ({ className = "", size = 36 }) => (
@@ -121,7 +121,7 @@ const items = [
   },
   {
     title: "Tailored Solutions",
-    text: "No one-size-fits-all. Cinergie Digital custom-builds IT solutions in AI, cloud, and data engineering to match your exact enterprise needs. ",
+    text: "No one-size-fits-all.         Cinergie Digital custom-builds IT solutions in AI, cloud, and data engineering to match your exact enterprise level needs. ",
     img: tailoredSolutions,
     alt: "Tailored IT solutions for enterprise AI, cloud, and data engineering",
   },
@@ -139,23 +139,30 @@ const items = [
   return (
     <>
       {/* Why Choose Section */}
-      <section className="py-5" style={{ backgroundColor: "#0B121D"}}>
+      <section className="py-5" style={{ backgroundColor: "#ffffff"}}>
         <div className="container">
-          <h2 className="text-center mb-5 fw-bold"style={{ color: "white" }}>Why Choose Cinergie?</h2>
+          <h2 className="text-center mb-5 fw-bold"style={{ color: "black",  fontFamily: 'Garet', fontSize: '2.5rem' }}>Why Choose Cinergie?</h2>
           <div className="row g-4">
             {items.map((item, index) => (
               <div className="col-md-4" key={index}>
                 <div className="card h-100 shadow-sm border-0 rounded-3">
-                  <img
-                    src={item.img}
-                    className="card-img-top rounded-top"
-                    alt={item.alt}
-                    style={{ height: "220px", objectFit: "cover" }}
-                  />
+                <img
+  src={item.img}
+  className="card-img-top rounded-top uniform-image-style"
+  alt={item.alt}
+  style={{
+    height: "220px",
+    objectFit: "cover",
+    filter: "brightness(0.95) contrast(1.05)",
+    
+  }}
+/>
+
+                 
                 <section className="dark-section">
-  <div className="card-body text-center">
-    <h5 className="fw-bold">{item.title}</h5>
-    <p className="text-muted">{item.text}</p>
+  <div className="card-body text-center" >
+    <h3 className="fw">{item.title}</h3>
+    <p className="text">{item.text}</p>
   </div>
 </section>
 
@@ -165,9 +172,9 @@ const items = [
           </div>
         </div>
       </section>
-<section className="py-5 bg-dark-blue"style={{ color: "white" }}>
+<section className="py-5 bg-dark-blue"style={{backgroundColor: "#86878D" }}>
   <div className="container">
-   <h2 className="text-center mb-5 fw-bold" style={{ color: "white" }}>
+   <h2 className="text-center mb-5 fw-bold" style={{ color: "white",  fontFamily: 'Garet', fontSize: '2.5rem' }}>
   How Cinergie Digital Delivers Secure, Compliant & Reliable IT Solutions?
 </h2>
 
@@ -197,7 +204,7 @@ const items = [
           <feature.Icon className={`${feature.color}`} size={48} />
         </div>
      <section className="dark-section">
-  <h5 className="feature-title">{feature.title}</h5>
+  <h3 className="feature-title">{feature.title}</h3>
   <p className="feature-text">{feature.text}</p>
 </section>
 
@@ -213,3 +220,4 @@ const items = [
 };
 
 export default WhyChooseCinergie;
+ 

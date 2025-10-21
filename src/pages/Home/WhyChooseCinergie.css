@@ -1,60 +1,63 @@
-/* Grid Container */
-.features-grid {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 2rem;
-}
-
-/* Feature Cards */
-.feature-card {
-  flex: 1 1 30%;
+/* Dark Section Cards (Bottom Section) */
+.bg-dark-blue .card.h-100 {
+  background-color: #e2e2e2; /* darker white for dark section */
+  color: #000; /* enforce black text */
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  text-align: center;
-  border-radius: 8px;
-  background-color: #ffffff;
-  transition: box-shadow 0.3s ease;
-  color: #000; /* Force black text */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.feature-card:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+.bg-dark-blue .card.h-100:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
 }
 
-/* Icon Styling */
-.icon-wrapper {
-  margin-bottom: 1rem;
+/* Feature text inside dark section cards */
+.dark-section .feature-title {
+  color: #0a0a0a;
+  font-size: larger;
+}
+.fw{
+font-size: 1.5rem;
+ font-Family: Garet;
+font-weight: 550;
+}
+.text{
+font-size: 1rem;
+font-Family: Garet;
+font-weight: 500;
 }
 
-.feature-icon {
-  color: #000;
-  font-size: 2rem;
+.feature-title{
+font-size: 1.5rem;
+font-Family: Garet;
+font-weight: 550;
 }
-
-/* Optional: Dark section background if needed */
-.bg-dark-blue {
-  background-color: #0B121D;
-  padding: 2rem;
-  border-radius: 10px;
+.feature-text{
+font-size: 1rem;
+font-Family: Garet;
+font-weight: 500;
 }
-
-.dark-section .card-body,
-.dark-section .card-body h5,
-.dark-section .card-body p {
-  color: #080808;
-}
-
-.dark-section .text-muted {
-  color: #161010 !important;
-}
-.dark-section .feature-title,
-.dark-section .feature-text {
-  color: #130d0d;
+.row g-4{
+  font-weight: 500;
 }
 
 .dark-section .feature-text {
-  color: #130f0f; /* softer white for muted */
+  color: #1a1a1a;
+  font-size: 1rem;
+font-Family: Garet;
+font-weight: 500;
+}
+.dark-section .feature-title {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-Family: Garet;
+font-weight: 550;
+}
+/* For card body text (light section) */
+.card-body.text-center {
+  background-color: #f7f6ec; /* match card background */
+}
+.uniform-image-style {
+  height: 220px;
+  object-fit: cover;
+  filter: brightness(0.95) contrast(1.05);
 }

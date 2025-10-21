@@ -5,7 +5,7 @@ import "./Services.css"; // Updated styles for layout and design
 import advisoryImg from "../../assets/images/advisory-data-strategy-services.jpg";
 import appDevImg from "../../assets/images/application-development-services.jpg";
 import appModernImg from "../../assets/images/application-modernisation-maintenance.jpg";
-import dataEngImg from "../../assets/images/data-engineering-analytics-services.jpg";
+import dataEngImg from "../../assets/images/data-engineering-analytics-services.png";
 import aiImg from "../../assets/images/ai-automation-services.jpg";
 import integrationImg from "../../assets/images/enterprise-integration-services.jpg";
 import qaImg from "../../assets/images/qa-devops-services.jpg";
@@ -127,28 +127,31 @@ const Services = () => {
     },
   ];
 
+  // Helper to determine if a card should be flipped (for 2nd and 4th visual rows in left column)
+  const isFlipped = (index: number) => [1, 3].includes(index);
+
   return (
     <>
       <button id="scrollTopBtn" title="Go to top">↑</button>
       <section className="services-section">
         <div className="services-container">
-          <h2>Enterprise IT & Digital Services That Deliver Measurable Outcomes</h2>
+          <h2 className="fw-bold" style={{ fontFamily: 'Garet' }}>Enterprise IT & Digital Services That Deliver Measurable Outcomes</h2>
           <div className="services-grid">
             <div className="left-column">
               {services.slice(0, 5).map((service, index) => (
-                <div key={index} className="service-card">
+                <div key={index} className={`service-card ${isFlipped(index) ? 'flipped' : ''}`}>
                   <div className="card-image">
                     <img src={service.img} alt={service.alt} />
                     <div className="metric-badge">{service.badge}</div>
                   </div>
                   <div className="service-content">
-                    <h3>{service.title}</h3>
-                    <ul>
+                    <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{service.title}</h3>
+                    <ul style={{ fontFamily: 'Garet' }}>
                       {service.desc.map((item, i) => (
                         <li key={i}>{item}</li>
                       ))}
                     </ul>
-                    <a href="/contact" className="cta-link">Learn More →</a>
+                    <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
                   </div>
                 </div>
               ))}
@@ -161,13 +164,13 @@ const Services = () => {
                     <div className="metric-badge">{service.badge}</div>
                   </div>
                   <div className="service-content">
-                    <h3>{service.title}</h3>
-                    <ul>
+                    <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{service.title}</h3>
+                    <ul style={{ fontFamily: 'Garet' }}>
                       {service.desc.map((item, i) => (
                         <li key={i}>{item}</li>
                       ))}
                     </ul>
-                    <a href="/contact" className="cta-link">Learn More →</a>
+                    <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
                   </div>
                 </div>
               ))}

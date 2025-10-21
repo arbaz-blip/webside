@@ -1,4 +1,4 @@
-import officeImage1 from 'assets/images/contact/lahore.png';
+ import officeImage1 from 'assets/images/contact/lahore.png';
 import officeImage2 from 'assets/images/contact/dubai1.jpg';
 import { Office } from './types';
 

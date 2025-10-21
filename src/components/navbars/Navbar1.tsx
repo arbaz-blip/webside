@@ -93,9 +93,10 @@ const Navbar1 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Na
                             <Nav.Link href="/" className="px-3">Home</Nav.Link>
                             <Nav.Link href="/digital-platform-components" className="px-3">About Us</Nav.Link>
                             <Nav.Link href="/Industries" className="px-3">Industries</Nav.Link>
-                            <Nav.Link href="/career" className="px-3">Career</Nav.Link>
+                 
                             <Nav.Link href="/services" className="px-3">Services</Nav.Link>
                             <Nav.Link href="/team" className="px-3">Resources</Nav.Link>
+                            <Nav.Link href="/career" className="px-3">Career</Nav.Link>
                             <Nav.Link href="/contact" className="px-3">Contact</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

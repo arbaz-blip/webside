@@ -13,21 +13,26 @@ export default function ValuesSection() {
   });
 
   return (
-    <div style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-      <section className='values-section'>
+    <div  >
+    <div  style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+
+      <section className='values-section'   >
         <h2 style={{ 
           fontSize: '2.5rem', 
-          fontWeight: '300', 
+          fontWeight: '600', 
           marginBottom: '10px',
-          color: '#1a1a1a'
+          color: '#1a1a1a',
+         fontFamily: 'Garet'
+          
         }}>
           Our Values
         </h2>
         <p style={{ 
-          fontSize: '1.1rem', 
+          fontSize: '1rem', 
           color: '#666', 
           marginBottom: '50px',
-          fontWeight: '300'
+          fontWeight: '300',
+          fontFamily: 'Garet'
         }}>
           The principles that guide everything we build and deliver
         </p>
@@ -35,7 +40,8 @@ export default function ValuesSection() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '30px'
+          gap: '30px',
+          fontFamily: 'Garet'
         }}>
           {/* Outcomes First */}
           <div 
@@ -46,7 +52,8 @@ export default function ValuesSection() {
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              fontFamily: 'Garet'
             }}
             onMouseEnter={() => setHoveredIndex(0)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -57,19 +64,19 @@ export default function ValuesSection() {
               </svg>
             </div>
             <div>
-              <h3 style={{ 
-                fontSize: '1.1rem', 
-                fontWeight: '600', 
+              <h3 className="fw-medium subheading" style={{ 
                 marginBottom: '8px',
-                color: '#1a1a1a'
+                color: '#1a1a1a',
+                fontFamily: 'Garet'
               }}>
                 Outcomes First
               </h3>
               <p style={{ 
-                fontSize: '0.95rem', 
+                fontSize: '1rem', 
                 color: '#666', 
                 lineHeight: '1.6',
-                margin: 0
+                margin: 0,
+                fontFamily: 'Garet'
               }}>
                 Measured in ROI, not tasks closed.
               </p>
@@ -85,7 +92,8 @@ export default function ValuesSection() {
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              fontFamily: 'Garet'
             }}
             onMouseEnter={() => setHoveredIndex(1)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -97,19 +105,19 @@ export default function ValuesSection() {
               </svg>
             </div>
             <div>
-              <h3 style={{ 
-                fontSize: '1.1rem', 
-                fontWeight: '600', 
+              <h3 className="fw-medium subheading" style={{ 
                 marginBottom: '8px',
-                color: '#1a1a1a'
+                color: '#1a1a1a',
+                fontFamily: 'Garet'
               }}>
                 Transparency Always
               </h3>
               <p style={{ 
-                fontSize: '0.95rem', 
+                fontSize: '1rem', 
                 color: '#666', 
                 lineHeight: '1.6',
-                margin: 0
+                margin: 0,
+                fontFamily: 'Garet'
               }}>
                 Open sprints, clear docs, audit trails.
               </p>
@@ -125,7 +133,8 @@ export default function ValuesSection() {
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              fontFamily: 'Garet'
             }}
             onMouseEnter={() => setHoveredIndex(2)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -136,19 +145,19 @@ export default function ValuesSection() {
               </svg>
             </div>
             <div>
-              <h3 style={{ 
-                fontSize: '1.1rem', 
-                fontWeight: '600', 
+              <h3 className="fw-medium subheading" style={{ 
                 marginBottom: '8px',
-                color: '#1a1a1a'
+                color: '#1a1a1a',
+                fontFamily: 'Garet'
               }}>
                 Security by Default
               </h3>
               <p style={{ 
-                fontSize: '0.95rem', 
+                fontSize: '1rem', 
                 color: '#666', 
                 lineHeight: '1.6',
-                margin: 0
+                margin: 0,
+                fontFamily: 'Garet'
               }}>
                 Encryption and access controls everywhere.
               </p>
@@ -164,7 +173,8 @@ export default function ValuesSection() {
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              fontFamily: 'Garet'
             }}
             onMouseEnter={() => setHoveredIndex(3)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -175,19 +185,19 @@ export default function ValuesSection() {
               </svg>
             </div>
             <div>
-              <h3 style={{ 
-                fontSize: '1.1rem', 
-                fontWeight: '600', 
+              <h3 className="fw-medium subheading" style={{ 
                 marginBottom: '8px',
-                color: '#1a1a1a'
+                color: '#1a1a1a',
+                fontFamily: 'Garet'
               }}>
                 Build for Change
               </h3>
               <p style={{ 
-                fontSize: '0.95rem', 
+                fontSize: '1rem', 
                 color: '#666', 
                 lineHeight: '1.6',
-                margin: 0
+                margin: 0,
+                fontFamily: 'Garet'
               }}>
                 Modular, maintainable, scalable architecture.
               </p>
@@ -203,7 +213,8 @@ export default function ValuesSection() {
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              fontFamily: 'Garet'
             }}
             onMouseEnter={() => setHoveredIndex(4)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -214,19 +225,19 @@ export default function ValuesSection() {
               </svg>
             </div>
             <div>
-              <h3 style={{ 
-                fontSize: '1.1rem', 
-                fontWeight: '600', 
+              <h3 className="fw-medium subheading" style={{ 
                 marginBottom: '8px',
-                color: '#1a1a1a'
+                color: '#1a1a1a',
+                fontFamily: 'Garet'
               }}>
                 One Team Mindset
               </h3>
               <p style={{ 
-                fontSize: '0.95rem', 
+                fontSize: '1rem', 
                 color: '#666', 
                 lineHeight: '1.6',
-                margin: 0
+                margin: 0,
+                fontFamily: 'Garet'
               }}>
                 Embedded pods with shared accountability.
               </p>
@@ -242,7 +253,8 @@ export default function ValuesSection() {
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              fontFamily: 'Garet'
             }}
             onMouseEnter={() => setHoveredIndex(5)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -253,19 +265,19 @@ export default function ValuesSection() {
               </svg>
             </div>
             <div>
-              <h3 style={{ 
-                fontSize: '1.1rem', 
-                fontWeight: '600', 
+              <h3 className="fw-medium subheading" style={{ 
                 marginBottom: '8px',
-                color: '#1a1a1a'
+                color: '#1a1a1a',
+                fontFamily: 'Garet'
               }}>
                 Responsible AI
               </h3>
               <p style={{ 
-                fontSize: '0.95rem', 
+                fontSize: '1rem', 
                 color: '#666', 
                 lineHeight: '1.6',
-                margin: 0
+                margin: 0,
+                fontFamily: 'Garet'
               }}>
                 Fairness checks and explainable AI models.
               </p>
@@ -281,7 +293,8 @@ export default function ValuesSection() {
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              fontFamily: 'Garet'
             }}
             onMouseEnter={() => setHoveredIndex(6)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -292,19 +305,19 @@ export default function ValuesSection() {
               </svg>
             </div>
             <div>
-              <h3 style={{ 
-                fontSize: '1.1rem', 
-                fontWeight: '600', 
+              <h3 className="fw-medium subheading" style={{ 
                 marginBottom: '8px',
-                color: '#1a1a1a'
+                color: '#1a1a1a',
+                fontFamily: 'Garet'
               }}>
                 Operational Excellence
               </h3>
               <p style={{ 
-                fontSize: '0.95rem', 
+                fontSize: '1rem', 
                 color: '#666', 
                 lineHeight: '1.6',
-                margin: 0
+                margin: 0,
+                fontFamily: 'Garet'
               }}>
                 SLOs, on-call, and continuous improvement.
               </p>
@@ -320,7 +333,8 @@ export default function ValuesSection() {
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              fontFamily: 'Garet'
             }}
             onMouseEnter={() => setHoveredIndex(7)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -331,26 +345,73 @@ export default function ValuesSection() {
               </svg>
             </div>
             <div>
-              <h3 style={{ 
-                fontSize: '1.1rem', 
-                fontWeight: '600', 
+              <h3 className="fw-medium subheading" style={{ 
                 marginBottom: '8px',
-                color: '#1a1a1a'
+                color: '#1a1a1a',
+                fontFamily: 'Garet'
               }}>
                 Stewardship of Spend
               </h3>
               <p style={{ 
-                fontSize: '0.95rem', 
+                fontSize: '1rem', 
                 color: '#666', 
                 lineHeight: '1.6',
-                margin: 0
+                margin: 0,
+                fontFamily: 'Garet'
               }}>
                 FinOps discipline, predictable costs, clear ROI.
               </p>
             </div>
           </div>
+
+  {/* Human-Centered Innovation*/}
+          <div 
+            style={{
+              display: 'flex',
+              gap: '20px',
+              padding: '25px',
+              borderBottom: '2px solid #333',
+              backgroundColor: '#f8f8f8',
+              borderRadius: '8px',
+              cursor: 'pointer',
+              fontFamily: 'Garet'
+            }}
+            onMouseEnter={() => setHoveredIndex(8)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <div style={iconStyle(8)}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="2" style={{ width: '100%', height: '100%' }}>
+                <circle cx="12" cy="8" r="3" />
+                <path d="M12 14c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z" />
+                <path d="M12 11v3" strokeDasharray="2 2" />
+                <circle cx="12" cy="12" r="8" strokeWidth="1.5" opacity="0.3" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="fw-medium subheading" style={{ 
+                marginBottom: '8px',
+                color: '#1a1a1a',
+                fontFamily: 'Garet'
+              }}>
+                Human-Centered Innovation
+              </h3>
+              <p style={{ 
+                fontSize: '1rem', 
+                color: '#666', 
+                lineHeight: '1.6',
+                margin: 0,
+                fontFamily: 'Garet'
+              }}>
+                Designed for usability, and real-world impact.
+              </p>
+            </div>
+          </div>
+
+             
         </div>
       </section>
+    </div>
+    
     </div>
   );
 }

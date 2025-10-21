@@ -1,13 +1,13 @@
-// src/pages/case-studies/bfsi.tsx
 import React from 'react';
-import { Navbar2} from 'components/navbars';
+import { Navbar5} from 'components/navbars';
 import BackToTop from 'components/BackToTop';
-import Connect from 'components/shared/Connect';
-import bsfiHero from '../../assets/images/bsfi-case-study-hero.jpg.jpg';
+
+import bsfiHero from '../../assets/images/bsfi-case-study-hero.jpg.png';
 import bsfiQa from '../../assets/images/bsfi-qa-automation.jpg.jpg';
 import bsfiCrm from '../../assets/images/bsfi-crm-modernisation.jpg.jpg';
 import bsfiFinance from '../../assets/images/bsfi-finance-automation.jpg.jpg';
 import Footer from 'pages/Home/Footer';
+import Conect from 'components/shared/conect';
 
 // import bsfiFooter from '../../assets/images/case-studies/bsfi-case-study-cinergiedigital.jpg'; // Uncomment if footer image is available
 
@@ -15,40 +15,71 @@ import "./bsfi.css";
 
 const BFSICaseStudy = () => {
   return (
-    
-    <div className="case-study-page">
-             <Navbar2
-    hideSearch
-    fixedWidth
-      isSticky={true}
-    navClass="navbar-light bg-white zindex-10" // Changed to navbar-light and added bg-white
-    buttonClass="btn-white text-white btn-sm"
-/>
-      {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-content">
-          <h1>BFSI — QA Automation at Scale</h1>
-        </div>
-        <img 
-          src={bsfiHero} 
-          alt="BFSI Hero Image" 
-          className="hero-image" 
-         
-        />
-      </section>
+    <>
+      
+            {/* Hero Section */}
+            <section
+                className="position-relative"
+                style={{
+                    height: '90vh',
+                    
+                    fontFamily: 'Garet'
+                }}
+            >
+               {/* Background Image */}
+<div
+  className="hero-background-image position-absolute w-100 h-100"
+  style={{
 
+    backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0)), url(${bsfiHero})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    top: 0,
+    left: 0,
+    zIndex: -2,
+  }}
+></div>
+
+
+                {/* Dark Overlay */}
+                <div
+                    className="position-absolute top-0 start-0 w-100 h-100"
+                    style={{
+                        // backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                       
+                        fontFamily: 'Garet'
+                    }}
+                ></div>
+
+                {/* Navbar */}
+<Navbar5
+      isSticky={true}
+      hideSearch
+
+    />
+
+    {/* Hero Text on Left */}
+    <div className="hero-text position-absolute top-50 start-0 translate-middle-y ms-4" style={{ zIndex: 1 }}>
+      <h1 className="hero-heading" style={{ fontFamily: 'Garet', color: 'white', fontSize: '3.2rem', marginBottom: '1rem'      }}>Banking, Financial Services & Insurance</h1>
+      <p className="hero-description" style={{ fontFamily: 'Garet', color: 'white', fontSize: '1.125rem', maxWidth: '1000px' }}>
+        Transforming banking and financial services with innovative digital solutions for faster, safer modernization.
+      </p>
+    </div>
+       
+       </section>
 
       {/* Metrics Section */}
       <section className="metrics-section">
         <div className="metrics-container">
           <div className="metrics-left">
-            <h1 className="metric-item">70% FEWER BUGS.</h1>
-            <h1 className="metric-item">2x FASTER RELEASES.</h1>
-            <h1 className="metric-item">+45% FASTER LEAD RESPONSE.</h1>
-            <p className="metrics-subtext">Predictable, auditable, ROI-driven delivery for BFSI leaders.</p>
+            <h2 className="metric-item" style={{ fontFamily: 'Garet',color: 'black' }}>70% FEWER BUGS.</h2>
+            <h2 className="metric-item" style={{ fontFamily: 'Garet',color: 'black' }}>2x FASTER RELEASES.</h2>
+            <h2 className="metric-item" style={{ fontFamily: 'Garet',color: 'black' }}>+45% FASTER LEAD RESPONSE.</h2>
+            <p className="metrics-descriptions" style={{ fontFamily: 'Garet' }}>Predictable, auditable, ROI-driven delivery for BFSI leaders.</p>
           </div>
           <div className="metrics-right">
-            <p className="metrics-description">Banks and financial institutions need faster, safer ways to modernise. Cinergie Digital enabled a leading BFSI firm to reduce risk, accelerate customer response, and deliver measurable ROI in weeks, not quarters.</p>
+            <p className="metrics-description" style={{ fontFamily: 'Garet' }}>Banks and financial institutions need faster, safer ways to modernise. Cinergie Digital enabled a leading BFSI firm to reduce risk, accelerate customer response, and deliver measurable ROI in weeks, not quarters.</p>
           </div>
         </div>
       </section>
@@ -56,9 +87,10 @@ const BFSICaseStudy = () => {
       {/* Challenge Section */}
       <section className="challenge-section">
         <div className="container">
-          <h2>Challenge</h2>
-          <p>Banks face growing complexity and risk:</p>
-          <ul>
+          <h2 style={{ fontFamily: 'Garet' }}>Challenge</h2>
+          <p style={{ fontFamily: 'Garet' }}>Banks face growing complexity and risk:</p>
+          <ul style={{ fontFamily: 'Garet' }}>
+            
             <li>Manual QA processes caused slow releases and frequent defects</li>
             <li>Siloed CRM systems delayed reporting and compliance readiness</li>
             <li>Finance ops were error-prone, slowing reporting and compliance readiness.</li>
@@ -73,8 +105,8 @@ const BFSICaseStudy = () => {
       {/* Block 1 - Image on Right */}
       <div className="approach-block">
         <div className="approach-content">
-          <h3>QA Automation at Scale</h3>
-          <ul>
+          <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>QA Automation at Scale</h3>
+          <ul style={{ fontFamily: 'Garet' }}>
             <li>Built a test automation pyramid across unit, API, and E2E.</li>
             <li>Embedded CI/CD pipelines with quality gates and rollback readiness.</li>
             <li>Dashboards to track defect trends and release health.</li>
@@ -88,8 +120,8 @@ const BFSICaseStudy = () => {
       {/* Block 2 - Image on Left */}
       <div className="approach-block">
         <div className="approach-content">
-          <h3>CRM Modernisation (&lt;90 days)</h3>
-          <ul>
+          <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>CRM Modernisation (&lt;90 days)</h3>
+          <ul style={{ fontFamily: 'Garet' }}>
             <li>Delivered a full Customer 360 rollout in under 90 days.</li>
             <li>Automated lead routing and improved sales visibility.</li>
             <li>Unified data for faster customer response.</li>
@@ -103,8 +135,8 @@ const BFSICaseStudy = () => {
       {/* Block 3 - Image on Right */}
       <div className="approach-block">
         <div className="approach-content">
-          <h3>Finance Ops Hyperautomation</h3>
-          <ul>
+          <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>Finance Ops Hyperautomation</h3>
+          <ul style={{ fontFamily: 'Garet' }}>
             <li>Deployed bots to reconcile accounts and automate reporting.</li>
             <li>Cut errors and reduced month-end closing time.</li>
             <li>Built audit-ready trails for compliance confidence.</li>
@@ -118,74 +150,96 @@ const BFSICaseStudy = () => {
     </div>
   </div>
 </section>
-{/* Proof of Value Section */}
-<section className="proof-section">
-  <h2>Proof of value, not just promises!</h2>
-  <div className="proof-grid">
-    <div className="proof-item bugs-card">
-      <div className="icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      </div>
-      <h3>70% FEWER BUGS</h3>
-      <p>Release defects reduced with automation</p>
-    </div>
-    <div className="proof-item releases-card">
-      <div className="icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      </div>
-      <h3>2x FASTER RELEASES</h3>
-      <p>CI/CD pipelines doubled delivery speed</p>
-    </div>
-    <div className="proof-item lead-card">
-      <div className="icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      </div>
-      <h3>+45% FASTER LEAD RESPONSE</h3>
-      <p>CRM rollout improved client engagement</p>
-    </div>
-    <div className="proof-item reporting-card">
-      <div className="icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M12 6v6l4 2" />
-        </svg>
-      </div>
-      <h3>3x FASTER REPORTING</h3>
-      <p>Finance bots accelerated reconciliation</p>
-    </div>
-    <div className="proof-item errors-card">
-      <div className="icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      </div>
-      <h3>60% FEWER ERRORS</h3>
-      <p>Automation reduced manual mistakes</p>
-    </div>
-    <div className="proof-item audit-card">
-      <div className="icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-        </svg>
-      </div>
-      <h3>AUDIT-READY DELIVERY</h3>
-      <p>Dashboards for compliance visibility</p>
-    </div>
-  </div>
-</section>
+ <section className="proof-section">
+        <h2>Proof of value, not just promises!</h2>
+        
+        <div className="proof-grid">
+         
+            <div className="proof-card">
+                <div className="icon-circle green-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div className="card-content">
+                    <h3>70% Fewer Bugs</h3>
+                    <p>Release defects reduced with automation</p>
+                </div>
+            </div>
+
+          
+            <div className="proof-card">
+                <div className="icon-circle yellow-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div className="card-content">
+                    <h3>2x Faster Releases</h3>
+                    <p>CI/CD pipelines doubled delivery speed</p>
+                </div>
+            </div>
+
+            <div className="proof-card">
+                <div className="icon-circle blue-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                </div>
+                <div className="card-content">
+                    <h3>+45% Faster Lead Response</h3>
+                    <p>CRM rollout improved client engagement</p>
+                </div>
+            </div>
+
+            <div className="proof-card">
+                <div className="icon-circle indigo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v6l4 2" />
+                    </svg>
+                </div>
+                <div className="card-content">
+                    <h3>3x Faster Reporting</h3>
+                    <p>Finance bots accelerated reconciliation</p>
+                </div>
+            </div>
+
+          
+            <div className="proof-card">
+                <div className="icon-circle pink-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div className="card-content">
+                    <h3>60% Fewer Errors</h3>
+                    <p>Automation reduced manual mistakes</p>
+                </div>
+            </div>
+
+            
+            <div className="proof-card">
+                <div className="icon-circle cyan-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                    </svg>
+                </div>
+                <div className="card-content">
+                    <h3>Audit-Ready Delivery</h3>
+                    <p>Dashboards for compliance visibility and reporting transparency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
       {/* Why It Matters Section */}
 <section className="why-matters-section">
   <div className="container">
-    <h2>Why It Matters for BFSI Leaders</h2>
-    <p>For banks and financial institutions, release risk equals business risk. Defects harm compliance, delays lose customers, and slow reporting undermines governance.</p>
-    <p className="enables">Cenergy Digital enables CIOs and CTOs to:</p>
-    <ul>
+    <h2 style={{ fontFamily: 'Garet' }}>Why It Matters for BFSI Leaders</h2>
+    <p style={{ fontFamily: 'Garet' }}>For banks and financial institutions, release risk equals business risk. Defects harm compliance, delays lose customers, and slow reporting undermines governance.</p>
+    <p className="enables" style={{ fontFamily: 'Garet' }}>Cinergie Digital enables CIOs and CTOs to:</p>
+    <ul style={{ fontFamily: 'Garet' }}>
       <li>Deliver predictable, auditable releases</li>
       <li>Show ROI in weeks, not quarters</li>
       <li>Build confidence with regulators, customers, and boards</li>
@@ -196,8 +250,8 @@ const BFSICaseStudy = () => {
       {/* Outcomes Section */}
       <section className="outcomes-section">
         <div className="container">
-          <h2>Outcomes That Matter Most</h2>
-          <ul>
+          <h2 style={{ fontFamily: 'Garet' }}>Outcomes That Matter Most</h2>
+          <ul style={{ fontFamily: 'Garet' }}>
             <li>Automation reduced manual errors</li>
             <li>Dashboards for compliance visibility</li>
            
@@ -209,23 +263,11 @@ const BFSICaseStudy = () => {
 
 <li>Improved customer satisfaction</li> 
 
-<li>Measurable ROI delivery </li>
+
           </ul>
         </div>
       </section>
-{/* CTA Section */}
-<section className="cta-section">
-  <div className="cta-container">
-    <div className="cta-card">
-      <h2>Want predictable delivery and measurable ROI?</h2>
-      <p>See how Cinergie Digital helps BFSI leaders cut risk and accelerate outcomes.</p>
-      <div className="cta-buttons">
-        <a href="#" className="cta-btn cta-btn-primary">Get My ROI Audit →</a>
-        <a href="#" className="cta-btn cta-btn-secondary">See All Industries →</a>
-      </div>
-    </div>
-  </div>
-</section>
+
 
       {/* Footer Section */}
       {/* Uncomment if footer image is available
@@ -247,15 +289,16 @@ const BFSICaseStudy = () => {
 
           
 
-            {/* <Connect
-                title="Get In Touch"
-                description="Get in touch with us today to learn more about how we can help you succeed with these digital capabilities through our solutions and services."
-            /> */}
+            <Conect
+                title="Want predictable delivery and measurable ROI?"
+                description="See how Cinergie Digital helps BFSI leaders cut risk and accelerate outcomes."
+            />
 <BackToTop />
             <Footer />
 
-    </div>
     
+  
+    </>
   );
 };
 

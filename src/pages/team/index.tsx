@@ -1,4 +1,4 @@
-import { Navbar1 } from 'components/navbars';
+import { Navbar5 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 
 // import Hero from './Hero';
@@ -11,7 +11,10 @@ import Connect from 'components/shared/Connect';
 import Platform from './case';
 const Blog = () => {
     return (
-        <>
+        <div 
+          style={{
+            background: '#4F6D7A'
+          }}>
             <div
                 className="bg-gradient2"
                 style={{
@@ -19,6 +22,7 @@ const Blog = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'top',
                     position: 'relative',
+                    fontFamily: 'Garet'
                 }}
             >
                 <div
@@ -29,11 +33,12 @@ const Blog = () => {
                         left: 0,
                         width: '100%',
                         height: '100%',
-                        background: 'rgba(0, 0, 0, 0.5)',
+                        background: '#4F6D7A',
                         backdropFilter: 'blur(0.5px)',
+                        fontFamily: 'Garet'
                     }}
                 ></div>
-<Navbar1
+<Navbar5
       isSticky={true}
       hideSearch
 
@@ -48,7 +53,7 @@ const Blog = () => {
             <Footer />
 
             <BackToTop />
-        </>
+        </div>
     );
 };
 
