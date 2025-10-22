@@ -1,30 +1,26 @@
-/* .case-study-page {
- 
-  
+
+/* transport-logistics.css - Updated for Mobile Responsiveness */
+
+.case-study-page {
   color: #333;
 }
 
 .hero-section {
-  
-  
   background-color: #ffffff;
 }
 
-.hero-content h1 {
-  color: #070707; /* Dark blue color similar to the screenshot */
-.hero-heading{
-    font-size: 3.2rem;
+.hero-heading {
+  font-size: 3.2rem;
   font-weight: 600;
   line-height: 1.2;
-  
   color: #fff;
-   margin-bottom: 1rem;
+  margin-bottom: 1rem;
   margin-top: 50px;
-   padding-left: 8%;  
+  padding-left: 8%;  
 }
 
-.hero-description{
-    font-size: 1.125rem;
+.hero-description {
+  font-size: 1.125rem;
   line-height: 1.6;
   max-width: 900px;
   color: #e0e0e0;
@@ -32,86 +28,73 @@
   padding-left: 8%; 
 }
 
-
-
-
-
-
-
-
-
-
 .metrics-section {
-          background-color: #DBE9EE; /* dark background */
-          height: 90vh;
-          display: flex;
-          align-items: center;         
-          justify-content: center;     
-          padding: 60px 40px;          /* more horizontal padding */
-        }
+  background-color: #DBE9EE; /* dark background */
+  height: 90vh;
+  display: flex;
+  align-items: center;         
+  justify-content: center;     
+  padding: 60px 40px;          /* more horizontal padding */
+}
 
-        /* Wider container */
-        .metrics-container {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: space-between; /* spread across */
-          max-width: 1400px;              /* make it span wider */
-          width: 100%;
-          gap: 60px;
-        }
+/* Wider container */
+.metrics-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; /* spread across */
+  max-width: 1400px;              /* make it span wider */
+  width: 100%;
+  gap: 60px;
+}
 
-        /* Left Metrics */
-        .metrics-left {
-          flex: 1 1 40%;
-          text-align: left;
-          color: rgb(15, 13, 13);
-          margin-top: 0%;
-        }
+/* Left Metrics */
+.metrics-left {
+  flex: 1 1 40%;
+  text-align: left;
+  color: rgb(15, 13, 13);
+  margin-top: 0%;
+}
 
-        .metric-item {
-          font-size: 3.2rem;          /* Updated to match h2 size */
-          font-weight: 500;          /* BOLD text */
-          margin-bottom: 30px;        /* Spacing between lines */
-          line-height: 1.2;           /* Adjusted for better spacing (original had 5, which was too large) */
-          text-transform: uppercase; 
-           padding-left: 8%;  
-           color: rgb(15, 13, 13);
-           /* Match uppercase in image */
-        }
-        .metrics-descriptions{
-           padding-left: 8%;
-           font-size: 1.125rem;
-        }
+.metric-item {
+  font-size: 3.2rem;          /* Updated to match h2 size */
+  font-weight: 500;          /* BOLD text */
+  margin-bottom: 30px;        /* Spacing between lines */
+  line-height: 1.2;           /* Adjusted for better spacing (original had 5, which was too large) */
+  text-transform: uppercase; 
+  padding-left: 8%;  
+  color: rgb(15, 13, 13);
+  /* Match uppercase in image */
+}
+.metrics-descriptions {
+  padding-left: 8%;
+  font-size: 1.125rem;
+}
 
-        .metrics-subtitle {
-          font-size: 1rem;          /* Smaller for the subtitle */
-          font-weight: bold;
-          margin-top: 10px;
-          line-height: 1.5;
-        }
+.metrics-subtitle {
+  font-size: 1rem;          /* Smaller for the subtitle */
+  font-weight: bold;
+  margin-top: 10px;
+  line-height: 1.5;
+}
 
-        /* Right Box */
-      .metrics-right {
+/* Right Box */
+.metrics-right {
   flex: 1 1 30%;
- background-color: #C0D6DF;  /* grey background */
+  background-color: #C0D6DF;  /* grey background */
   padding: 50px 40px;
   color: #111;
   font-size: 2rem;             /* Updated paragraph size */
   line-height: 1.6;
   border-radius: 4px;
-  
   font-weight: 400;
 }
-        .metric-item{
-           color: white;
-        }
 
 /* Challenge Section */
 .challenge-section {
   height: 90vh;
   display: flex;
-   padding-left: 8%;  
+  padding-left: 8%;  
   align-items: center;
   padding: 40px 20px;
   background-color: #4F6D7A;
@@ -125,7 +108,7 @@
   color: white;
   font-weight: 100;
 }
-.challenge-section  p {
+.challenge-section p {
   font-size: 2rem; /* Updated paragraph size */
   margin-bottom: 20px;
 }
@@ -147,6 +130,12 @@
   max-width: 1200px;
   margin: 0 auto;
   font-size: 1.125rem; /* Updated to paragraph size */ 
+}
+
+.approach-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .approach-block {
@@ -199,30 +188,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-      filter: 
-        brightness(0.9)
-        contrast(1.15)
-        saturate(0.9)
-        hue-rotate(-5deg)
-
-
+  filter: 
+    brightness(0.9)
+    contrast(1.15)
+    saturate(0.9)
+    hue-rotate(-5deg)
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .approach-block {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .approach-block:nth-child(even) .approach-content,
-  .approach-block:nth-child(even) .approach-image {
-    order: initial;
-  }
-}
 /* Proof of Value Section */
-/* proof-of-value.css */
-
 * {
     margin: 0;
     padding: 0;
@@ -233,130 +206,111 @@ body {
     font-family: system-ui, -apple-system, sans-serif;
     background-color: #DBE9EE;
 }
-
 .proof-section {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+ 
 }
 
 .proof-section h2 {
-    font-size: 2.5rem; /* Consistent h2 size */
-    font-weight: 500;
-    margin-bottom: 60px;
-    color: #1a1a1a;
-    text-align: center;
+  font-size: 2.5rem; /* Consistent h2 size */
+  font-weight: 500;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+  text-align: center;
 }
 
 .proof-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
 }
 
 .proof-card {
-    background-color: #f8f9fa;
-    border-radius: 16px;
-    padding: 25px;
-    border: 1px solid #e5e7eb;
-    border-bottom: 2px solid #342e2e;  /* Add this line for the thick bottom border */
-    transition: all 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  padding: 25px;
+  border: 1px solid #e5e7eb;
+  border-bottom: 2px solid #342e2e;  /* Add this line for the thick bottom border */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .proof-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-    border-color: #d1d5db;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
 }
 
 .icon-circle {
-    width: 56px;
-    height: 56px;
-    min-width: 56px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-circle svg {
-    width: 28px;
-    height: 28px;
+  width: 28px;
+  height: 28px;
 }
 
 /* Icon color variations */
 .green-icon {
-    background-color: #dcfce7;
-    color: #10b981;
+  background-color: #dcfce7;
+  color: #10b981;
 }
 
 .yellow-icon {
-    background-color: #fef3c7;
-    color: #f59e0b;
+  background-color: #fef3c7;
+  color: #f59e0b;
 }
 
 .blue-icon {
-    background-color: #dbeafe;
-    color: #3b82f6;
+  background-color: #dbeafe;
+  color: #3b82f6;
 }
 
 .indigo-icon {
-    background-color: #e0e7ff;
-    color: #6366f1;
+  background-color: #e0e7ff;
+  color: #6366f1;
 }
 
 .pink-icon {
-    background-color: #fce7f3;
-    color: #ec4899;
+  background-color: #fce7f3;
+  color: #ec4899;
 }
 
 .cyan-icon {
-    background-color: #cffafe;
-    color: #06b6d4;
+  background-color: #cffafe;
+  color: #06b6d4;
 }
 
 .card-content {
-    flex: 1;
+  flex: 1;
 }
 
 .card-content h3 {
-    font-size: 1.25rem;
-    margin-bottom: 8px;
-    color: #1a1a1a;
-    font-weight: 600;
-    line-height: 1.4;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .card-content p {
-    font-size: 1.125rem; /* Updated to paragraph size */
-    color: #6b7280;
-    line-height: 1.5;
-    margin: 0;
+  font-size: 1.125rem; /* Updated to paragraph size */
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .proof-section {
-        padding: 60px 15px;
-    }
-    
-    .proof-section h2 {
-        font-size: 2rem;
-        margin-bottom: 40px;
-    }
-    
-    .proof-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .proof-card {
-        padding: 24px;
-    }
-}
 /* Why It Matters Section */
 .why-matters-section {
   padding: 20px 20px;
@@ -364,14 +318,12 @@ body {
   background-color: #4F6D7A;
   margin-top: 5%;
   font-size: 1.125rem; /* Updated to paragraph size */
-color: white;
- 
+  color: white;
 }
 
 .why-matters-section h2 {
   font-size: 2.5rem; /* Consistent h2 size */
   margin-bottom: 20px;
- 
   margin-top: 10%;
   text-decoration-thickness: 2px;
   color: white;
@@ -382,13 +334,13 @@ color: white;
   margin-bottom: 15px;
   color: #f9f5f5;
   line-height: 1.6;
-   font-size: 1.125rem; /* Updated paragraph size */
+  font-size: 1.125rem; /* Updated paragraph size */
 }
 
 .why-matters-section ul {
   list-style-type: disc;
   padding-left: 20px;
-   font-size: 1.125rem; /* Updated to paragraph size */
+  font-size: 1.125rem; /* Updated to paragraph size */
 }
 
 .why-matters-section ul li {
@@ -396,8 +348,6 @@ color: white;
   color: #f9f5f5;
   line-height: 1.6;
 }
-
-
 
 /* Outcomes Section */
 .outcomes-section {
@@ -442,6 +392,343 @@ color: white;
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+.subheading {
+  font-size: 2.5rem; /* Updated to h2 size for consistency */
+  font-weight: 500;
+  font-family: 'Garet';
+}
+
+/* Mobile Responsiveness - Tablet and Below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: 2.8rem;
+    padding-left: 5%;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    padding-left: 5%;
+  }
+
+  .metrics-section {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .metrics-container {
+    flex-direction: column;
+    gap: 40px;
+    max-width: 100%;
+  }
+
+  .metrics-left {
+    flex: none;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .metric-item {
+    font-size: 2.5rem;
+    padding-left: 0;
+  }
+
+  .metrics-descriptions {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .metrics-right {
+    flex: none;
+    font-size: 1.5rem;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .challenge-section {
+    height: auto;
+    padding: 40px 20px;
+    padding-left: 5%;
+  }
+
+  .challenge-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .challenge-section p {
+    font-size: 1.5rem;
+  }
+
+  .challenge-section ul {
+    font-size: 1.25rem;
+    padding-left: 20px;
+  }
+
+  .approach-blocks-section {
+    padding: 40px 20px;
+  }
+
+  .approach-block {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .approach-block:nth-child(even) .approach-content,
+  .approach-block:nth-child(even) .approach-image {
+    order: initial;
+  }
+
+  .approach-content h3 {
+    font-size: 2rem;
+  }
+
+  .approach-content ul li {
+    font-size: 1rem;
+  }
+
+  .proof-section {
+    padding: 60px 20px;
+  }
+
+  .proof-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .why-matters-section {
+    height: auto;
+    padding: 40px 20px;
+    margin-top: 0;
+  }
+
+  .why-matters-section h2 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .why-matters-section p,
+  .why-matters-section ul {
+    font-size: 1rem;
+  }
+
+  .outcomes-section {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .outcomes-section h2 {
+    font-size: 2rem;
+  }
+
+  .outcomes-section ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .outcomes-section li {
+    font-size: 1.125rem;
+    padding: 20px;
+  }
+}
+
+/* Mobile Responsiveness - Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+  }
+
+  .hero-heading {
+    font-size: 2.2rem;
+    padding-left: 3%;
+    margin-top: 20px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    padding-left: 3%;
+    max-width: 90%;
+  }
+
+  .metrics-section {
+    padding: 30px 15px;
+  }
+
+  .metric-item {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .metrics-right {
+    font-size: 1.25rem;
+    padding: 20px 15px;
+  }
+
+  .challenge-section {
+    padding: 30px 15px;
+    padding-left: 3%;
+  }
+
+  .challenge-section h2 {
+    font-size: 2rem;
+  }
+
+  .challenge-section p {
+    font-size: 1.25rem;
+  }
+
+  .challenge-section ul {
+    font-size: 1.125rem;
+    padding-left: 15px;
+  }
+
+  .approach-blocks-section {
+    padding: 30px 15px;
+  }
+
+  .approach-content h3 {
+    font-size: 1.75rem;
+  }
+
+  .approach-content ul li {
+    font-size: 0.95rem;
+  }
+
+  .approach-image {
+    aspect-ratio: 4 / 3; /* Adjust for mobile to avoid excessive height */
+  }
+
+  .proof-section {
+    padding: 40px 15px;
+  }
+
+  .proof-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .proof-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .proof-card {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .icon-circle {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .icon-circle svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .card-content h3 {
+    font-size: 1.125rem;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+  }
+
+  .why-matters-section {
+    padding: 30px 15px;
+  }
+
+  .why-matters-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .why-matters-section p,
+  .why-matters-section ul li {
+    font-size: 0.95rem;
+  }
+
+  .outcomes-section {
+    padding: 30px 15px;
+  }
+
+  .outcomes-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .outcomes-section ul {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .outcomes-section li {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Extra Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .metric-item {
+    font-size: 1.75rem;
+  }
+
+  .metrics-right {
+    font-size: 1.125rem;
+  }
+
+  .challenge-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .challenge-section p {
+    font-size: 1.125rem;
+  }
+
+  .challenge-section ul {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+
+  .approach-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .approach-content ul li {
+    font-size: 0.9rem;
+  }
+
+  .proof-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .why-matters-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .outcomes-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .outcomes-section li {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}
+
 
 /* CTA Section */
 .cta-section {
@@ -534,7 +821,62 @@ color: white;
   background-color: #1976d2;
   color: rgb(18, 14, 14);
 }
+/* Extra Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 1.8rem;
+  }
 
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .metric-item {
+    font-size: 1.75rem;
+  }
+
+  .metrics-right {
+    font-size: 1.125rem;
+  }
+
+  .challenge-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .challenge-section p {
+    font-size: 1.125rem;
+  }
+
+  .challenge-section ul {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+
+  .approach-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .approach-content ul li {
+    font-size: 0.9rem;
+  }
+
+  .proof-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .why-matters-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .outcomes-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .outcomes-section li {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}
 /* Responsive */
 @media (max-width: 768px) {
   .cta-section {
@@ -562,9 +904,4 @@ color: white;
     width: 100%;
     max-width: 250px;
   }
-}
-.subheading {
-  font-size: 2.5rem; /* Updated to h2 size for consistency */
-  font-weight: 500;
-  font-family: 'Garet';
 }

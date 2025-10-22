@@ -1,7 +1,7 @@
+// platform.tsx
 import React from 'react';
 
-
-export default function ValuesSection() {
+export default function Platform({ isMobile = false }) {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
 
   const iconStyle = (index: number) => ({
@@ -13,12 +13,12 @@ export default function ValuesSection() {
   });
 
   return (
-    <div  >
-    <div  style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <div>
+    <div style={{ padding: isMobile ? '40px 15px' : '60px 20px', maxWidth: '1200px', margin: '0 auto', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
 
       <section className='values-section'   >
         <h2 style={{ 
-          fontSize: '2.5rem', 
+          fontSize: isMobile ? '2rem' : '2.5rem', 
           fontWeight: '600', 
           marginBottom: '10px',
           color: '#1a1a1a',
@@ -40,7 +40,7 @@ export default function ValuesSection() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '30px',
+          gap: isMobile ? '20px' : '30px',
           fontFamily: 'Garet'
         }}>
           {/* Outcomes First */}
@@ -48,7 +48,7 @@ export default function ValuesSection() {
             style={{
               display: 'flex',
               gap: '20px',
-              padding: '25px',
+              padding: isMobile ? '20px 15px' : '25px',
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
@@ -88,7 +88,7 @@ export default function ValuesSection() {
             style={{
               display: 'flex',
               gap: '20px',
-              padding: '25px',
+              padding: isMobile ? '20px 15px' : '25px',
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
@@ -129,7 +129,7 @@ export default function ValuesSection() {
             style={{
               display: 'flex',
               gap: '20px',
-              padding: '25px',
+              padding: isMobile ? '20px 15px' : '25px',
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
@@ -169,7 +169,7 @@ export default function ValuesSection() {
             style={{
               display: 'flex',
               gap: '20px',
-              padding: '25px',
+              padding: isMobile ? '20px 15px' : '25px',
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
@@ -209,7 +209,7 @@ export default function ValuesSection() {
             style={{
               display: 'flex',
               gap: '20px',
-              padding: '25px',
+              padding: isMobile ? '20px 15px' : '25px',
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
@@ -249,7 +249,7 @@ export default function ValuesSection() {
             style={{
               display: 'flex',
               gap: '20px',
-              padding: '25px',
+              padding: isMobile ? '20px 15px' : '25px',
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
@@ -289,7 +289,7 @@ export default function ValuesSection() {
             style={{
               display: 'flex',
               gap: '20px',
-              padding: '25px',
+              padding: isMobile ? '20px 15px' : '25px',
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
@@ -329,7 +329,7 @@ export default function ValuesSection() {
             style={{
               display: 'flex',
               gap: '20px',
-              padding: '25px',
+              padding: isMobile ? '20px 15px' : '25px',
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',
@@ -369,7 +369,7 @@ export default function ValuesSection() {
             style={{
               display: 'flex',
               gap: '20px',
-              padding: '25px',
+              padding: isMobile ? '20px 15px' : '25px',
               borderBottom: '2px solid #333',
               backgroundColor: '#f8f8f8',
               borderRadius: '8px',

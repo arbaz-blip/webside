@@ -1,3 +1,5 @@
+// index.tsx
+import React, { useState, useEffect } from 'react';
 import { Navbar5 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 import Footer from 'pages/Home/Footer';
@@ -10,6 +12,18 @@ import About from "../../assets/images/About.png";
 // const homeVideo = require('../../assets/videos/enterprise-it-consulting-and-ai-automation.mp4');
 
 const Blog = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <>
             {/* Hero Section */}
@@ -17,7 +31,6 @@ const Blog = () => {
                 className="position-relative"
                 style={{
                     minHeight: '100vh',
-                    
                     fontFamily: 'Garet'
                 }}
             >
@@ -53,9 +66,9 @@ const Blog = () => {
                   
                       />
 
-                    <div className="d-flex flex-column align-items-center justify-content-center text-white text-center px-3" style={{ height: '80vh' }}>
+                    <div className="d-flex flex-column align-items-center justify-content-center text-white text-center px-3" style={{ height: isMobile ? '70vh' : '80vh' }}>
                         <h1 className="hero-title" style={{  
-                        fontSize: '3.2rem',
+                        fontSize: isMobile ? '2.5rem' : '3.2rem',
                         fontWeight: 600,
                         lineHeight: 1.2,
                         color: "#fff"  ,
@@ -70,7 +83,7 @@ const Blog = () => {
   style={{
     marginTop: '2rem',
     fontWeight: 500,
-    fontSize: '1.125rem',
+    fontSize: isMobile ? '1rem' : '1.125rem',
     maxWidth: '1000px',
     textAlign: 'center',
     // textShadow: '1px 1px 3px rgba(0, 0, 0, 1)',
@@ -85,8 +98,8 @@ const Blog = () => {
             </section>
 
             {/* Rest of the Page */}
-            <Platform />
-            <Timeline />
+            <Platform isMobile={isMobile} />
+            <Timeline isMobile={isMobile} />
             <Connect
                 title="Get In Touch"
                 description="Get in touch with us today to learn more about how we can help you succeed with these digital capabilities through our solutions and services."
