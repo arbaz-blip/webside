@@ -7,7 +7,7 @@ import axios from "axios";
 import { Spinner } from 'react-bootstrap';
 import hero from 'assets/images/cinergie-digital-join-our-team.jpg.png';
 import Footer from 'pages/Home/Footer';
-
+import "./career.css";
 import Connect from 'components/shared/Connect';
 // import Team from './Team';
 // import { teamMembers } from './data';

@@ -260,7 +260,6 @@
     font-weight: 500;
     font-family: 'Garet';
 }
-/* Updated CSS for ./styles.css - Fixes hamburger visibility on scroll + instant menu bg on open */
 
 @media (max-width: 768px) {
   /* Initial state: Keep navbar transparent */
@@ -272,9 +271,8 @@
   }
 
   /* On scroll: Apply opaque style */
-  .navbar.scrolled,
-  .navbar.navbar-scrolled,
-  .navbar.sticky-top.scrolled {
+  .navbar.navbar-light.bg-white.shadow-sm,
+  .navbar.navbar-sticky {
     background-color: rgba(255, 255, 255, 0.98) !important;
     backdrop-filter: blur(10px) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
@@ -293,16 +291,14 @@
   }
 
   /* On scrolled: Adjust logo for white bg */
-  .navbar.scrolled .navbar-brand,
-  .navbar.navbar-scrolled .navbar-brand,
-  .navbar.sticky-top.scrolled .navbar-brand {
+  .navbar.navbar-light.bg-white.shadow-sm .navbar-brand,
+  .navbar.navbar-sticky .navbar-brand {
     color: #333 !important;
     text-shadow: none !important;
   }
 
-  .navbar.scrolled .navbar-brand img,
-  .navbar.navbar-scrolled .navbar-brand img,
-  .navbar.sticky-top.scrolled .navbar-brand img {
+  .navbar.navbar-light.bg-white.shadow-sm .navbar-brand img,
+  .navbar.navbar-sticky .navbar-brand img {
     filter: brightness(1) saturate(1) !important;
   }
 
@@ -320,9 +316,8 @@
   }
 
   /* Scrolled hamburger icon (dark lines on white bg) */
-  .navbar.scrolled .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon,
-  .navbar.navbar-scrolled .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon,
-  .navbar.sticky-top.scrolled .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
+  .navbar.navbar-light.bg-white.shadow-sm .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon,
+  .navbar.navbar-sticky .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
   }
 
@@ -331,9 +326,8 @@
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 23L23 4M23 23L4 4'/%3e%3c/svg%3e") !important;
   }
 
-  .navbar.scrolled .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon,
-  .navbar.navbar-scrolled .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon,
-  .navbar.sticky-top.scrolled .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  .navbar.navbar-light.bg-white.shadow-sm .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon,
+  .navbar.navbar-sticky .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 23L23 4M23 23L4 4'/%3e%3c/svg%3e") !important;
   }
 
@@ -367,9 +361,8 @@
   }
 
   /* If scrolled and menu open, adjust menu border */
-  .navbar.scrolled .navbar-collapse.show,
-  .navbar.navbar-scrolled .navbar-collapse.show,
-  .navbar.sticky-top.scrolled .navbar-collapse.show {
+  .navbar.navbar-light.bg-white.shadow-sm .navbar-collapse.show,
+  .navbar.navbar-sticky .navbar-collapse.show {
     border-top-color: rgba(0, 0, 0, 0.1) !important;
   }
 
