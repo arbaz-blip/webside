@@ -66,15 +66,15 @@ const Blog = () => {
                   
                       />
 
-                    <div className="d-flex flex-column align-items-center justify-content-center text-white text-center px-3" style={{ height: isMobile ? '70vh' : '80vh' }}>
+                    <div className="d-flex flex-column align-items-center justify-content-center text-white text-center px-1" style={{ height: isMobile ? '70vh' : '80vh' }}>
                         <h1 className="hero-title" style={{  
                         fontSize: isMobile ? '2.5rem' : '3.2rem',
                         fontWeight: 600,
                         lineHeight: 1.2,
-                        color: "#fff"  ,
-                        
-                        fontFamily: 'Garet'
-                        
+                        color: "#fff",
+                       
+                        fontFamily: 'Garet',
+                        marginTop: 100
 
                     }} >
                             Digital Platform Outcomes

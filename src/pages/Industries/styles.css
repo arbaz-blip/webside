@@ -273,7 +273,7 @@
   /* On scroll: Apply opaque style */
   .navbar.navbar-light.bg-white.shadow-sm,
   .navbar.navbar-sticky {
-    background-color: rgba(255, 255, 255, 0.98) !important;
+    background-color: rgba(255, 255, 255, 1) !important;
     backdrop-filter: blur(10px) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
@@ -344,7 +344,7 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
     margin-top: 0 !important;
     padding-top: 10px !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; */
     opacity: 1 !important;
     visibility: visible !important;
     transition: opacity 0.2s ease !important; /* Quick fade for content */
