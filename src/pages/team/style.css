@@ -1,15 +1,14 @@
-/* === Resources Section === */
+/* === Resources Section with Alternating Grid === */
 .resources-section {
     padding: 5rem 2rem;
     background-color: #4F6D7A;
-    font-Family: 'Garet'
+    font-family: 'Garet';
 }
 
 .resources-container {
     max-width: 1200px;
-    margin:  auto;
-    color: rgb(16, 14, 14);
-
+    margin: 0 auto;
+    color: white;
 }
 
 .resources-section h2 {
@@ -18,29 +17,33 @@
     margin-bottom: 3rem;
     text-align: center;
     font-weight: 600;
-    margin-left: 0%;
-    font-Family: 'Garet'
+    font-family: 'Garet';
 }
 
-.resources-grid {
+/* === Alternating Grid Layout === */
+.services-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1.5rem;
-    color: #f1f1f4;
+    margin-bottom: 1.5rem;
+}
+
+/* Flipped grid for alternating pattern */
+.services-grid-flipped {
+    grid-template-columns: 1fr 2fr;
 }
 
 .left-column {
-    display: grid;
-    grid-template-rows: repeat(1, 1fr);
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .right-column {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
+/* === Resource Cards === */
 .resource-card {
     background-color: white;
     border-radius: 12px;
@@ -49,29 +52,40 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    height: 400px;
-    margin-left: 5%;
-    
+    height: 500px;
+    font-family: 'Garet';
 }
 
 .resource-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
+
+.resource-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* === Card Image === */
 .card-image {
-  width: 100%;
-  height: auto; /* or set a specific height if needed */
-  position: relative;
-  overflow: hidden;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
 }
 
 .card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: 
+        brightness(0.9)
+        contrast(1.15)
+        saturate(0.9)
+        hue-rotate(-5deg);
 }
-
 
 .metric-badge {
     position: absolute;
@@ -88,166 +102,34 @@
     letter-spacing: 0.5px;
 }
 
-.content-label {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: var(--white);
-    font-weight: 600;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-}
-
+/* === Card Content === */
 .resource-content {
-    padding: 0.7rem;
+    padding: 1.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-        
+    height: 50%;
     background-color: #f5f6fb;
 }
 
 .resource-content h3 {
     font-size: 1.5rem;
-    color: rgb(14, 14, 14);
-    margin-bottom: 0.4rem;
+    color: #0e0e0e;
+    margin-bottom: 0.8rem;
     font-weight: 500;
-
+    font-family: 'Garet';
 }
 
 .resource-content p {
     font-size: 1rem;
-    color: rgb(17, 14, 14);
-    margin-bottom: 0.5rem;
+    color: #110e0e;
+    margin-bottom: 1rem;
     flex-grow: 1;
     line-height: 1.4;
+    font-family: 'Garet';
 }
 
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.tag {
-    background-color: #E3F2FD;
-    color: #dbdddf;
-    padding: 2px 6px;
-    border-radius: 8px;
-    font-size: 0.65rem;
-    font-weight: 500;
-}
-
-.resource-content .cta-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.2rem;
-    font-weight: 600;
-    color: #0078D4;
-    transition: color 0.3s ease, transform 0.2s ease;
-    margin-top: auto;
-    font-size: 1rem;
-    text-decoration: none;
-}
-
-.resource-content .cta-link:hover {
-    color: #005A9E;
-    transform: translateX(5px);
-}
-
-/* === CTA Section === */
-.cta-section {
-    padding: 7rem 5rem;
-    background-color: var(--charcoal);
-    color: var(--white);
-    text-align: center;
-}
-
-.cta-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-}
-
-.cta-section p {
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    opacity: 0.9;
-}
-
-.cta-section .cta-button {
-    background-color: var(--skyblue);
-    color: var(--white);
-    padding: 0.8rem 2rem;
-    border-radius: 4px;
-    font-weight: 600;
-    display: inline-flex;
-    text-decoration: none;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background-color 0.3s ease;
-}
-
-.cta-section .cta-button:hover {
-    background-color: #029ADB;
-}
-
-/* === Scroll to Top Button === */
-#scrollTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: var(--skyblue);
-    color: white;
-    cursor: pointer;
-    padding: 12px 16px;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#scrollTopBtn:hover {
-    background-color: #2D6CAE;
-    transform: scale(1.1);
-}
-
-/* === Responsive Adjustments === */
-@media (max-width: 1200px) {
-    .resources-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .left-column, .right-column {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .resources-section h2 {
-        font-size: 2rem;
-    }
-
-    .resource-card {
-        height: auto;
-    }
-
-    .card-image {
-        height: 120px;
-    }
-
-    .tags {
-        justify-content: flex-start;
-    }
-}
+/* === Resource Footer === */
 .resource-footer {
     display: flex;
     justify-content: space-between;
@@ -255,6 +137,24 @@
     margin-top: auto;
 }
 
+.cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-weight: 600;
+    color: #0078D4;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Garet';
+}
+
+.cta-link:hover {
+    color: #005A9E;
+    transform: translateX(5px);
+}
+
+/* === Labels/Tags === */
 .labels {
     display: flex;
     gap: 0.4rem;
@@ -272,131 +172,227 @@
     white-space: nowrap;
 }
 
+/* === Scroll to Top Button === */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #0078D4;
+    color: white;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #2D6CAE;
+    transform: scale(1.1);
+}
+
+/* === Utility Classes === */
 .subheading {
-  font-size: 1.5rem;
-  font-weight: 500;
-  font-family: 'Garet';
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Garet';
 }
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 1200px) {
+    .services-grid,
+    .services-grid-flipped {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-card {
+        height: auto;
+    }
+
+    .card-image {
+        height: 250px;
+    }
+
+    .resource-content {
+        height: auto;
+        padding: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
-  /* Initial state: Keep navbar transparent */
-  .navbar {
-    background-color: transparent !important;
-    backdrop-filter: none !important;
-    border-bottom: none !important;
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease !important;
-  }
+    .resources-section {
+        padding: 3rem 1rem;
+    }
 
-  /* On scroll: Apply opaque style */
-  .navbar.navbar-light.bg-white.shadow-sm,
-  .navbar.navbar-sticky {
-    background-color: rgba(255, 255, 255, 1) !important;
-    backdrop-filter: blur(10px) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
-  }
+    .resources-section h2 {
+        font-size: 2rem;
+    }
 
-  /* Logo visibility - always enhance on transparent bg */
-  .navbar-brand {
-    color: #fff !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
-  }
+    .resource-card {
+        min-height: 350px;
+    }
 
-  .navbar-brand img {
-    filter: brightness(1.2) saturate(1.1) !important;
-    max-height: 40px !important;
-  }
+    .card-image {
+        height: 200px;
+    }
 
-  /* On scrolled: Adjust logo for white bg */
-  .navbar.navbar-light.bg-white.shadow-sm .navbar-brand,
-  .navbar.navbar-sticky .navbar-brand {
-    color: #333 !important;
-    text-shadow: none !important;
-  }
+    .resource-content {
+        padding: 1rem;
+    }
 
-  .navbar.navbar-light.bg-white.shadow-sm .navbar-brand img,
-  .navbar.navbar-sticky .navbar-brand img {
-    filter: brightness(1) saturate(1) !important;
-  }
+    .resource-content h3 {
+        font-size: 1.25rem;
+    }
 
-  /* Hamburger toggler - always visible with proper contrast */
-  .navbar-toggler {
-    border: none !important; /* Remove border for clean look */
-    background-color: transparent !important;
-    padding: 4px !important; /* Compact padding */
-    z-index: 10 !important; /* Ensure on top */
-  }
+    .resource-content p {
+        font-size: 0.95rem;
+    }
 
-  /* Initial hamburger icon (white lines on transparent) */
-  .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-  }
+    .resource-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
 
-  /* Scrolled hamburger icon (dark lines on white bg) */
-  .navbar.navbar-light.bg-white.shadow-sm .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon,
-  .navbar.navbar-sticky .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-  }
-
-  /* When menu is open (X icon) - white on transparent, dark on scrolled */
-  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 23L23 4M23 23L4 4'/%3e%3c/svg%3e") !important;
-  }
-
-  .navbar.navbar-light.bg-white.shadow-sm .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon,
-  .navbar.navbar-sticky .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 23L23 4M23 23L4 4'/%3e%3c/svg%3e") !important;
-  }
-
-  /* Mobile menu: Instant white bg on open, no delay */
-  .navbar-collapse {
-    background-color: transparent !important;
-    transition: none !important; /* Remove transition for instant bg */
-    opacity: 0 !important; /* Hide initially */
-    visibility: hidden !important;
-  }
-
-  .navbar-collapse.show {
-    background-color: white !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
-    margin-top: 0 !important;
-    padding-top: 10px !important;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; */
-    opacity: 1 !important;
-    visibility: visible !important;
-    transition: opacity 0.2s ease !important; /* Quick fade for content */
-  }
-
-  /* Ensure menu content (text/links) doesn't show before bg */
-  .navbar-collapse .navbar-nav {
-    opacity: 0;
-    transition: opacity 0.2s ease 0.05s !important; /* Slight delay for bg to set */
-  }
-
-  .navbar-collapse.show .navbar-nav {
-    opacity: 1 !important;
-  }
-
-  /* If scrolled and menu open, adjust menu border */
-  .navbar.navbar-light.bg-white.shadow-sm .navbar-collapse.show,
-  .navbar.navbar-sticky .navbar-collapse.show {
-    border-top-color: rgba(0, 0, 0, 0.1) !important;
-  }
-
-  /* Nav links in mobile menu - always dark for white bg */
-  .navbar-nav .nav-link {
-    color: #333 !important;
-    padding: 12px 20px !important;
-    transition: all 0.2s ease !important;
-  }
-
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link:focus {
-    color: #007bff !important;
-    background-color: rgba(0, 123, 255, 0.1) !important;
-  }
-
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth !important;
-  }
+    .labels {
+        justify-content: flex-start;
+    }
 }
+
+/* === Mobile Navbar Styles === */
+@media (max-width: 768px) {
+    /* Initial state: Keep navbar transparent */
+    .navbar {
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+        border-bottom: none !important;
+        transition: background-color 0.3s ease, backdrop-filter 0.3s ease !important;
+    }
+
+    /* On scroll: Apply opaque style */
+    .navbar.navbar-light.bg-white.shadow-sm,
+    .navbar.navbar-sticky {
+        background-color: rgba(255, 255, 255, 1) !important;
+        backdrop-filter: blur(10px) !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Logo visibility - always enhance on transparent bg */
+    .navbar-brand {
+        color: #fff !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .navbar-brand img {
+        filter: brightness(1.2) saturate(1.1) !important;
+        max-height: 40px !important;
+    }
+
+    /* On scrolled: Adjust logo for white bg */
+    .navbar.navbar-light.bg-white.shadow-sm .navbar-brand,
+    .navbar.navbar-sticky .navbar-brand {
+        color: #333 !important;
+        text-shadow: none !important;
+    }
+
+    .navbar.navbar-light.bg-white.shadow-sm .navbar-brand img,
+    .navbar.navbar-sticky .navbar-brand img {
+        filter: brightness(1) saturate(1) !important;
+    }
+
+    /* Hamburger toggler - always visible with proper contrast */
+    .navbar-toggler {
+        border: none !important;
+        background-color: transparent !important;
+        padding: 4px !important;
+        z-index: 10 !important;
+    }
+
+    /* Initial hamburger icon (white lines on transparent) */
+    .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    /* Scrolled hamburger icon (dark lines on white bg) */
+    .navbar.navbar-light.bg-white.shadow-sm .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon,
+    .navbar.navbar-sticky .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    /* When menu is open (X icon) - white on transparent, dark on scrolled */
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 23L23 4M23 23L4 4'/%3e%3c/svg%3e") !important;
+    }
+
+    .navbar.navbar-light.bg-white.shadow-sm .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon,
+    .navbar.navbar-sticky .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 23L23 4M23 23L4 4'/%3e%3c/svg%3e") !important;
+    }
+
+    /* Mobile menu: Instant white bg on open, no delay */
+    .navbar-collapse {
+        background-color: transparent !important;
+        transition: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    .navbar-collapse.show {
+        background-color: white !important;
+        border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+        margin-top: 0 !important;
+        padding-top: 10px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.2s ease !important;
+    }
+
+    /* Ensure menu content (text/links) doesn't show before bg */
+    .navbar-collapse .navbar-nav {
+        opacity: 0;
+        transition: opacity 0.2s ease 0.05s !important;
+    }
+
+    .navbar-collapse.show .navbar-nav {
+        opacity: 1 !important;
+    }
+
+    /* If scrolled and menu open, adjust menu border */
+    .navbar.navbar-light.bg-white.shadow-sm .navbar-collapse.show,
+    .navbar.navbar-sticky .navbar-collapse.show {
+        border-top-color: rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Nav links in mobile menu - always dark for white bg */
+    .navbar-nav .nav-link {
+        color: #333 !important;
+        padding: 12px 20px !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+        color: #007bff !important;
+        background-color: rgba(0, 123, 255, 0.1) !important;
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth !important;
+    }
+}
+

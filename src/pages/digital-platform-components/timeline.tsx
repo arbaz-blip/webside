@@ -1,5 +1,6 @@
 // timeline.tsx
 import React from 'react';
+import './mobile.css'; // Import the CSS file
 
 export default function TimelineSection({ isMobile = false }) {
   if (!isMobile) {
@@ -9,8 +10,6 @@ export default function TimelineSection({ isMobile = false }) {
         maxWidth: '1200px',
         margin: '0 auto',
         fontFamily: 'Garet',
-       
-      
       }}>
         <h2 style={{
           fontSize: '2.5rem',
@@ -19,7 +18,6 @@ export default function TimelineSection({ isMobile = false }) {
           marginBottom: '80px',
           color: '#1a1a1a',
           fontFamily: 'Garet'
-            
         }}>
           Cinergie's Proven Approach
         </h2>
@@ -36,7 +34,7 @@ export default function TimelineSection({ isMobile = false }) {
             transform: 'translateY(-50%)',
             borderRadius: '4px',
             zIndex: 0,
-               fontFamily: 'Garet'
+            fontFamily: 'Garet'
           }} />
 
           {/* Timeline Items Container */}
@@ -320,115 +318,28 @@ export default function TimelineSection({ isMobile = false }) {
     );
   }
 
-  // Mobile vertical timeline
+  // Mobile vertical timeline with CSS classes
   const stages = [
-    { time: '1-2 Weeks', desc: 'Roadmaps, audit, tech recommendations', bg: '#0784a3', shadow: 'rgba(7,132,163,0.3)' },
-    { time: '2-3 Weeks', desc: 'User flows, architecture, specs', bg: '#0784a3', shadow: 'rgba(7,132,163,0.3)' },
-    { time: '6-10 Weeks', desc: 'Go live, train, improve', bg: '#3FAAD9', shadow: 'rgba(63,170,217,0.3)' },
-    { time: '1-2 Weeks', desc: 'Build, integrate, test', bg: '#3FAAD9', shadow: 'rgba(63,170,217,0.3)' }
+    { time: '1-2 Weeks', desc: 'Roadmaps, audit, tech recommendations' },
+    { time: '2-3 Weeks', desc: 'User flows, architecture, specs' },
+    { time: '6-10 Weeks', desc: 'Go live, train, improve' },
+    { time: '1-2 Weeks', desc: 'Build, integrate, test' }
   ];
 
   return (
-    <div style={{
-      padding: '40px 15px',
-      maxWidth: '600px',
-      margin: '0 auto',
-      fontFamily: 'Garet',
-    }}>
-      <h2 style={{
-        fontSize: '2rem',
-        fontWeight: '600',
-        textAlign: 'center',
-        marginBottom: '60px',
-        color: '#1a1a1a',
-        fontFamily: 'Garet'
-      }}>
-        Cinergie's Proven Approach
-      </h2>
-
-      <div style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        gap: '60px', 
-        position: 'relative',
-        alignItems: 'center'
-      }}>
-        {/* Vertical Timeline Bar */}
-        <div style={{
-          position: 'absolute',
-          left: '50%',
-          top: 0,
-          bottom: 0,
-          width: '4px',
-          background: 'linear-gradient(to bottom, #0784a3 0%, #0784a3 50%, #3FAAD9 50%, #3FAAD9 100%)',
-          transform: 'translateX(-50%)',
-          zIndex: 0,
-          borderRadius: '2px',
-          fontFamily: 'Garet'
-        }} />
-
+    <div className="timeline-mobile">
+      <h2>Cinergie's Proven Approach</h2>
+      
+      <div className="timeline-mobile-list">
         {stages.map((stage, index) => (
-          <div 
-            key={index} 
-            style={{ 
-              position: 'relative', 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              zIndex: 1,
-              width: '100%'
-            }}
-          >
-            <div style={{
-              width: '60px',
-              height: '60px',
-              borderRadius: '50%',
-              background: stage.bg,
-              color: 'white',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '1.8rem',
-              fontWeight: '600',
-              marginBottom: '20px',
-              boxShadow: `0 4px 6px ${stage.shadow}`,
-              fontFamily: 'Garet'
-            }}>
+          <div key={index} className="timeline-stage-item">
+            <div className={`stage-number ${index >= 2 ? `stage-${index + 1}` : ''}`}>
               {index + 1}
             </div>
-            <div style={{ 
-              textAlign: 'center', 
-              maxWidth: '400px',
-              padding: '0 10px',
-              fontFamily: 'Garet'
-            }}>
-              <div style={{
-                fontSize: '1.2rem',
-                fontWeight: '600',
-                marginBottom: '10px',
-                color: '#333',
-                fontFamily: 'Garet'
-              }}>
-                {stage.time}
-              </div>
-              <div style={{
-                fontSize: '1.3rem',
-                fontWeight: '700',
-                letterSpacing: '1px',
-                marginBottom: '8px',
-                color: '#333',
-                fontFamily: 'Garet'
-              }}>
-                STAGE
-              </div>
-              <div style={{
-                fontSize: '0.9rem',
-                color: '#666',
-                lineHeight: '1.5',
-                fontFamily: 'Garet'
-              }}>
-                {stage.desc}
-              </div>
+            <div className="stage-content">
+              <div className="stage-time">{stage.time}</div>
+              <div className="stage-label">STAGE</div>
+              <div className="stage-description">{stage.desc}</div>
             </div>
           </div>
         ))}

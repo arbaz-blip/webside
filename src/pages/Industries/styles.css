@@ -384,3 +384,96 @@
     scroll-behavior: smooth !important;
   }
 }
+
+
+
+
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+  .full-width-card .service-card {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .full-width-card .card-image {
+    flex: 0 0 auto;
+    min-height: 200px;
+    max-height: 250px;
+  }
+
+  .full-width-card .service-content {
+    padding: 1.5rem;
+  }
+
+  .full-width-card .service-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .full-width-card .metric-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Mobile - 480px and below */
+@media (max-width: 480px) {
+  .full-width-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .full-width-card .card-image {
+    min-height: 180px;
+    max-height: 200px;
+  }
+
+  .full-width-card .service-content {
+    padding: 1.25rem;
+  }
+
+  .full-width-card .service-content h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .full-width-card .service-content ul {
+    margin-bottom: 1rem;
+  }
+
+  .full-width-card .service-content ul li {
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+    padding-left: 1.25rem;
+  }
+
+  .full-width-card .metric-badge {
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .full-width-card .cta-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small devices - 360px and below */
+@media (max-width: 360px) {
+  .full-width-card .card-image {
+    min-height: 160px;
+    max-height: 180px;
+  }
+
+  .full-width-card .service-content {
+    padding: 1rem;
+  }
+
+  .full-width-card .service-content h3 {
+    font-size: 1rem;
+  }
+
+  .full-width-card .service-content ul li {
+    font-size: 0.85rem;
+  }
+}

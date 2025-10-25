@@ -1,5 +1,5 @@
 import React from "react";
-import "./Services.css"; // Updated styles for layout and design
+import "./Services.css";
 
 // Import images (replace with actual paths)
 import advisoryImg from "../../assets/images/advisory-data-strategy-services.jpg";
@@ -42,7 +42,7 @@ const Services = () => {
       desc: [
         "Cloud migration & re-platforming",
         "API enablement & refactoring",
-        "SLA-driven maintenance & performance optimisation",
+       
       ],
       img: appModernImg,
       alt: "Application modernisation and legacy system migration",
@@ -127,53 +127,207 @@ const Services = () => {
     },
   ];
 
-  // Helper to determine if a card should be flipped (for 2nd and 4th visual rows in left column)
-  const isFlipped = (index: number) => [1, 3].includes(index);
-
   return (
     <>
       <button id="scrollTopBtn" title="Go to top">↑</button>
       <section className="services-section">
         <div className="services-container">
-          <h2 className="fw-bold" style={{ fontFamily: 'Garet' }}>Enterprise IT & Digital Services That Deliver Measurable Outcomes</h2>
+          <h2 className="fw-bold" style={{ fontFamily: 'Garet' }}>
+            Enterprise IT & Digital Services That Deliver Measurable Outcomes
+          </h2>
+
+          {/* Row 1: Long left (2fr), Small right (1fr) */}
           <div className="services-grid">
             <div className="left-column">
-              {services.slice(0, 5).map((service, index) => (
-                <div key={index} className={`service-card ${isFlipped(index) ? 'flipped' : ''}`}>
-                  <div className="card-image">
-                    <img src={service.img} alt={service.alt} />
-                    <div className="metric-badge">{service.badge}</div>
-                  </div>
-                  <div className="service-content">
-                    <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{service.title}</h3>
-                    <ul style={{ fontFamily: 'Garet' }}>
-                      {service.desc.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                    <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
-                  </div>
+              <div className="service-card">
+                <div className="card-image">
+                  <img src={services[0].img} alt={services[0].alt} />
+                  <div className="metric-badge">{services[0].badge}</div>
                 </div>
-              ))}
+                <div className="service-content">
+                  <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{services[0].title}</h3>
+                  <ul style={{ fontFamily: 'Garet' }}>
+                    {services[0].desc.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
+                </div>
+              </div>
             </div>
+            
             <div className="right-column">
-              {services.slice(5, 10).map((service, index) => (
-                <div key={index + 5} className="service-card">
-                  <div className="card-image">
-                    <img src={service.img} alt={service.alt} />
-                    <div className="metric-badge">{service.badge}</div>
-                  </div>
-                  <div className="service-content">
-                    <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{service.title}</h3>
-                    <ul style={{ fontFamily: 'Garet' }}>
-                      {service.desc.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                    <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
-                  </div>
+              <div className="service-card">
+                <div className="card-image">
+                  <img src={services[1].img} alt={services[1].alt} />
+                  <div className="metric-badge">{services[1].badge}</div>
                 </div>
-              ))}
+                <div className="service-content">
+                  <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{services[1].title}</h3>
+                  <ul style={{ fontFamily: 'Garet' }}>
+                    {services[1].desc.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2: Small left (1fr), Long right (2fr) - FLIPPED */}
+          <div className="services-grid services-grid-flipped">
+            <div className="left-column">
+              <div className="service-card">
+                <div className="card-image">
+                  <img src={services[2].img} alt={services[2].alt} />
+                  <div className="metric-badge">{services[2].badge}</div>
+                </div>
+                <div className="service-content">
+                  <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{services[2].title}</h3>
+                  <ul style={{ fontFamily: 'Garet' }}>
+                    {services[2].desc.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="right-column">
+              <div className="service-card">
+                <div className="card-image">
+                  <img src={services[3].img} alt={services[3].alt} />
+                  <div className="metric-badge">{services[3].badge}</div>
+                </div>
+                <div className="service-content">
+                  <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{services[3].title}</h3>
+                  <ul style={{ fontFamily: 'Garet' }}>
+                    {services[3].desc.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 3: Long left (2fr), Small right (1fr) */}
+          <div className="services-grid">
+            <div className="left-column">
+              <div className="service-card">
+                <div className="card-image">
+                  <img src={services[4].img} alt={services[4].alt} />
+                  <div className="metric-badge">{services[4].badge}</div>
+                </div>
+                <div className="service-content">
+                  <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{services[4].title}</h3>
+                  <ul style={{ fontFamily: 'Garet' }}>
+                    {services[4].desc.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="right-column">
+              <div className="service-card">
+                <div className="card-image">
+                  <img src={services[5].img} alt={services[5].alt} />
+                  <div className="metric-badge">{services[5].badge}</div>
+                </div>
+                <div className="service-content">
+                  <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{services[5].title}</h3>
+                  <ul style={{ fontFamily: 'Garet' }}>
+                    {services[5].desc.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 4: Small left (1fr), Long right (2fr) - FLIPPED */}
+          <div className="services-grid services-grid-flipped">
+            <div className="left-column">
+              <div className="service-card">
+                <div className="card-image">
+                  <img src={services[6].img} alt={services[6].alt} />
+                  <div className="metric-badge">{services[6].badge}</div>
+                </div>
+                <div className="service-content">
+                  <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{services[6].title}</h3>
+                  <ul style={{ fontFamily: 'Garet' }}>
+                    {services[6].desc.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="right-column">
+              <div className="service-card">
+                <div className="card-image">
+                  <img src={services[7].img} alt={services[7].alt} />
+                  <div className="metric-badge">{services[7].badge}</div>
+                </div>
+                <div className="service-content">
+                  <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{services[7].title}</h3>
+                  <ul style={{ fontFamily: 'Garet' }}>
+                    {services[7].desc.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 5: Long left (2fr), Small right (1fr) */}
+          <div className="services-grid">
+            <div className="left-column">
+              <div className="service-card">
+                <div className="card-image">
+                  <img src={services[8].img} alt={services[8].alt} />
+                  <div className="metric-badge">{services[8].badge}</div>
+                </div>
+                <div className="service-content">
+                  <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{services[8].title}</h3>
+                  <ul style={{ fontFamily: 'Garet' }}>
+                    {services[8].desc.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="right-column">
+              <div className="service-card">
+                <div className="card-image">
+                  <img src={services[9].img} alt={services[9].alt} />
+                  <div className="metric-badge">{services[9].badge}</div>
+                </div>
+                <div className="service-content">
+                  <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{services[9].title}</h3>
+                  <ul style={{ fontFamily: 'Garet' }}>
+                    {services[9].desc.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className="cta-link" style={{ fontFamily: 'Garet' }}>Learn More →</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

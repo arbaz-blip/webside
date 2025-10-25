@@ -16,7 +16,10 @@ const healthcareCase = React.lazy(() => import('../pages/Industries/healthcare')
 const retailEcommerceCase = React.lazy(() => import('../pages/Industries/retailecommerce'));
 const enterpriseDeliveryCase = React.lazy(() => import('../pages/Industries/enterprisedelivery'));
 const realTimeOrderStream = React.lazy(() => import('../pages/team/real-time-order-stream'));
+const reimaginingloanorigination = React.lazy(() => import('../pages/team/reimagining-loan-origination'));
 
+const RegulatoryReportingAutomation = React.lazy(() => import('../pages/team/Regulatory-Reporting-Automation'));
+const PredictiveFraudDetection = React.lazy(() => import('../pages/team/Predictive-Fraud-Detection'));
 
 // const tibco = React.lazy(() => import('../pages/solutions/tibco'));
 // const singlestore = React.lazy(() => import('../pages/solutions/singlestore'));
@@ -90,7 +93,18 @@ const AllRoutes = () => {
             path: '/real-time-order-stream',
             element: <LoadComponent component={realTimeOrderStream} />
         },
-       
+       {
+            path: '/reimagining-loan-origination',
+            element: <LoadComponent component={reimaginingloanorigination} />
+        },
+        {
+            path: '/Predictive-Fraud-Detection',
+            element: <LoadComponent component={PredictiveFraudDetection} />
+        },
+        {
+            path: '/Regulatory-Reporting-Automation',
+            element: <LoadComponent component={RegulatoryReportingAutomation} />
+        },
         {
             path: '/team',
             element: <LoadComponent component={team} />

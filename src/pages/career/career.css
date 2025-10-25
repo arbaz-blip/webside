@@ -121,3 +121,28 @@
     scroll-behavior: smooth !important;
   }
 }
+/* Mobile Navbar - Move hamburger to right */
+@media (max-width: 991px) {
+    .navbar > .container,
+    .navbar > .container-fluid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-toggler {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .navbar-brand {
+        order: 1;
+        margin-right: auto;
+    }
+
+    .navbar-collapse {
+        order: 3;
+        width: 100%;
+    }
+}
