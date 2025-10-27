@@ -35,11 +35,16 @@ const ContactUs = () => {
     } = methods;
 
     const form = useRef(null);
-    // service_a9njwqk
+
     const sendEmail = async () => {
         try {
             if (form.current) {
-                const result = await emailjs.sendForm('service_cy0b6yc', 'template_5x8jb8h', form.current, 't5t-h48zRsZEmoh6H');
+                const result = await emailjs.sendForm(
+                    'service_cy0b6yc',
+                    'template_5x8jb8h',
+                    form.current,
+                    't5t-h48zRsZEmoh6H'
+                );
                 setShowSuccessModal(true);
                 console.log(result.text);
             } else {
@@ -52,7 +57,6 @@ const ContactUs = () => {
         }
     };
 
-
     const onSubmit = async () => {
         await sendEmail();
         methods.reset();
@@ -61,11 +65,11 @@ const ContactUs = () => {
     return (
         <section className="section" style={{ fontFamily: 'Garet' }}>
             <Container>
-                <Row className="align-items-center">
+                {/* --- Dubai Office --- */}
+                <Row className="align-items-center mb-5">
                     <Col lg={6}>
-                        <OfficeCard office={offices[1]} />
+                        <OfficeCard office={offices[0]} />
                     </Col>
-
                     <Col lg={6}>
                         <div style={{ position: 'relative', overflow: 'hidden', width: '100%', paddingTop: '100%' }}>
                             <iframe
@@ -79,47 +83,30 @@ const ContactUs = () => {
                                     height: '100%',
                                     border: '0',
                                 }}
-                                allowFullScreen={true}
+                                allowFullScreen
                                 loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"></iframe>
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
                         </div>
                     </Col>
                 </Row>
 
-                <Row className="align-items-center">
-                    <Col lg={6} className="order-1 order-md-0">
-                        <div style={{ position: 'relative', overflow: 'hidden', width: '100%', paddingTop: '100%' }}>
-                            <iframe
-                                title="Lahore Office"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d850.693151200423!2d74.40065196957399!3d31.475440898389664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391907e3853df6b9%3A0x9884636ad1ffe162!2sCinergie%20Digital%20(Pvt.)%20Ltd.!5e0!3m2!1sen!2sus!4v1705385027231!5m2!1sen!2sus"
-                                style={{
-                                    position: 'absolute',
-                                    top: '0',
-                                    left: '0',
-                                    width: '100%',
-                                    height: '100%',
-                                    border: '0',
-                                }}
-                                allowFullScreen={true}
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </Col>
-
-                    <Col lg={6} className="order-0 order-md-1">
-                        <OfficeCard office={offices[0]} />
-                    </Col>
-                </Row>
+                {/* --- Contact Form --- */}
                 <Row className="align-items-center">
                     <Col lg={1}></Col>
                     <Col lg={10}>
                         <Card className="shadow-none">
                             <Card.Body className="p-xl-5 p-0">
-                                <h2 className="mb-2 mt-0 fw-medium" style={{
-                                    fontSize: '2.5rem',
-                                    fontWeight: 600,
-                                    fontFamily: 'Garet'
-                                }}>Ready to Connect?</h2>
+                                <h2
+                                    className="mb-2 mt-0 fw-medium"
+                                    style={{
+                                        fontSize: '2.5rem',
+                                        fontWeight: 600,
+                                        fontFamily: 'Garet',
+                                    }}
+                                >
+                                    Ready to Connect?
+                                </h2>
                                 <p className="mb-5" style={{ fontFamily: 'Garet' }}>
                                     Drop us a note by filling out the form below. We're eager to connect with you and
                                     will be in touch shortly.
@@ -167,7 +154,7 @@ const ContactUs = () => {
                                             <FormInput
                                                 type="email"
                                                 name="email"
-                                                label="Email Name"
+                                                label="Email"
                                                 placeholder="Your Email"
                                                 containerClass={'mb-3'}
                                                 register={register}
@@ -180,7 +167,7 @@ const ContactUs = () => {
                                                 type="textarea"
                                                 name="message"
                                                 label="Message"
-                                                placeholder="Type Your message..."
+                                                placeholder="Type your message..."
                                                 rows={5}
                                                 containerClass={'mb-3'}
                                                 register={register}
@@ -200,25 +187,22 @@ const ContactUs = () => {
                                 </form>
 
                                 {/* Success Modal */}
-                                <Modal
-                                    show={showSuccessModal}
-                                    onHide={() => setShowSuccessModal(false)}
-                                    size="sm"
-                                    centered>
-                                    <Modal.Header
-                                        onHide={() => setShowSuccessModal(false)}
-                                        closeButton
-                                        className="border-0 pb-0"
-                                    />
+                                <Modal show={showSuccessModal} onHide={successClose} size="sm" centered>
+                                    <Modal.Header closeButton className="border-0 pb-0" />
                                     <Modal.Body className="text-center">
                                         <span className="icon icon-lg text-success">
                                             <FeatherIcon icon="check-circle" className="icon-dual-success" />
                                         </span>
-                                        <h4 className="text-success mt-0" style={{
-                                            fontSize: '1.5rem',
-                                            fontWeight: 500,
-                                            fontFamily: 'Garet'
-                                        }}>Application Sent</h4>
+                                        <h4
+                                            className="text-success mt-0"
+                                            style={{
+                                                fontSize: '1.5rem',
+                                                fontWeight: 500,
+                                                fontFamily: 'Garet',
+                                            }}
+                                        >
+                                            Application Sent
+                                        </h4>
                                         <p className="mx-auto text-muted" style={{ fontFamily: 'Garet' }}>
                                             Thank you for your application! We've received it and will process it
                                             shortly.
@@ -232,24 +216,25 @@ const ContactUs = () => {
                                 </Modal>
 
                                 {/* Error Modal */}
-                                <Modal show={showErrorModal} onHide={() => setShowErrorModal(false)} size="sm" centered>
-                                    <Modal.Header
-                                        onHide={() => setShowErrorModal(false)}
-                                        closeButton
-                                        className="border-0 pb-0"
-                                    />
+                                <Modal show={showErrorModal} onHide={errorClose} size="sm" centered>
+                                    <Modal.Header closeButton className="border-0 pb-0" />
                                     <Modal.Body className="text-center">
                                         <span className="icon icon-md text-danger">
                                             <FeatherIcon icon="alert-octagon" className="icon-dual-danger" />
                                         </span>
-                                        <h4 className="text-danger mt-0" style={{
-                                            fontSize: '1.5rem',
-                                            fontWeight: 500,
-                                            fontFamily: 'Garet'
-                                        }}>Something went wrong.</h4>
+                                        <h4
+                                            className="text-danger mt-0"
+                                            style={{
+                                                fontSize: '1.5rem',
+                                                fontWeight: 500,
+                                                fontFamily: 'Garet',
+                                            }}
+                                        >
+                                            Something went wrong.
+                                        </h4>
                                         <p className="mx-auto text-muted mt-2" style={{ fontFamily: 'Garet' }}>
-                                            We are unable to process your request at the moment. Our appologies, try
-                                            again in a few minutes.
+                                            We are unable to process your request at the moment. Our apologies, please
+                                            try again in a few minutes.
                                         </p>
                                         <div className="mt-4">
                                             <Button variant="white btn-sm" onClick={errorClose}>

@@ -448,9 +448,10 @@
 
   .full-width-card .metric-badge {
     top: 0.75rem;
-    left: 0.75rem;
+   right: 0.75rem;
     font-size: 0.7rem;
-    padding: 0.35rem 0.7rem;
+    padding: 0.5rem 0.7rem;
+
   }
 
   .full-width-card .cta-link {

@@ -18,11 +18,11 @@ const Contact = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     position: 'relative',
-                    filter: `
-                        brightness(0.9)
-                        contrast(1.15)
-                        saturate(0.9)
-                        hue-rotate(-5deg)`,
+                    // filter: `
+                    //     brightness(0.9)
+                    //     contrast(1.15)
+                    //     saturate(0.9)
+                    //     hue-rotate(-5deg)`,
                     fontFamily: 'Garet'
                 }}
             >

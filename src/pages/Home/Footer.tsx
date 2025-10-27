@@ -17,9 +17,7 @@ const Footer = () => {
                                 <img src={logoLight} alt="logo" height="50" className="d-inline-block align-top mb-4" />
                             </Link>
                             <div className="footer-address">
-                                <p className="text-muted mb-2" style={{ fontSize: '15px', lineHeight: '1.8' }}>
-                                    Office 509, Haly Tower Sector-R, DHA Phase 2, Lahore, Pakistan
-                                </p>
+                                
                                 <p className="text-muted mb-0" style={{ fontSize: '14px', lineHeight: '1.8' }}>
                                     Office 1701, The Binary, Al Abraj Street, Business Bay, Dubai, UAE
                                 </p>
@@ -36,7 +34,7 @@ const Footer = () => {
                                     info@cinergiedigital.com
                                 </a>
                             </p>
-                            <p className="text-muted mb-2" style={{ fontSize: '14px' }}>+92 42 32020590</p>
+                            
                             <p className="text-muted mb-0" style={{ fontSize: '14px' }}>+971 4 551 4344</p>
                         </div>
                     </Col>

@@ -80,3 +80,40 @@
     font-size: 2rem;
   }
 }
+/* Mobile Navbar - Move hamburger to right and ensure h1 visibility */
+@media (max-width: 991px) {
+    .navbar > .container,
+    .navbar > .container-fluid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-toggler {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .navbar-brand {
+        order: 1;
+        margin-right: auto;
+        flex-shrink: 0; /* Prevent shrinking */
+        display: block !important; /* Ensure visibility */
+    }
+
+    .navbar-brand h1 {
+        display: block !important;
+        visibility: visible !important;
+        margin: 0;
+        font-size: clamp(1.2rem, 4vw, 1.5rem); /* Responsive font size */
+        line-height: 1.2;
+        white-space: nowrap; /* Prevent wrapping if needed */
+        overflow: visible;
+    }
+
+    .navbar-collapse {
+        order: 3;
+        width: 100%;
+    }
+}

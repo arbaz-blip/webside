@@ -3,8 +3,9 @@ import './style.css';
 import { Link } from 'react-router-dom';
 import coverImage from '../../assets/images/real-time-order-tracking-dashboard-supply-chain-cinergie-digital.png';
 import Picture1 from '../../assets/images/Picture1.png';
-import Picture2 from '../../assets/images/Picture2.png';
+import Image from '../../assets/images/predictive-freight-intelligence-cinergie-digital.png';
 import Picture3 from '../../assets/images/Picture3.png';
+
 import Connect from 'components/shared/Connect';
 
 const Resources = () => {
@@ -28,13 +29,13 @@ const Resources = () => {
       tags: ["#Banking Automation" ]
     },
     {
-      slug: "Predictive-Fraud-Detection",
-      title: "Predictive Fraud Detection with AI ",
-      desc: "Leverage machine learning to identify suspicious patterns, minimize risks, and protect your business in real time.",
-      img: Picture2,
-      alt: "Cinergie Digital AI-powered fraud detection dashboard analyzing transactions for anomalies.",
+      slug: "Predictive-Freight-Intelligence",
+      title: "Predictive Freight Intelligence for a Global Logistics Network ",
+      desc: "AI-powered predictive freight for smarter global logistics.",
+      img: Image,
+      alt: "Cinergie Digital predictive analytics and MLOps framework optimizing freight efficiency for a global logistics enterprise.",
       badge: "TRENDING",
-      tags: ["#Machine Learning" ]
+      tags: ["# Predictive Analytics" ]
     },
     {
       slug: "Regulatory-Reporting-Automation",

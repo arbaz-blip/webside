@@ -19,7 +19,7 @@ const realTimeOrderStream = React.lazy(() => import('../pages/team/real-time-ord
 const reimaginingloanorigination = React.lazy(() => import('../pages/team/reimagining-loan-origination'));
 
 const RegulatoryReportingAutomation = React.lazy(() => import('../pages/team/Regulatory-Reporting-Automation'));
-const PredictiveFraudDetection = React.lazy(() => import('../pages/team/Predictive-Fraud-Detection'));
+const PredictiveFreightIntelligence = React.lazy(() => import('../pages/team/Predictive-Freight-Intelligence'));
 
 // const tibco = React.lazy(() => import('../pages/solutions/tibco'));
 // const singlestore = React.lazy(() => import('../pages/solutions/singlestore'));
@@ -98,8 +98,8 @@ const AllRoutes = () => {
             element: <LoadComponent component={reimaginingloanorigination} />
         },
         {
-            path: '/Predictive-Fraud-Detection',
-            element: <LoadComponent component={PredictiveFraudDetection} />
+            path: '/Predictive-Freight-Intelligence',
+            element: <LoadComponent component={PredictiveFreightIntelligence} />
         },
         {
             path: '/Regulatory-Reporting-Automation',

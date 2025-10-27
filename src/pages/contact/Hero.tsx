@@ -24,12 +24,12 @@ const Hero = () => {
                             fontSize: '3.2rem',
                             fontWeight: 600,
                             lineHeight: 1.2,
-                            textShadow: '2px 2px 4px rgba(0, 0, 0, 10)' ,
+                            // textShadow: '2px 2px 4px rgba(0, 0, 0, 10)' ,
                             fontFamily: 'Garet'
                         }}>Contact Us</h1>
                         <p className="mb-4 fs-17 text-white" style={{ 
                             fontSize: '1rem',
-                            textShadow: '2px 2px 4px rgba(0, 0, 0, 10)' ,
+                            // textShadow: '2px 2px 4px rgba(0, 0, 0, 10)' ,
                             fontFamily: 'Garet'
                         }}>
                             Please fill out the following form and we will get back to you shortly
