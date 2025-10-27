@@ -21,13 +21,7 @@ const Footer = () => {
                                 <p className="text-muted mb-0" style={{ fontSize: '14px', lineHeight: '1.8' }}>
                                     Office 1701, The Binary, Al Abraj Street, Business Bay, Dubai, UAE
                                 </p>
-                            </div>
-                        </div>
-                    </Col>
-
-                    {/* Get in Touch */}
-                    <Col lg={3} md={4} className="mb-4 mb-lg-0">
-                        <div className="footer-get-in-touch">
+                                 <div className="footer-get-in-touch">
                             <h6 className="text-white mb-3 fw-semibold" style={{ fontSize: '16px' }}>Get In Touch</h6>
                             <p className="text-muted mb-2" style={{ fontSize: '14px', lineHeight: '1.8' }}>
                                 <a href="mailto:info@cinergiedigital.com" className="text-muted" style={{ textDecoration: 'none' }}>
@@ -37,7 +31,10 @@ const Footer = () => {
                             
                             <p className="text-muted mb-0" style={{ fontSize: '14px' }}>+971 4 551 4344</p>
                         </div>
+                            </div>
+                        </div>
                     </Col>
+
 
                     {/* Company Links */}
                     <Col lg={2} md={4} className="mb-4 mb-md-0">
@@ -110,6 +107,20 @@ const Footer = () => {
                                     </HashLink>
                                 </li>
                             </ul>
+                        </div>
+                    </Col>
+                    
+                    {/* Get in Touch */}
+                    <Col lg={3} md={4} className="mb-4 mb-lg-0">
+                        <div className="footer-get-in-touch">
+                            <h6 className="text-white mb-3 fw-semibold" style={{ fontSize: '16px' }}>Products</h6>
+                            <p className="text-muted mb-2" style={{ fontSize: '14px', lineHeight: '1.8' }}>
+                                <a href="mailto:info@cinergiedigital.com" className="text-muted" style={{ textDecoration: 'none' }}>
+                                    info@cinergiedigital.com
+                                </a>
+                            </p>
+                            
+                            <p className="text-muted mb-0" style={{ fontSize: '14px' }}>+971 4 551 4344</p>
                         </div>
                     </Col>
                 </Row>

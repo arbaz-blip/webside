@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import classNames from 'classnames';
 import "./nav.css";
 
@@ -93,7 +93,14 @@ const Navbar3 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Na
                             <Nav.Link href="/" className="px-3">Home</Nav.Link>
                             <Nav.Link href="/digital-platform-components" className="px-3">About Us</Nav.Link>
                             <Nav.Link href="/Industries" className="px-3">Industries</Nav.Link>
-                            
+                             {/* ✅ New Products Dropdown */}
+                            <NavDropdown title="Products" id="products-dropdown" className="px-3">
+                                <NavDropdown.Item href="/Solutions/akinon">Akinon</NavDropdown.Item>
+                                <NavDropdown.Item href="/Solutions/bct">BCT</NavDropdown.Item>
+                                <NavDropdown.Item href="/Solutions/singlestore">SingleStore</NavDropdown.Item>
+                            <NavDropdown.Item href="/Solutions/nintex">Nintex</NavDropdown.Item>
+                            <NavDropdown.Item href="/Solutions/tibco">Tibco</NavDropdown.Item>
+                            </NavDropdown>
                             <Nav.Link href="/services" className="px-3">Services</Nav.Link>
                             <Nav.Link href="/team" className="px-3">Resources</Nav.Link>
                             <Nav.Link href="/career" className="px-3">Career</Nav.Link>

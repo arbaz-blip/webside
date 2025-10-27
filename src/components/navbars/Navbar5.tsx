@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import classNames from 'classnames';
 import "./navbar.css";
 
@@ -7,7 +7,7 @@ import "./navbar.css";
 import logo from '../../assets/images/official.svg';
 import logoLight from '../../assets/images/white.svg';
 
-type Navbar1Props = {
+type NavbarProps = {
     isSticky?: boolean;
     navClass?: string;
     buttonClass?: string;
@@ -15,7 +15,7 @@ type Navbar1Props = {
     hideSearch?: boolean;
 };
 
-const Navbar5 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Navbar1Props) => {
+const Navbar5 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: NavbarProps) => {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -46,14 +46,13 @@ const Navbar5 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Na
     }, [isSticky]);
 
     // Combine default navClass with scroll-based background change
-       const combinedNavClass = classNames(
+    const combinedNavClass = classNames(
         'topnav-menu',
         navClass,
         scrolled ? 'navbar-light bg-white shadow-sm' : 'navbar-transparent text-white'
     );
 
     const logoSrc = scrolled ? logo : logoLight;
-
 
     return (
         <header>
@@ -64,10 +63,9 @@ const Navbar5 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Na
                 className={combinedNavClass}
             >
                 <Container fluid={!fixedWidth}>
-                    <Navbar.Brand href="/" className="logo">
-    <img src={logoSrc} height="40" className="align-top" alt="Cinergie Digital" />
-</Navbar.Brand>
-
+                    <Navbar.Brand href="/" className="logo d-flex align-items-center">
+                        <img src={logoSrc} height="40" className="align-middle" alt="Cinergie Digital" />
+                    </Navbar.Brand>
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
@@ -89,11 +87,18 @@ const Navbar5 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Na
                                 </Nav.Item>
                             </Nav>
                         )}
-                        <Nav className="ms-auto">
+                        <Nav className="ms-auto align-items-center">
                             <Nav.Link href="/" className="px-3">Home</Nav.Link>
                             <Nav.Link href="/digital-platform-components" className="px-3">About Us</Nav.Link>
                             <Nav.Link href="/Industries" className="px-3">Industries</Nav.Link>
-                            
+                            {/* ✅ New Products Dropdown */}
+                            <NavDropdown title="Products" id="products-dropdown" className="">
+                                <NavDropdown.Item href="/Solutions/akinon">Akinon</NavDropdown.Item>
+                                <NavDropdown.Item href="/Solutions/bct">BCT</NavDropdown.Item>
+                                <NavDropdown.Item href="/Solutions/singlestore">SingleStore</NavDropdown.Item>
+                                <NavDropdown.Item href="/Solutions/nintex">Nintex</NavDropdown.Item>
+                                <NavDropdown.Item href="/Solutions/tibco">Tibco</NavDropdown.Item>
+                            </NavDropdown>
                             <Nav.Link href="/services" className="px-3">Services</Nav.Link>
                             <Nav.Link href="/team" className="px-3">Resources</Nav.Link>
                             <Nav.Link href="/career" className="px-3">Career</Nav.Link>

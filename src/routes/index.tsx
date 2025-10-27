@@ -20,7 +20,13 @@ const reimaginingloanorigination = React.lazy(() => import('../pages/team/reimag
 
 const RegulatoryReportingAutomation = React.lazy(() => import('../pages/team/Regulatory-Reporting-Automation'));
 const PredictiveFreightIntelligence = React.lazy(() => import('../pages/team/Predictive-Freight-Intelligence'));
+const tibco = React.lazy(() => import('../pages/Products/tibco'));
+const singlestore = React.lazy(() => import('../pages/Products/singlestore'));
 
+
+const nintex = React.lazy(() => import('../pages/Products/nintex'));
+const bct = React.lazy(() => import('../pages/Products/bct'));
+const akinon = React.lazy(() => import('../pages/Products/akinon'));
 // const tibco = React.lazy(() => import('../pages/solutions/tibco'));
 // const singlestore = React.lazy(() => import('../pages/solutions/singlestore'));
 // // const yellow = React.lazy(() => import('../pages/solutions/yellow-ai'));
@@ -51,7 +57,17 @@ const AllRoutes = () => {
             path: '/services',
             element: <LoadComponent component={services} />
         },
-       
+              {
+            path: 'solutions',
+            children: [
+                { path: 'tibco', element: <LoadComponent component={tibco} /> },
+                { path: 'singlestore', element: <LoadComponent component={singlestore} /> },
+              
+                { path: 'nintex', element: <LoadComponent component={nintex} /> },
+                { path: 'bct', element: <LoadComponent component={bct} /> },
+                { path: 'akinon', element: <LoadComponent component={akinon} /> },
+            ],
+        },
         // {
         //     path: 'solutions',
         //     children: [

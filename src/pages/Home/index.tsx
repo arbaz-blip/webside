@@ -5,7 +5,7 @@ import Connect from 'components/shared/Connect';
 import WhyChooseCinergie from './WhyChooseCinergie';
 import ValueDelivered from './ValueDelivered';
 import "./Home.css";
-import HeroBackground from "../../assets/images/Hero-Background.png";
+// import HeroBackground from "../../assets/images/Hero-Background.png";
 import MainPageHeroBackgroundImage from "../../assets/images/MainPageHeroBackgroundImage.png";
 // const homeVideo = require('../../assets/videos/enterprise-it-consulting-and-ai-automation.mp4');
 

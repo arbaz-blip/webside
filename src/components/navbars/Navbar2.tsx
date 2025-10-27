@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import classNames from 'classnames';
 import "./nav.css";
 // component
@@ -49,43 +49,47 @@ const Navbar2 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Na
                 className={classNames('topnav-menu', navClass)}
             >
                 <Container fluid={!fixedWidth}>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="me-3" />
-                    <Navbar.Brand href="/" className="me-lg-4 me-auto">
-                        <img src={logo} height="30" className="d-inline-block align-top" alt="" />
+                    <Navbar.Brand href="/" className="me-lg-4 me-auto d-flex align-items-center">
+                        <img src={logo} height="30" className="d-inline-block align-middle" alt="" />
                     </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="me-3" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-    {!hideSearch && (
-        <Nav className="align-items-lg-center d-flex me-auto">
-            <Nav.Item as="li">
-                <form id="search" className="form-inline d-none d-sm-flex me-lg-3">
-                    <div className="form-control-with-hint ms-lg-2 ms-xl-4">
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="search-input"
-                            placeholder="What are you looking for?"
-                        />
-                        <span className="form-control-feedback uil uil-search fs-16"></span>
-                    </div>
-                </form>
-            </Nav.Item>
-        </Nav>
-    )}
+                        {!hideSearch && (
+                            <Nav className="align-items-lg-center d-flex me-auto">
+                                <Nav.Item as="li">
+                                    <form id="search" className="form-inline d-none d-sm-flex me-lg-3">
+                                        <div className="form-control-with-hint ms-lg-2 ms-xl-4">
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                id="search-input"
+                                                placeholder="What are you looking for?"
+                                            />
+                                            <span className="form-control-feedback uil uil-search fs-16"></span>
+                                        </div>
+                                    </form>
+                                </Nav.Item>
+                            </Nav>
+                        )}
 
-    <Nav className="ms-auto">
-                                    <Nav.Link href="/" className="px-3">Home</Nav.Link>
+                        <Nav className="ms-auto align-items-center">
+                            <Nav.Link href="/" className="px-3">Home</Nav.Link>
                             <Nav.Link href="/digital-platform-components" className="px-3">About Us</Nav.Link>
                             <Nav.Link href="/Industries" className="px-3">Industries</Nav.Link>
-                         
+                            {/* ✅ New Products Dropdown */}
+                            <NavDropdown title="Products" id="products-dropdown" className="">
+                                <NavDropdown.Item href="/Solutions/akinon">Akinon</NavDropdown.Item>
+                                <NavDropdown.Item href="/Solutions/bct">BCT</NavDropdown.Item>
+                                <NavDropdown.Item href="/Solutions/singlestore">SingleStore</NavDropdown.Item>
+                                <NavDropdown.Item href="/Solutions/nintex">Nintex</NavDropdown.Item>
+                                <NavDropdown.Item href="/Solutions/tibco">Tibco</NavDropdown.Item>
+                            </NavDropdown>
                             <Nav.Link href="/services" className="px-3">Services</Nav.Link>
                             <Nav.Link href="/team" className="px-3">Resources</Nav.Link>
                             <Nav.Link href="/career" className="px-3">Career</Nav.Link>
                             <Nav.Link href="/contact" className="px-3">Contact</Nav.Link>
-                                                </Nav>
-</Navbar.Collapse>
-
-
-                    
+                        </Nav>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
         </header>
