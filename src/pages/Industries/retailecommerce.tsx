@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar5 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 
-import retailHero from '../../assets/images/retail-ecommerce-case-study-hero.jpg.png';
+import retailHero from '../../assets/images/retail-ecommerce-case-study-hero.jpg.jpg';
 import retailCloud from '../../assets/images/retail-cloud-ecommerce.jpg.jpg';
 import retailErp from '../../assets/images/retail-erp-modernisation.jpg.jpg';
 import retailOmni from '../../assets/images/retail-omnichannel-it.jpg.jpg';

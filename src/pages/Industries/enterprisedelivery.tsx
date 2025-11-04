@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar5 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 
-import enterpriseHero from '../../assets/images/enterprise-delivery-case-study-hero.jpg.png';
+import enterpriseHero from '../../assets/images/enterprise-delivery-case-study-hero.jpg.jpg';
 import enterpriseQa from '../../assets/images/enterprise-qa-devops.jpg.jpg';
 import enterprisePods from '../../assets/images/enterprise-embedded-pods.jpg.jpg';
 import enterpriseGov from '../../assets/images/enterprise-governance.jpg.jpg';

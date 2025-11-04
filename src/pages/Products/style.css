@@ -1,0 +1,530 @@
+/* Services.css - Updated for Case Studies with Alternating Grid Pattern */
+
+/* === Case Studies Section === */
+.services-section {
+    padding: 5rem 2rem;
+    background-color:#4F6D7A;
+    font-family: 'Garet';
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Garet';
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Garet';
+}
+
+.hero-subtext {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    font-family: 'Garet';
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.full-width-card {
+  grid-column: 1 / -1; /* Spans both columns */
+  /* Optional: Make it taller or adjust padding for bigger feel */
+  .service-card {
+    min-height: 500px; /* Example to make it visually bigger */
+  }
+}
+/* Specific fix only for the full-width healthcare card image */
+.full-width-card .card-image {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center; /* Centers vertically to show doctor's eyes properly */
+  justify-content: center;
+  overflow: hidden;
+  min-height: 350px; /* Gives more room for this specific tall image */
+}
+
+.full-width-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%; /* Adjusts vertical position slightly down if eyes are higher up; tweak % as needed */
+}
+
+/* Ensure the card itself has enough height for this specific one */
+.full-width-card .service-card {
+  min-height: 600px;
+}
+/* Flipped grid for alternating pattern */
+.services-grid-flipped {
+    grid-template-columns: 1fr 2fr;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    font-family: 'Garet';
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.resource-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-image {
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: 
+        brightness(0.9)
+        contrast(1.15)
+        saturate(0.9)
+        hue-rotate(-5deg);
+}
+
+.metric-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #0078D4;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.service-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+
+.service-content h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.service-content ul {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    padding-left: 1.2rem;
+}
+
+.service-content li {
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+}
+
+.service-content .cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-weight: 600;
+    color: #0078D4;
+    transition: color 0.3s ease, transform 0.2s ease;
+    margin-top: auto;
+    font-size: 1rem;
+}
+
+.service-content .cta-link:hover {
+    color: #005A9E;
+    transform: translateX(5px);
+}
+
+/* === Scroll to Top Button === */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #0078D4;
+    color: white;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #2D6CAE;
+    transform: scale(1.1);
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 1200px) {
+    .services-grid,
+    .services-grid-flipped {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .card-image {
+        height: 250px;
+        flex: 0 0 250px;
+    }
+
+    .service-content {
+        height: auto;
+        padding: 1rem;
+        flex-grow: 1;
+    }
+
+    .full-width-card .service-card {
+        min-height: auto;
+    }
+
+    .full-width-card .card-image {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        padding: 3rem 1rem;
+    }
+
+    .services-section h2 {
+        font-size: 2rem;
+    }
+
+    .hero-subtext {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .services-grid,
+    .services-grid-flipped {
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-card {
+        min-height: 350px;
+        border-radius: 8px;
+    }
+
+    .card-image {
+        height: 200px;
+        flex: 0 0 200px;
+    }
+
+    .card-image img {
+        object-fit: cover;
+    }
+
+    .metric-badge {
+        top: 8px;
+        right: 8px;
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+
+    .service-content {
+        padding: 1.25rem;
+    }
+
+    .service-content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .service-content ul {
+        font-size: 0.95rem;
+        padding-left: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .service-content li {
+        margin-bottom: 0.35rem;
+        line-height: 1.45;
+    }
+
+    .service-content .cta-link {
+        font-size: 0.95rem;
+    }
+
+    .full-width-card .service-card {
+        min-height: 400px;
+    }
+
+    .full-width-card .card-image {
+        min-height: 200px;
+        align-items: flex-start; /* Adjust for mobile if needed */
+    }
+
+    .full-width-card .card-image img {
+        object-position: center top; /* Adjust for full-width image on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-section {
+        padding: 2rem 0.75rem;
+        margin-bottom: 10%;
+    }
+
+    .services-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+.services-container h2 {
+ margin-top: 5rem;
+}
+    .hero-subtext {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .services-grid,
+    .services-grid-flipped {
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .service-card {
+        min-height: 320px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-image {
+        height: 160px;
+        flex: 0 0 160px;
+    }
+
+    .metric-badge {
+        top: 6px;
+        right: 6px;
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+
+    .service-content {
+        padding: 1rem;
+    }
+
+    .service-content h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .service-content ul {
+        font-size: 0.9rem;
+        padding-left: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .service-content li {
+        margin-bottom: 0.3rem;
+        line-height: 1.4;
+    }
+
+    .service-content .cta-link {
+        font-size: 0.9rem;
+    }
+
+    .full-width-card .service-card {
+        min-height: 360px;
+        border-radius: 8px;
+    }
+
+    .full-width-card .card-image {
+        min-height: 160px;
+    }
+
+    .full-width-card .service-content {
+        padding: 1rem;
+    }
+
+    .full-width-card .service-content h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .full-width-card .service-content ul {
+        margin-bottom: 0.5rem;
+    }
+
+    .full-width-card .service-content ul li {
+        font-size: 0.9rem;
+        padding: 0.3rem 0;
+        padding-left: 0.75rem;
+    }
+
+    .full-width-card .metric-badge {
+        top: 6px;
+        right: 6px;
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+
+    .full-width-card .cta-link {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices - 360px and below */
+@media (max-width: 360px) {
+    .services-section {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .services-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtext {
+        font-size: 0.85rem;
+        padding: 0;
+        margin-bottom: 1.25rem;
+    }
+
+    .services-grid,
+    .services-grid-flipped {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .service-card {
+        min-height: 300px;
+    }
+
+    .card-image {
+        height: 140px;
+        flex: 0 0 140px;
+    }
+
+    .service-content {
+        padding: 0.75rem;
+    }
+
+    .service-content h3 {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .service-content ul {
+        font-size: 0.85rem;
+        padding-left: 0.5rem;
+    }
+
+    .service-content li {
+        margin-bottom: 0.25rem;
+        line-height: 1.35;
+    }
+
+    .service-content .cta-link {
+        font-size: 0.85rem;
+    }
+
+    .full-width-card .service-card {
+        min-height: 320px;
+    }
+
+    .full-width-card .card-image {
+        min-height: 140px;
+    }
+
+    .full-width-card .service-content {
+        padding: 0.75rem;
+    }
+
+    .full-width-card .service-content h3 {
+        font-size: 1rem;
+    }
+
+    .full-width-card .service-content ul li {
+        font-size: 0.85rem;
+    }
+
+    #scrollTopBtn {
+        bottom: 15px;
+        right: 15px;
+        font-size: 16px;
+        padding: 10px 14px;
+    }
+}
+
+.subheading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Garet';
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth !important;
+}

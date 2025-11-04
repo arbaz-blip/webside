@@ -1,0 +1,140 @@
+/* .hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  background-color: #f1eded; /* ✅ Prevent silver flash before video loads */
+
+.btn:hover {
+  border-color: #007bff;
+  color: #090a0b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  /* Initial state: Keep navbar transparent */
+  .navbar {
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    border-bottom: none !important;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease !important;
+  }
+
+  /* On scroll: Apply opaque style */
+  .navbar.navbar-light.bg-white.shadow-sm,
+  .navbar.navbar-sticky {
+    background-color: rgba(255, 255, 255, 1) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* Logo visibility - always enhance on transparent bg */
+  .navbar-brand {
+    color: #fff !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .navbar-brand img {
+    filter: brightness(1.2) saturate(1.1) !important;
+    max-height: 40px !important;
+  }
+
+  /* On scrolled: Adjust logo for white bg */
+  .navbar.navbar-light.bg-white.shadow-sm .navbar-brand,
+  .navbar.navbar-sticky .navbar-brand {
+    color: #333 !important;
+    text-shadow: none !important;
+  }
+
+  .navbar.navbar-light.bg-white.shadow-sm .navbar-brand img,
+  .navbar.navbar-sticky .navbar-brand img {
+    filter: brightness(1) saturate(1) !important;
+  }
+
+  /* Hamburger toggler - always visible with proper contrast */
+  .navbar-toggler {
+    border: none !important; /* Remove border for clean look */
+    background-color: transparent !important;
+    padding: 4px !important; /* Compact padding */
+    z-index: 10 !important; /* Ensure on top */
+  }
+
+  /* Initial hamburger icon (white lines on transparent) */
+  .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+
+  /* Scrolled hamburger icon (dark lines on white bg) */
+  .navbar.navbar-light.bg-white.shadow-sm .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon,
+  .navbar.navbar-sticky .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+
+  /* When menu is open (X icon) - white on transparent, dark on scrolled */
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 23L23 4M23 23L4 4'/%3e%3c/svg%3e") !important;
+  }
+
+  .navbar.navbar-light.bg-white.shadow-sm .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon,
+  .navbar.navbar-sticky .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 23L23 4M23 23L4 4'/%3e%3c/svg%3e") !important;
+  }
+
+  /* Mobile menu: Instant white bg on open, no delay */
+  .navbar-collapse {
+    background-color: transparent !important;
+    transition: none !important; /* Remove transition for instant bg */
+    opacity: 0 !important; /* Hide initially */
+    visibility: hidden !important;
+  }
+
+  .navbar-collapse.show {
+    background-color: white !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; */
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: opacity 0.2s ease !important; /* Quick fade for content */
+  }
+
+  /* Ensure menu content (text/links) doesn't show before bg */
+  .navbar-collapse .navbar-nav {
+    opacity: 0;
+    transition: opacity 0.2s ease 0.05s !important; /* Slight delay for bg to set */
+  }
+
+  .navbar-collapse.show .navbar-nav {
+    opacity: 1 !important;
+  }
+
+  /* If scrolled and menu open, adjust menu border */
+  .navbar.navbar-light.bg-white.shadow-sm .navbar-collapse.show,
+  .navbar.navbar-sticky .navbar-collapse.show {
+    border-top-color: rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* Nav links in mobile menu - always dark for white bg */
+  .navbar-nav .nav-link {
+    color: #333 !important;
+    padding: 12px 20px !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: #007bff !important;
+    background-color: rgba(0, 123, 255, 0.1) !important;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth !important;
+  }
+}

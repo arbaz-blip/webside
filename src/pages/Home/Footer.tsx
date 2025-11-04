@@ -22,7 +22,7 @@ const Footer = () => {
                                     Office 1701, The Binary, Al Abraj Street, Business Bay, Dubai, UAE
                                 </p>
                                  <div className="footer-get-in-touch">
-                            <h6 className="text-white mb-3 fw-semibold" style={{ fontSize: '16px' }}>Get In Touch</h6>
+                           
                             <p className="text-muted mb-2" style={{ fontSize: '14px', lineHeight: '1.8' }}>
                                 <a href="mailto:info@cinergiedigital.com" className="text-muted" style={{ textDecoration: 'none' }}>
                                     info@cinergiedigital.com
@@ -114,16 +114,42 @@ const Footer = () => {
                     <Col lg={3} md={4} className="mb-4 mb-lg-0">
                         <div className="footer-get-in-touch">
                             <h6 className="text-white mb-3 fw-semibold" style={{ fontSize: '16px' }}>Products</h6>
-                            <p className="text-muted mb-2" style={{ fontSize: '14px', lineHeight: '1.8' }}>
-                                <a href="mailto:info@cinergiedigital.com" className="text-muted" style={{ textDecoration: 'none' }}>
-                                    info@cinergiedigital.com
-                                </a>
-                            </p>
+                                                    
+                                
+                                    <ul className="list-unstyled">
+                                        <li className="my-2">
+                                            <Link to="/solutions/tibco" className="text-muted">
+                                                TIBCO
+                                            </Link>
+                                        </li>
+                                        <li className="my-2">
+                                            <Link to="/solutions/singlestore" className="text-muted">
+                                                SingleStore
+                                            </Link>
+                                        </li>
+                                        <li className="my-2">
+                                            <Link to="/solutions/nintex" className="text-muted">
+                                                Nintex
+                                            </Link>
+                                        </li>
+                                       
+                                        <li className="my-2">
+                                            <Link to="/solutions/bct" className="text-muted">
+                                                BCT
+                                            </Link>
+                                        </li>
+                                        <li className="my-2">
+                                            <Link to="/solutions/akinon" className="text-muted">
+                                                Akinon
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </Col>
+ </Row>
                             
-                            <p className="text-muted mb-0" style={{ fontSize: '14px' }}>+971 4 551 4344</p>
-                        </div>
-                    </Col>
-                </Row>
+                            
+                 
 
                 <Row className="mt-5 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
                     <Col md={6}>

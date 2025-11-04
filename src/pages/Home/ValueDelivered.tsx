@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./ValueDelivered.css";
-import bfsiImg from "../../assets/images/bsfi-data-migration-faster-lead-response.jpg.png";
-import transportImg from "../../assets/images/transport-logistics-audit-compliance.jpg.png";
-import healthcareImg from "../../assets/images/healthcare-ai-analytics-roi.jpg.png";
-import enterpriseImg from "../../assets/images/enterprise-devops-faster-releases.jpg.png";
-import retailImg from "../../assets/images/retail-ecommerce-go-live-10-weeks.jpg.png";
+import bfsiImg from "../../assets/images/bsfi-data-migration-faster-lead-response.jpg.jpg";
+import transportImg from "../../assets/images/transport-logistics-audit-compliance.jpg.jpg";
+import healthcareImg from "../../assets/images/healthcare-ai-analytics-roi.jpg.jpg";
+import enterpriseImg from "../../assets/images/enterprise-devops-faster-releases.jpg.jpg";
+import retailImg from "../../assets/images/retail-ecommerce-go-live-10-weeks.jpg.jpg";
 
 const categories = [
   "All",

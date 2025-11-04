@@ -50,6 +50,11 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+   
+ 
+  "generate-sitemap": "node scripts/generate-sitemap.js",
+
+
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -77,6 +82,7 @@
   "devDependencies": {
     "@types/leaflet": "^1.7.9",
     "@types/react-router-hash-link": "^2.4.9",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "sitemap": "^8.0.2"
   }
 }

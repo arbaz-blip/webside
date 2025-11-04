@@ -2,11 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./styles.css";
-import bsfiImg from '../../assets/images/bsfi-data-migration-faster-lead-response.jpg.png';
-import transportImg from '../../assets/images/transport-logistics-audit-compliance.jpg.png';
-import healthcareImg from '../../assets/images/healthcare-ai-analytics-roi.jpg.png';
-import retailImg from '../../assets/images/retail-ecommerce-go-live-10-weeks.jpg.png';
-import enterpriseImg from '../../assets/images/enterprise-devops-faster-releases.jpg.png';
+import bsfiImg from '../../assets/images/bsfi-data-migration-faster-lead-response.jpg.jpg';
+import transportImg from '../../assets/images/transport-logistics-audit-compliance.jpg.jpg';
+import healthcareImg from '../../assets/images/healthcare-ai-analytics-roi.jpg.jpg';
+import retailImg from '../../assets/images/retail-ecommerce-go-live-10-weeks.jpg.jpg';
+import enterpriseImg from '../../assets/images/enterprise-devops-faster-releases.jpg.jpg';
 
 const CaseStudies = () => {
   const caseStudies = [

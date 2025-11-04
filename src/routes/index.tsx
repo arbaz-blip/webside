@@ -4,22 +4,24 @@ import { useRoutes } from 'react-router-dom';
 
 const Home = React.lazy(() => import('../pages/Home'));
 const services = React.lazy(() => import('../pages/services'));
-const team = React.lazy(() => import('../pages/team'));
+const team = React.lazy(() => import('../pages/Resources'));
+const product = React.lazy(() => import('../pages/Products'));
 const career = React.lazy(() => import('../pages/career'));
 const jobapplication = React.lazy(() => import('../pages/job-application'));
 const contact = React.lazy(() => import('../pages/contact'));
-const digitalplatformcomponents = React.lazy(() => import('../pages/digital-platform-components'));
+const digitalplatformcomponents = React.lazy(() => import('../pages/About-us'));
 const digitalplatformoutcomes = React.lazy(() => import('../pages/Industries'));
 const bfsiCase = React.lazy(() => import('../pages/Industries/bfsi'));
 const transportLogisticsCase = React.lazy(() => import('../pages/Industries/transportlogistics'));
 const healthcareCase = React.lazy(() => import('../pages/Industries/healthcare'));
+
 const retailEcommerceCase = React.lazy(() => import('../pages/Industries/retailecommerce'));
 const enterpriseDeliveryCase = React.lazy(() => import('../pages/Industries/enterprisedelivery'));
-const realTimeOrderStream = React.lazy(() => import('../pages/team/real-time-order-stream'));
-const reimaginingloanorigination = React.lazy(() => import('../pages/team/reimagining-loan-origination'));
+const realTimeOrderStream = React.lazy(() => import('../pages/Resources/real-time-order-stream'));
+const reimaginingloanorigination = React.lazy(() => import('../pages/Resources/reimagining-loan-origination'));
 
-const RegulatoryReportingAutomation = React.lazy(() => import('../pages/team/Regulatory-Reporting-Automation'));
-const PredictiveFreightIntelligence = React.lazy(() => import('../pages/team/Predictive-Freight-Intelligence'));
+const RegulatoryReportingAutomation = React.lazy(() => import('../pages/Resources/Regulatory-Reporting-Automation'));
+const PredictiveFreightIntelligence = React.lazy(() => import('../pages/Resources/Predictive-Freight-Intelligence'));
 const tibco = React.lazy(() => import('../pages/Products/tibco'));
 const singlestore = React.lazy(() => import('../pages/Products/singlestore'));
 
@@ -122,19 +124,24 @@ const AllRoutes = () => {
             element: <LoadComponent component={RegulatoryReportingAutomation} />
         },
         {
-            path: '/team',
+            path: '/Resources',
             element: <LoadComponent component={team} />
         },
+       
         {
             path: '/career',
             element: <LoadComponent component={career} />
+        },
+         {
+            path: '/Products',
+            element: <LoadComponent component={product} />
         },
         {
             path: "/job-application/:job_id",
             element: <LoadComponent component={jobapplication} />
         },
         {
-            path: '/digital-platform-components',
+            path: '/About-us',
             element: <LoadComponent component={digitalplatformcomponents} />
         },
         {

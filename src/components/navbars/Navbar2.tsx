@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import classNames from 'classnames';
 import "./nav.css";
 // component
@@ -74,18 +74,12 @@ const Navbar2 = ({ isSticky, navClass, buttonClass, fixedWidth, hideSearch }: Na
 
                         <Nav className="ms-auto align-items-center">
                             <Nav.Link href="/" className="px-3">Home</Nav.Link>
-                            <Nav.Link href="/digital-platform-components" className="px-3">About Us</Nav.Link>
+                            <Nav.Link href="/About-us" className="px-3">About Us</Nav.Link>
                             <Nav.Link href="/Industries" className="px-3">Industries</Nav.Link>
                             {/* ✅ New Products Dropdown */}
-                            <NavDropdown title="Products" id="products-dropdown" className="">
-                                <NavDropdown.Item href="/Solutions/akinon">Akinon</NavDropdown.Item>
-                                <NavDropdown.Item href="/Solutions/bct">BCT</NavDropdown.Item>
-                                <NavDropdown.Item href="/Solutions/singlestore">SingleStore</NavDropdown.Item>
-                                <NavDropdown.Item href="/Solutions/nintex">Nintex</NavDropdown.Item>
-                                <NavDropdown.Item href="/Solutions/tibco">Tibco</NavDropdown.Item>
-                            </NavDropdown>
+                             <Nav.Link href="/Products" className="px-3">Products</Nav.Link>
                             <Nav.Link href="/services" className="px-3">Services</Nav.Link>
-                            <Nav.Link href="/team" className="px-3">Resources</Nav.Link>
+                            <Nav.Link href="/Resources" className="px-3">Resources</Nav.Link>
                             <Nav.Link href="/career" className="px-3">Career</Nav.Link>
                             <Nav.Link href="/contact" className="px-3">Contact</Nav.Link>
                         </Nav>

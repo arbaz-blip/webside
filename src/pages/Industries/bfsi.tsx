@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar5} from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 
-import bsfiHero from '../../assets/images/bsfi-case-study-hero.jpg.png';
+import bsfiHero from '../../assets/images/bsfi-case-study-hero.jpg.jpg';
 import bsfiQa from '../../assets/images/bsfi-qa-automation.jpg.jpg';
 import bsfiCrm from '../../assets/images/bsfi-crm-modernisation.jpg.jpg';
 import bsfiFinance from '../../assets/images/bsfi-finance-automation.jpg.jpg';

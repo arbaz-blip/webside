@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar5 } from 'components/navbars';
 import BackToTop from 'components/BackToTop';
 
-import transportHero from '../../assets/images/transport-logistics-case-study-hero.jpg.png';
+import transportHero from '../../assets/images/transport-logistics-case-study-hero.jpg';
 import transportErp from '../../assets/images/transport-erp-integration.jpg.jpg';
 import transportAi from '../../assets/images/transport-ai-forecasting.jpg.jpg';
 import transportCompliance from '../../assets/images/transport-compliance-automation.jpg.jpg';
