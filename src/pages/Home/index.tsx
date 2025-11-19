@@ -1,4 +1,6 @@
 import BackToTop from 'components/BackToTop';
+
+import SEO from '../../components/SEO';
 import Navbar5 from 'components/navbars/Navbar5';
 import Footer from './Footer';
 import Connect from 'components/shared/Connect';
@@ -12,6 +14,12 @@ import MainPageHeroBackgroundImage from "../../assets/images/MainPageHeroBackgro
 const Home = () => {
     return (
         <>
+         <SEO
+  title="Digital Transformation & Software Development Company in UAE | Cinergie Digital"
+  description="Cinergie Digital empowers enterprises with digital transformation, software development, AI, and cloud solutions designed for scalable, lasting growth."
+  url="https://cinergiedigital.com/"
+/>
+
             {/* Hero Section */}
             <section
                 className="position-relative"

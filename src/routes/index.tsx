@@ -53,7 +53,8 @@ const AllRoutes = () => {
     return useRoutes([
         {
             path: '/',
-            element: <LoadComponent component={Home} />
+            element: <LoadComponent component={Home} />,
+            
         },
         {
             path: '/services',

@@ -6,7 +6,7 @@ import Footer from 'pages/Home/Footer';
 import Platform from './Platform';
 import Timeline from './timeline';
 import Connect from 'components/shared/Connect';
-
+import SEO from '../../components/SEO';
 import "./styles.css";
 import About from "../../assets/images/About.png";
 // const homeVideo = require('../../assets/videos/enterprise-it-consulting-and-ai-automation.mp4');
@@ -26,6 +26,11 @@ const Blog = () => {
 
     return (
         <>
+               <SEO
+  title="About Cinergie Digital | Empowering Enterprises With Technology & AI Solutions "
+  description="Learn how Cinergie Digital helps global enterprises innovate with AI, cloud, and data-driven transformation. Your trusted technology partner from strategy to steady state. "
+  url="https://cinergiedigital.com/"
+/>
             {/* Hero Section */}
             <section
                 className="position-relative"
