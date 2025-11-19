@@ -8,9 +8,16 @@ import Hero from './Hero';
 import ContactUs from './ContactUs';
 import Footer from 'pages/Home/Footer';
 
+  import SEO from '../../components/SEO';
 const Contact = () => {
     return (
         <>
+    
+                         <SEO
+                  title="Contact Cinergie Digital | Book a Consultation for Your Next IT Project  "
+                  description="Connect with Cinergie Digital to discuss your next IT or digital transformation project. One Partner from Strategy to Steady State.  "
+                  url="https://cinergiedigital.com/"
+                />
             <div
                 className="bg-gradient2"
                 style={{

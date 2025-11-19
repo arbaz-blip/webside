@@ -3,10 +3,16 @@ import { Navbar5 } from 'components/navbars';
 import Footer from 'pages/Home/Footer';
 import Platform from './Platform';
 import Connect from 'components/shared/Connect';
-
+   import SEO from '../../components/SEO';
 const Blog = () => {
     return (
         <>
+          
+                 <SEO
+          title="Enterprise Products & Platforms | AI, Data & Cloud Solutions by Cinergie Digital "
+          description="Explore Cinergie Digital’s enterprise-grade products and platforms designed to accelerate innovation in AI, data analytics, and cloud-native ecosystems. "
+          url="https://cinergiedigital.com/"
+        />
         <div
           style={{
             

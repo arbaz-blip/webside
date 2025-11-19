@@ -3,10 +3,16 @@ import { Navbar5 } from 'components/navbars';
 import Footer from 'pages/Home/Footer';
 import Platform from './Platform';
 import Connect from 'components/shared/Connect';
-
+   import SEO from '../../components/SEO';
 const Blog = () => {
     return (
         <>
+        
+                 <SEO
+          title="Industries We Serve | BFSI, Healthcare, Enterprise Delivery, Aviation, Logistics & Retail Technology Experts "
+          description="Discover how we help Aviation, Banking, Logistics, Retail, and Healthcare enterprises modernize operations with digital transformation and automation."
+          url="https://cinergiedigital.com/"
+        />
         <div
           style={{
             

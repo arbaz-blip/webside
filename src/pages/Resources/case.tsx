@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import coverImage from '../../assets/images/real-time-order-tracking-dashboard-supply-chain-cinergie-digital.jpg';
 import Picture1 from '../../assets/images/Picture1.jpg';
 import Image from '../../assets/images/predictive-freight-intelligence-cinergie-digital.jpg';
-import Picture3 from '../../assets/images/Picture3.jpg';
+// import Picture3 from '../../assets/images/Picture3.jpg';
 
 import Connect from 'components/shared/Connect';
 
@@ -37,15 +37,15 @@ const Resources = () => {
       badge: "TRENDING",
       tags: ["# Predictive Analytics" ]
     },
-    {
-      slug: "Regulatory-Reporting-Automation",
-      title: "Regulatory Reporting Automation for Compliance Teams",
-      desc: "Streamline compliance with Regulatory Reporting Automation designed for modern compliance teams. Automate data collection, validation, and submission to ensure accuracy, transparency, and timely regulatory reporting.",
-      img: Picture3,
-      alt: "Cinergie Digital compliance automation dashboard generating real-time regulatory reports.",
-      badge: "NEW",
-      tags: ["#RegTech", "#Audit Readiness", "#RiskMgmt"]
-    }
+    // {
+    //   slug: "Regulatory-Reporting-Automation",
+    //   title: "Regulatory Reporting Automation for Compliance Teams",
+    //   desc: "Streamline compliance with Regulatory Reporting Automation designed for modern compliance teams. Automate data collection, validation, and submission to ensure accuracy, transparency, and timely regulatory reporting.",
+    //   img: Picture3,
+    //   alt: "Cinergie Digital compliance automation dashboard generating real-time regulatory reports.",
+    //   badge: "NEW",
+    //   tags: ["#RegTech", "#Audit Readiness", "#RiskMgmt"]
+    // }
   ];
 
   return (
@@ -136,7 +136,7 @@ const Resources = () => {
               </Link>
             </div>
             
-            <div className="right-column">
+            {/* <div className="right-column">
               <Link to={`/${teamResources[3].slug}`} className="resource-card-link">
                 <div className="resource-card">
                   <div className="card-image">
@@ -159,7 +159,7 @@ const Resources = () => {
                   </div>
                 </div>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

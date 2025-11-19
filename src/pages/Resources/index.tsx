@@ -9,6 +9,7 @@ import Connect from 'components/shared/Connect';
 // import Team from './Team';
 // import { teamMembers } from './data';
 import Platform from './case';
+ import SEO from '../../components/SEO';
 const Blog = () => {
     return (
         <div 
@@ -38,6 +39,12 @@ const Blog = () => {
                         fontFamily: 'Garet'
                     }}
                 ></div>
+                   
+                                 <SEO
+                          title="Case Studies & Insights | Digital Transformation Resources by Cinergie Digital   "
+                          description="Explore expert insights, case studies, and blogs on AI, cloud, and enterprise digital transformation. Learn how innovation drives business success.    "
+                          url="https://cinergiedigital.com/"
+                        />
 <Navbar5
       isSticky={true}
       hideSearch

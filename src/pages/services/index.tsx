@@ -7,10 +7,16 @@ import BackToTop from 'components/BackToTop';
 import Footer from 'pages/Home/Footer';
 import Services from './Services';
 import Connect from 'components/shared/Connect';
-
+ import SEO from '../../components/SEO';
 const Blog = () => {
     return (
         <>
+          
+                                 <SEO
+                          title="IT Consulting, Cloud, AI & Software Development Services | Cinergie Digital  "
+                          description="From advisory to delivery, we offer full lifecycle technology services that power enterprise growth. One Partner from Strategy to Steady State.   "
+                          url="https://cinergiedigital.com/"
+                        />
             <div
                 className="bg-gradient2"
                 style={{

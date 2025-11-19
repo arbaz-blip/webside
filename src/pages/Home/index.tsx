@@ -14,6 +14,8 @@ import MainPageHeroBackgroundImage from "../../assets/images/MainPageHeroBackgro
 const Home = () => {
     return (
         <>
+        
+
          <SEO
   title="Digital Transformation & Software Development Company in UAE | Cinergie Digital"
   description="Cinergie Digital empowers enterprises with digital transformation, software development, AI, and cloud solutions designed for scalable, lasting growth."

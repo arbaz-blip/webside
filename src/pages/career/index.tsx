@@ -13,7 +13,7 @@ import Connect from 'components/shared/Connect';
 // import { teamMembers } from './data';
 // import { jobListings } from './data'
 import Job from './jobs'
-
+import SEO from '../../components/SEO';
 type JobProps = {
     jobParameters: JobParameter[]
 }
@@ -79,7 +79,12 @@ const Blog = () => {
     //   background: 'rgba(0, 0, 0, 0.4)', // Add semi-transparent overlay for text readability if needed
     }}
   ></div>
-
+   
+                 <SEO
+          title="Careers at Cinergie Digital | Join a Growing Tech & AI Company in UAE "
+          description="Join Cinergie Digital and work on transformative technology projects shaping global enterprises. Build your future with us in UAE and beyond.  "
+          url="https://cinergiedigital.com/"
+        />
    <Navbar5
       isSticky={true}
       hideSearch
