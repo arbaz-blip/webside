@@ -24,6 +24,7 @@ const RegulatoryReportingAutomation = React.lazy(() => import('../pages/Resource
 const PredictiveFreightIntelligence = React.lazy(() => import('../pages/Resources/Predictive-Freight-Intelligence'));
 const tibco = React.lazy(() => import('../pages/Products/tibco'));
 const singlestore = React.lazy(() => import('../pages/Products/singlestore'));
+const whatChanged = React.lazy(() => import('../pages/Resources/2025-to-2026-What-Changed-in-Enterprise'))
 
 
 const nintex = React.lazy(() => import('../pages/Products/nintex'));
@@ -54,18 +55,18 @@ const AllRoutes = () => {
         {
             path: '/',
             element: <LoadComponent component={Home} />,
-            
+
         },
         {
             path: '/services',
             element: <LoadComponent component={services} />
         },
-              {
+        {
             path: 'solutions',
             children: [
                 { path: 'tibco', element: <LoadComponent component={tibco} /> },
                 { path: 'singlestore', element: <LoadComponent component={singlestore} /> },
-              
+
                 { path: 'nintex', element: <LoadComponent component={nintex} /> },
                 { path: 'bct', element: <LoadComponent component={bct} /> },
                 { path: 'akinon', element: <LoadComponent component={akinon} /> },
@@ -87,8 +88,8 @@ const AllRoutes = () => {
             path: '/contact',
             element: <LoadComponent component={contact} />
         },
-       
-       {
+
+        {
             path: '/case-studies/bfsi',
             element: <LoadComponent component={bfsiCase} />
         },
@@ -112,7 +113,7 @@ const AllRoutes = () => {
             path: '/real-time-order-stream',
             element: <LoadComponent component={realTimeOrderStream} />
         },
-       {
+        {
             path: '/reimagining-loan-origination',
             element: <LoadComponent component={reimaginingloanorigination} />
         },
@@ -125,15 +126,19 @@ const AllRoutes = () => {
             element: <LoadComponent component={RegulatoryReportingAutomation} />
         },
         {
+            path: '/Resources/enterprise-digital-transformation-insights-2025-2026',
+            element: <LoadComponent component={whatChanged} />
+        },
+        {
             path: '/Resources',
             element: <LoadComponent component={team} />
         },
-       
+
         {
             path: '/career',
             element: <LoadComponent component={career} />
         },
-         {
+        {
             path: '/Products',
             element: <LoadComponent component={product} />
         },

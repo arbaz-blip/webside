@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import coverImage from '../../assets/images/real-time-order-tracking-dashboard-supply-chain-cinergie-digital.jpg';
 import Picture1 from '../../assets/images/Picture1.jpg';
 import Image from '../../assets/images/predictive-freight-intelligence-cinergie-digital.jpg';
-// import Picture3 from '../../assets/images/Picture3.jpg';
+import Picture3 from '../../assets/images/regulatory-reporting-automation-cinergie-digital.jpg';
+import blogImage from "../../assets/images/enterprise-digital-transformation-insights-2025-2026.png"
 
 import Connect from 'components/shared/Connect';
 
@@ -26,7 +27,7 @@ const Resources = () => {
       img: Picture1,
       alt: "Cinergie Digital AI-powered fraud detection dashboard analyzing transactions for anomalies.",
       badge: "FEATURED",
-      tags: ["#Banking Automation" ]
+      tags: ["#Banking Automation"]
     },
     {
       slug: "Predictive-Freight-Intelligence",
@@ -35,17 +36,26 @@ const Resources = () => {
       img: Image,
       alt: "Cinergie Digital predictive analytics and MLOps framework optimizing freight efficiency for a global logistics enterprise.",
       badge: "TRENDING",
-      tags: ["# Predictive Analytics" ]
+      tags: ["# Predictive Analytics"]
     },
-    // {
-    //   slug: "Regulatory-Reporting-Automation",
-    //   title: "Regulatory Reporting Automation for Compliance Teams",
-    //   desc: "Streamline compliance with Regulatory Reporting Automation designed for modern compliance teams. Automate data collection, validation, and submission to ensure accuracy, transparency, and timely regulatory reporting.",
-    //   img: Picture3,
-    //   alt: "Cinergie Digital compliance automation dashboard generating real-time regulatory reports.",
-    //   badge: "NEW",
-    //   tags: ["#RegTech", "#Audit Readiness", "#RiskMgmt"]
-    // }
+    {
+      slug: "Regulatory-Reporting-Automation",
+      title: "Regulatory Reporting Automation for Compliance Teams",
+      desc: "Streamline compliance with Regulatory Reporting Automation designed for modern compliance teams. Automate data collection, validation, and submission to ensure accuracy, transparency, and timely regulatory reporting.",
+      img: Picture3,
+      alt: "Cinergie Digital regulatory reporting dashboards supporting compliance teams with accurate submissions.",
+      badge: "NEW",
+      tags: ["#RegTech", "#Audit Readiness", "#RiskMgmt"]
+    },
+    {
+      slug: "Resources/enterprise-digital-transformation-insights-2025-2026",
+      title: "Enterprise Digital Transformation Insights for 2025 and 2026",
+      desc: "Discover what changed in enterprise digital transformation in 2025 and the priorities leaders must adopt for 2026. Insights on AI, automation, cloud, and data.",
+      img: blogImage,
+      alt: "Cinergie Digital insights on enterprise digital transformation for 2025 and 2026.",
+      badge: "NEW",
+      tags: ["#Digital Transformation", "#Enterprise Strategy", "#AI and Automation"]
+    }
   ];
 
   return (
@@ -55,7 +65,7 @@ const Resources = () => {
       <section className="resources-section">
         <div className="resources-container">
           <h2 className="fw-bold" style={{ fontFamily: 'Garet' }}>Explore Cinergie Digital's Blogs, Guides & Case Studies</h2>
-          
+
           {/* Row 1: Long left, Small right */}
           <div className="services-grid">
             <div className="left-column">
@@ -68,10 +78,10 @@ const Resources = () => {
                   <div className="resource-content">
                     <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{teamResources[0].title}</h3>
                     <p style={{ fontFamily: 'Garet' }}>{teamResources[0].desc}</p>
-                    
+
                     <div className="resource-footer">
                       <span className="cta-link" style={{ fontFamily: 'Garet' }}>Read More →</span>
-                      
+
                       <div className="labels">
                         {teamResources[0].tags.map((tag, i) => (
                           <span key={i} className="label">{tag}</span>
@@ -82,7 +92,7 @@ const Resources = () => {
                 </div>
               </Link>
             </div>
-            
+
             <div className="right-column">
               <Link to={`/${teamResources[1].slug}`} className="resource-card-link">
                 <div className="resource-card">
@@ -93,10 +103,10 @@ const Resources = () => {
                   <div className="resource-content">
                     <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{teamResources[1].title}</h3>
                     <p style={{ fontFamily: 'Garet' }}>{teamResources[1].desc}</p>
-                    
+
                     <div className="resource-footer">
                       <span className="cta-link" style={{ fontFamily: 'Garet' }}>Read More →</span>
-                      
+
                       <div className="labels">
                         {teamResources[1].tags.map((tag, i) => (
                           <span key={i} className="label">{tag}</span>
@@ -121,10 +131,10 @@ const Resources = () => {
                   <div className="resource-content">
                     <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{teamResources[2].title}</h3>
                     <p style={{ fontFamily: 'Garet' }}>{teamResources[2].desc}</p>
-                    
+
                     <div className="resource-footer">
                       <span className="cta-link" style={{ fontFamily: 'Garet' }}>Read More →</span>
-                      
+
                       <div className="labels">
                         {teamResources[2].tags.map((tag, i) => (
                           <span key={i} className="label">{tag}</span>
@@ -135,8 +145,8 @@ const Resources = () => {
                 </div>
               </Link>
             </div>
-            
-            {/* <div className="right-column">
+
+            <div className="right-column">
               <Link to={`/${teamResources[3].slug}`} className="resource-card-link">
                 <div className="resource-card">
                   <div className="card-image">
@@ -146,10 +156,10 @@ const Resources = () => {
                   <div className="resource-content">
                     <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{teamResources[3].title}</h3>
                     <p style={{ fontFamily: 'Garet' }}>{teamResources[3].desc}</p>
-                    
+
                     <div className="resource-footer">
                       <span className="cta-link" style={{ fontFamily: 'Garet' }}>Read More →</span>
-                      
+
                       <div className="labels">
                         {teamResources[3].tags.map((tag, i) => (
                           <span key={i} className="label">{tag}</span>
@@ -159,7 +169,35 @@ const Resources = () => {
                   </div>
                 </div>
               </Link>
-            </div> */}
+            </div>
+          </div>
+
+          {/* Row 1: Long left, Small right */}
+          <div className="services-grid">
+            <div className="left-column">
+              <Link to={`/${teamResources[4].slug}`} className="resource-card-link">
+                <div className="resource-card">
+                  <div className="card-image">
+                    <img src={teamResources[4].img} alt={teamResources[4].alt} />
+                    <div className="metric-badge">{teamResources[4].badge}</div>
+                  </div>
+                  <div className="resource-content">
+                    <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{teamResources[4].title}</h3>
+                    <p style={{ fontFamily: 'Garet' }}>{teamResources[4].desc}</p>
+
+                    <div className="resource-footer">
+                      <span className="cta-link" style={{ fontFamily: 'Garet' }}>Read More →</span>
+
+                      <div className="labels">
+                        {teamResources[4].tags.map((tag, i) => (
+                          <span key={i} className="label">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
