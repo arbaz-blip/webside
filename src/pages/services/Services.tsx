@@ -1,6 +1,7 @@
 import React from "react";
 import "./Services.css";
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 // Import images (replace with actual paths)
 import advisoryImg from "../../assets/images/advisory-data-strategy-services.jpg";
 import appDevImg from "../../assets/images/application-development-services.jpg";
@@ -14,6 +15,18 @@ import teamsImg from "../../assets/images/teams-as-a-service.jpg";
 import resourceImg from "../../assets/images/resource-augmentation-services.jpg";
 
 const Services = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   const services = [
     {
       title: "Advisory & Data Strategy",
@@ -42,7 +55,7 @@ const Services = () => {
       desc: [
         "Cloud migration & re-platforming",
         "API enablement & refactoring",
-       
+
       ],
       img: appModernImg,
       alt: "Application modernisation and legacy system migration",
@@ -139,7 +152,7 @@ const Services = () => {
           {/* Row 1: Long left (2fr), Small right (1fr) */}
           <div className="services-grid">
             <div className="left-column">
-              <div className="service-card">
+              <div className="service-card" id="advisory-data-strategy">
                 <div className="card-image">
                   <img src={services[0].img} alt={services[0].alt} />
                   <div className="metric-badge">{services[0].badge}</div>
@@ -155,9 +168,9 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="right-column">
-              <div className="service-card">
+              <div className="service-card" id="application-development">
                 <div className="card-image">
                   <img src={services[1].img} alt={services[1].alt} />
                   <div className="metric-badge">{services[1].badge}</div>
@@ -178,7 +191,7 @@ const Services = () => {
           {/* Row 2: Small left (1fr), Long right (2fr) - FLIPPED */}
           <div className="services-grid services-grid-flipped">
             <div className="left-column">
-              <div className="service-card">
+              <div className="service-card" id="application-modernisation-maintaince">
                 <div className="card-image">
                   <img src={services[2].img} alt={services[2].alt} />
                   <div className="metric-badge">{services[2].badge}</div>
@@ -194,9 +207,9 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="right-column">
-              <div className="service-card">
+              <div className="service-card" id="data-engineering-analytics">
                 <div className="card-image">
                   <img src={services[3].img} alt={services[3].alt} />
                   <div className="metric-badge">{services[3].badge}</div>
@@ -217,7 +230,7 @@ const Services = () => {
           {/* Row 3: Long left (2fr), Small right (1fr) */}
           <div className="services-grid">
             <div className="left-column">
-              <div className="service-card">
+              <div className="service-card" id="artifical-intelligence-automation">
                 <div className="card-image">
                   <img src={services[4].img} alt={services[4].alt} />
                   <div className="metric-badge">{services[4].badge}</div>
@@ -233,9 +246,9 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="right-column">
-              <div className="service-card">
+              <div className="service-card" id="integration">
                 <div className="card-image">
                   <img src={services[5].img} alt={services[5].alt} />
                   <div className="metric-badge">{services[5].badge}</div>
@@ -256,7 +269,7 @@ const Services = () => {
           {/* Row 4: Small left (1fr), Long right (2fr) - FLIPPED */}
           <div className="services-grid services-grid-flipped">
             <div className="left-column">
-              <div className="service-card">
+              <div className="service-card" id="qa-devops">
                 <div className="card-image">
                   <img src={services[6].img} alt={services[6].alt} />
                   <div className="metric-badge">{services[6].badge}</div>
@@ -272,9 +285,9 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="right-column">
-              <div className="service-card">
+              <div className="service-card" id="managed-services">
                 <div className="card-image">
                   <img src={services[7].img} alt={services[7].alt} />
                   <div className="metric-badge">{services[7].badge}</div>
@@ -295,7 +308,7 @@ const Services = () => {
           {/* Row 5: Long left (2fr), Small right (1fr) */}
           <div className="services-grid">
             <div className="left-column">
-              <div className="service-card">
+              <div className="service-card" id="team-as-a-service">
                 <div className="card-image">
                   <img src={services[8].img} alt={services[8].alt} />
                   <div className="metric-badge">{services[8].badge}</div>
@@ -311,9 +324,9 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="right-column">
-              <div className="service-card">
+              <div className="service-card" id="resource-augmentation">
                 <div className="card-image">
                   <img src={services[9].img} alt={services[9].alt} />
                   <div className="metric-badge">{services[9].badge}</div>

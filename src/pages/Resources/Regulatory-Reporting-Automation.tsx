@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from "react";
 import { Navbar2 } from 'components/navbars';
 import Footer from 'pages/Home/Footer';
 import BackToTop from 'components/BackToTop';
@@ -8,6 +9,10 @@ import coverImage from '../../assets/images/regulatory-reporting-automation-cine
 // import processFlowImage from '../../assets/images/order-process-flow-supply-chain-integration-cinergie-digital.png';
 
 const CaseStudyDetail = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar2 isSticky hideSearch />

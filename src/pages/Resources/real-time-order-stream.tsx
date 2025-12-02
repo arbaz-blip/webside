@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from "react";
 import { Navbar2 } from 'components/navbars';
 import Footer from 'pages/Home/Footer';
 import BackToTop from 'components/BackToTop';
@@ -8,6 +9,10 @@ import coverImage from '../../assets/images/real-time-order-tracking-dashboard-s
 import processFlowImage from '../../assets/images/order-process-flow-supply-chain-integration-cinergie-digital.png';
 
 const CaseStudyDetail = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar2 isSticky hideSearch />
@@ -15,11 +20,11 @@ const CaseStudyDetail = () => {
       <main className="blog-container">
         <article className="blog-article">
           <header className="blog-header">
-            <h1 className="hero-title" style={{ 
-                fontSize: '3.2rem',
-                fontWeight: 600,
-                lineHeight: 1.2,
-                fontFamily: 'Garet'
+            <h1 className="hero-title" style={{
+              fontSize: '3.2rem',
+              fontWeight: 600,
+              lineHeight: 1.2,
+              fontFamily: 'Garet'
             }}>Real-Time Order Stream for a Supply Chain Enterprise</h1>
             <p className="blog-date" style={{ fontFamily: 'Garet' }}>November 04, 2025</p>
             <img

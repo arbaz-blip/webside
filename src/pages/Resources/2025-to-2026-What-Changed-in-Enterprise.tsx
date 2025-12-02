@@ -53,7 +53,7 @@ const BlogDetail = () => {
                             Meaningful AI impact did not come from chatbots or isolated pilots. It came from:
                         </p>
                         <ul style={{ fontFamily: 'Garet' }}>
-                            <li>AI built on strong <Link style={{ color: '#3ea8d4' }} to='/services'>data foundations</Link></li>
+                            <li>AI built on strong <Link style={{ color: '#3ea8d4' }} to='/services#data-engineering-analytics'>data foundations</Link></li>
                             <li>Clear governance models </li>
                             <li>Explainability for regulated environments </li>
                             <li>Integration into existing operational systems</li>
@@ -111,7 +111,7 @@ const BlogDetail = () => {
                             <li>Lack of FinOps discipline </li>
                         </ul>
                         <p style={{ fontFamily: 'Garet' }}>
-                            2025 made something clear. Cloud is not about migration. Cloud is about design, <Link style={{ color: '#3ea8d4' }} to='/services'>optimization</Link> and governance.
+                            2025 made something clear. Cloud is not about migration. Cloud is about design, <Link style={{ color: '#3ea8d4' }} to='/services#application-modernisation-maintaince'>optimization</Link> and governance.
                         </p>
                         <p style={{ fontFamily: 'Garet', fontWeight: 'Bold' }}>In 2026:</p>
                         <p style={{ fontFamily: 'Garet' }}>Executives will be judged not by cloud adoption but by cloud ROI.</p>
@@ -153,7 +153,7 @@ const BlogDetail = () => {
                         <p style={{ fontFamily: 'Garet' }}>Transformation became a capability rather than a project. </p>
                         <p style={{ fontFamily: 'Garet', fontWeight: 'Bold' }}>In 2026:</p>
                         <p style={{ fontFamily: 'Garet' }}>The key question will be</p>
-                        <p style={{ fontFamily: 'Garet' }}>“What capabilities must we own and what should we <Link style={{ color: '#3ea8d4' }} to='/services'>co-build with the right partner</Link>?”</p>
+                        <p style={{ fontFamily: 'Garet' }}>“What capabilities must we own and what should we <Link style={{ color: '#3ea8d4' }} to='/services#resource-augmentation'>co-build with the right partner</Link>?”</p>
 
                     </section>
 
