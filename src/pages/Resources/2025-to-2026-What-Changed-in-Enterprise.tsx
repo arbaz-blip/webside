@@ -21,7 +21,7 @@ const BlogDetail = () => {
                             lineHeight: 1.2,
                             fontFamily: 'Garet'
                         }}>2025 to 2026: What Changed in Enterprise Digital Transformation and What Leaders Need Next </h1>
-                        <p className="blog-date" style={{ fontFamily: 'Garet' }}>November 26, 2025</p>
+                        <p className="blog-date" style={{ fontFamily: 'Garet' }}>December 05, 2025</p>
                         <img
                             src={image}
                             alt="Cinergie Digital insights on enterprise digital transformation for 2025 and 2026."
