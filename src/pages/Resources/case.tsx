@@ -6,6 +6,7 @@ import Picture1 from '../../assets/images/Picture1.jpg';
 import Image from '../../assets/images/predictive-freight-intelligence-cinergie-digital.jpg';
 import Picture3 from '../../assets/images/regulatory-reporting-automation-cinergie-digital.jpg';
 import blogImage from "../../assets/images/enterprise-digital-transformation-insights-2025-2026.png"
+import picture2 from '../../assets/images/predictive-intelligence-distributed-operations-cinergie.png'
 
 import Connect from 'components/shared/Connect';
 
@@ -55,6 +56,15 @@ const Resources = () => {
       alt: "Cinergie Digital insights on enterprise digital transformation for 2025 and 2026.",
       badge: "NEW",
       tags: ["#Digital Transformation", "#Enterprise Strategy", "#AI and Automation"]
+    },
+    {
+      slug: "case-studies/predictive-intelligence-distributed-operations",
+      title: "Predictive Intelligence for Distributed Operations",
+      desc: "Early risk alerts, less downtime, and smarter real-time decisions..",
+      img: picture2,
+      alt: "Cinergie Digital predictive intelligence dashboards providing risk insights across distributed enterprise operations.",
+      badge: "NEW",
+      tags: ["#Predictive Analytics", "#Enterprise AI"]
     }
   ];
 
@@ -133,7 +143,7 @@ const Resources = () => {
                     <p style={{ fontFamily: 'Garet' }}>{teamResources[2].desc}</p>
 
                     <div className="resource-footer">
-                      <span className="cta-link" style={{ fontFamily: 'Garet' }}>Read More →</span>
+                      <span className="cta-link" style={{ fontFamily: 'Garet', paddingRight: '10px' }}>Read More →</span>
 
                       <div className="labels">
                         {teamResources[2].tags.map((tag, i) => (
@@ -190,6 +200,31 @@ const Resources = () => {
 
                       <div className="labels">
                         {teamResources[4].tags.map((tag, i) => (
+                          <span key={i} className="label">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            <div className="right-column">
+              <Link to={`/${teamResources[5].slug}`} className="resource-card-link">
+                <div className="resource-card">
+                  <div className="card-image">
+                    <img src={teamResources[5].img} alt={teamResources[5].alt} />
+                    <div className="metric-badge">{teamResources[5].badge}</div>
+                  </div>
+                  <div className="resource-content">
+                    <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{teamResources[5].title}</h3>
+                    <p style={{ fontFamily: 'Garet' }}>{teamResources[5].desc}</p>
+
+                    <div className="resource-footer">
+                      <span className="cta-link" style={{ fontFamily: 'Garet' }}>Read More →</span>
+
+                      <div className="labels">
+                        {teamResources[5].tags.map((tag, i) => (
                           <span key={i} className="label">{tag}</span>
                         ))}
                       </div>

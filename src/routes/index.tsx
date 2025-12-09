@@ -25,6 +25,7 @@ const PredictiveFreightIntelligence = React.lazy(() => import('../pages/Resource
 const tibco = React.lazy(() => import('../pages/Products/tibco'));
 const singlestore = React.lazy(() => import('../pages/Products/singlestore'));
 const whatChanged = React.lazy(() => import('../pages/Resources/2025-to-2026-What-Changed-in-Enterprise'))
+const distributedOperations = React.lazy(() => import('../pages/Resources/Predictive-Intelligence-for-Distributed-Operations'))
 
 
 const nintex = React.lazy(() => import('../pages/Products/nintex'));
@@ -128,6 +129,10 @@ const AllRoutes = () => {
         {
             path: '/Resources/enterprise-digital-transformation-insights-2025-2026',
             element: <LoadComponent component={whatChanged} />
+        },
+        {
+            path: '/case-studies/predictive-intelligence-distributed-operations',
+            element: <LoadComponent component={distributedOperations} />
         },
         {
             path: '/Resources',
