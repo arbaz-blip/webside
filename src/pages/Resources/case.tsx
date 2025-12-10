@@ -7,6 +7,7 @@ import Image from '../../assets/images/predictive-freight-intelligence-cinergie-
 import Picture3 from '../../assets/images/regulatory-reporting-automation-cinergie-digital.jpg';
 import blogImage from "../../assets/images/enterprise-digital-transformation-insights-2025-2026.png"
 import picture2 from '../../assets/images/predictive-intelligence-distributed-operations-cinergie.png'
+import picture4 from '../../assets/images/enterprise-data-foundations-2025-cinergie.png'
 
 import Connect from 'components/shared/Connect';
 
@@ -24,7 +25,7 @@ const Resources = () => {
     {
       slug: "reimagining-loan-origination",
       title: "Reimagining Loan Origination with Hyperautomation",
-      desc: "Revolutionizing loan origination with hyperautomation for speed & precision",
+      desc: "Revolutionizing loan origination with hyperautomation for speed & precision.",
       img: Picture1,
       alt: "Cinergie Digital AI-powered fraud detection dashboard analyzing transactions for anomalies.",
       badge: "FEATURED",
@@ -37,7 +38,7 @@ const Resources = () => {
       img: Image,
       alt: "Cinergie Digital predictive analytics and MLOps framework optimizing freight efficiency for a global logistics enterprise.",
       badge: "TRENDING",
-      tags: ["# Predictive Analytics"]
+      tags: ["#Predictive Analytics"]
     },
     {
       slug: "Regulatory-Reporting-Automation",
@@ -60,11 +61,20 @@ const Resources = () => {
     {
       slug: "case-studies/predictive-intelligence-distributed-operations",
       title: "Predictive Intelligence for Distributed Operations",
-      desc: "Early risk alerts, less downtime, and smarter real-time decisions..",
+      desc: "Early risk alerts, less downtime, and smarter real-time decisions.",
       img: picture2,
       alt: "Cinergie Digital predictive intelligence dashboards providing risk insights across distributed enterprise operations.",
       badge: "NEW",
       tags: ["#Predictive Analytics", "#Enterprise AI"]
+    },
+    {
+      slug: "resources/2025-enterprise-data-foundations-for-ai-success",
+      title: "Enterprise Data Foundations for AI in 2025: What Leaders Must Fix",
+      desc: "AI fails without solid data foundations.",
+      img: picture4,
+      alt: "Cinergie Digital insights on enterprise data foundations for AI readiness in 2025.",
+      badge: "NEW",
+      tags: ["#Enterprise Data", "#Data Governance"]
     }
   ];
 
@@ -233,6 +243,35 @@ const Resources = () => {
                 </div>
               </Link>
             </div>
+          </div>
+
+          {/* Row 2: Small left, Long right (FLIPPED) */}
+          <div className="services-grid services-grid-flipped">
+            <div className="left-column">
+              <Link to={`/${teamResources[6].slug}`} className="resource-card-link">
+                <div className="resource-card">
+                  <div className="card-image">
+                    <img src={teamResources[6].img} alt={teamResources[6].alt} />
+                    <div className="metric-badge">{teamResources[6].badge}</div>
+                  </div>
+                  <div className="resource-content">
+                    <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{teamResources[6].title}</h3>
+                    <p style={{ fontFamily: 'Garet' }}>{teamResources[6].desc}</p>
+
+                    <div className="resource-footer">
+                      <span className="cta-link" style={{ fontFamily: 'Garet', paddingRight: '10px' }}>Read More →</span>
+
+                      <div className="labels">
+                        {teamResources[6].tags.map((tag, i) => (
+                          <span key={i} className="label">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
           </div>
         </div>
       </section>

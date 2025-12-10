@@ -26,7 +26,7 @@ const tibco = React.lazy(() => import('../pages/Products/tibco'));
 const singlestore = React.lazy(() => import('../pages/Products/singlestore'));
 const whatChanged = React.lazy(() => import('../pages/Resources/2025-to-2026-What-Changed-in-Enterprise'))
 const distributedOperations = React.lazy(() => import('../pages/Resources/Predictive-Intelligence-for-Distributed-Operations'))
-
+const enterpriseDataFoundations = React.lazy(() => import('../pages/Resources/The-Five-Foundations-Every-Enterprise-Build'))
 
 const nintex = React.lazy(() => import('../pages/Products/nintex'));
 const bct = React.lazy(() => import('../pages/Products/bct'));
@@ -134,6 +134,11 @@ const AllRoutes = () => {
             path: '/case-studies/predictive-intelligence-distributed-operations',
             element: <LoadComponent component={distributedOperations} />
         },
+        {
+            path: '/resources/2025-enterprise-data-foundations-for-ai-success',
+            element: <LoadComponent component={enterpriseDataFoundations} />
+        },
+
         {
             path: '/Resources',
             element: <LoadComponent component={team} />
