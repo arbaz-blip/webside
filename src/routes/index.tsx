@@ -27,7 +27,8 @@ const singlestore = React.lazy(() => import('../pages/Products/singlestore'));
 const whatChanged = React.lazy(() => import('../pages/Resources/2025-to-2026-What-Changed-in-Enterprise'))
 const distributedOperations = React.lazy(() => import('../pages/Resources/Predictive-Intelligence-for-Distributed-Operations'))
 const enterpriseDataFoundations = React.lazy(() => import('../pages/Resources/The-Five-Foundations-Every-Enterprise-Build'))
-
+const enterprisearchitecturemodernization = React.lazy(() => import('../pages/Resources/Enterprise-Architecture-Modernization'))
+const whydigitaltransformationfails = React.lazy(() => import('../pages/Resources/Why-Digital-Transformation-Fails'))
 const nintex = React.lazy(() => import('../pages/Products/nintex'));
 const bct = React.lazy(() => import('../pages/Products/bct'));
 const akinon = React.lazy(() => import('../pages/Products/akinon'));
@@ -138,7 +139,15 @@ const AllRoutes = () => {
             path: '/resources/2025-enterprise-data-foundations-for-ai-success',
             element: <LoadComponent component={enterpriseDataFoundations} />
         },
-
+  {
+            path: '/resources/Enterprise-Architecture-Modernization',
+            element: <LoadComponent component={enterprisearchitecturemodernization} />
+        },
+        
+         {
+            path: '/resources/Why-Digital-Transformation-Fails',
+            element: <LoadComponent component={whydigitaltransformationfails} />
+        },
         {
             path: '/Resources',
             element: <LoadComponent component={team} />

@@ -8,7 +8,8 @@ import Picture3 from '../../assets/images/regulatory-reporting-automation-cinerg
 import blogImage from "../../assets/images/enterprise-digital-transformation-insights-2025-2026.png"
 import picture2 from '../../assets/images/predictive-intelligence-distributed-operations-cinergie.png'
 import picture4 from '../../assets/images/enterprise-data-foundations-2025-cinergie.png'
-
+import picture5 from '../../assets/images/enterprise-architecture-modernisation-cinergie.png'
+import picture6 from '../../assets/images/digital-transformation-operating-model-cinergie.png'
 import Connect from 'components/shared/Connect';
 
 const Resources = () => {
@@ -75,6 +76,24 @@ const Resources = () => {
       alt: "Cinergie Digital insights on enterprise data foundations for AI readiness in 2025.",
       badge: "NEW",
       tags: ["#Enterprise Data", "#Data Governance"]
+    },
+     {
+      slug: "resources/Enterprise-Architecture-Modernization",
+      title: "Enterprise Architecture Modernization for Scalable Growth ",
+      desc: "Modernizing enterprise architecture to enable scalability, resilience, and seamless integration across evolving business systems.",
+      img: picture5,
+      alt: " Cinergie Digital modern enterprise architecture enabling scalability, resilience, and integration across complex systems",
+      badge: "NEW",
+      tags: ["#System Modernization", "#Scalable Platforms"]
+    },
+     {
+      slug: "resources/Why-Digital-Transformation-Fails",
+      title: "Why Digital Transformation Fails Without an Operating Model",
+      desc: "Digital transformation fails without a clear operating model.",
+      img: picture6,
+      alt: "Cinergie Digital operating model framework for executing digital transformation with clarity, governance, and accountability.",
+      badge: "NEW",
+      tags: ["#ExecutionFramework"]
     }
   ];
 
@@ -272,6 +291,59 @@ const Resources = () => {
               </Link>
             </div>
 
+
+  <div className="right-column">
+              <Link to={`/${teamResources[7].slug}`} className="resource-card-link">
+                <div className="resource-card">
+                  <div className="card-image">
+                    <img src={teamResources[7].img} alt={teamResources[7].alt} />
+                    <div className="metric-badge">{teamResources[7].badge}</div>
+                  </div>
+                  <div className="resource-content">
+                    <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{teamResources[7].title}</h3>
+                    <p style={{ fontFamily: 'Garet' }}>{teamResources[7].desc}</p>
+
+                    <div className="resource-footer">
+                      <span className="cta-link" style={{ fontFamily: 'Garet' }}>Read More →</span>
+
+                      <div className="labels">
+                        {teamResources[7].tags.map((tag, i) => (
+                          <span key={i} className="label">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          {/* Row 2: Small left, Long right (FLIPPED) */}
+          <div className="services-grid services-grid-flipped">
+            <div className="left-column">
+              <Link to={`/${teamResources[8].slug}`} className="resource-card-link">
+                <div className="resource-card">
+                  <div className="card-image">
+                    <img src={teamResources[8].img} alt={teamResources[8].alt} />
+                    <div className="metric-badge">{teamResources[8].badge}</div>
+                  </div>
+                  <div className="resource-content">
+                    <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{teamResources[8].title}</h3>
+                    <p style={{ fontFamily: 'Garet' }}>{teamResources[8].desc}</p>
+
+                    <div className="resource-footer">
+                      <span className="cta-link" style={{ fontFamily: 'Garet', paddingRight: '10px' }}>Read More →</span>
+
+                      <div className="labels">
+                        {teamResources[8].tags.map((tag, i) => (
+                          <span key={i} className="label">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
