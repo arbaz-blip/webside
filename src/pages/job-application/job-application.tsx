@@ -74,7 +74,7 @@ const JobApplication = () => {
    useEffect(() => {
     if (!jobId) return;
 
-    fetch(`http://api.cinergiedigital.com/recruitment/admin/get_job_by_id.php?job_id=${jobId}`)
+    fetch(`https://api.cinergiedigital.com/recruitment/admin/get_job_by_id.php?job_id=${jobId}`)
       .then(res => res.json())
       .then(result => {
         if (result.status === 'success') {
