@@ -3,7 +3,9 @@ import { useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import FeatherIcon from 'feather-icons-react';
 import { FormInput } from 'components/form';
-import { useRef, useState } from 'react';
+// import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 
 
@@ -58,13 +60,32 @@ const JobApplication = () => {
       salaryPackage: '',
     },
   });
-  const location = useLocation();
+  // const location = useLocation();
   const { register, handleSubmit, control, formState: { errors }, reset } = methods;
 
-  const jobParam = location.state as JobParameter;
+  // const jobParam = location.state as JobParameter;
+  const { jobId } = useParams();
+  const [jobParam, setJobParam] = useState<JobParameter | null>(null);
+  const [loading, setLoading] = useState(true);
   const form = useRef<HTMLFormElement>(null);
 
   // console.log('location.state:', location.state);
+
+   useEffect(() => {
+    if (!jobId) return;
+
+    fetch(`http://api.cinergiedigital.com/recruitment/admin/get_job_by_id.php?job_id=${jobId}`)
+      .then(res => res.json())
+      .then(result => {
+        if (result.status === 'success') {
+          setJobParam(result.data);
+        }
+      })
+      .finally(() => setLoading(false));
+  }, [jobId]);
+
+  if (loading) return <p>Loading job...</p>;
+  if (!jobParam) return <p>Job not found.</p>;
 
   const sendApplication = async (data: any) => {
     try {
@@ -282,8 +303,7 @@ const JobApplication = () => {
               containerClass={'mb-3'}
               register={register}
               errors={errors}
-              control={control}
-              required
+              control={control}                   required
               className="text-blue-600 underline hover:text-blue-800"
               style={{ width: '200px', fontSize: '0.9rem' }} // Smaller size and link-like style
             />

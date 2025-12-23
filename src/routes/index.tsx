@@ -162,7 +162,7 @@ const AllRoutes = () => {
             element: <LoadComponent component={product} />
         },
         {
-            path: "/job-application/:job_id",
+            path: "/job-application/:jobId",
             element: <LoadComponent component={jobapplication} />
         },
         {
