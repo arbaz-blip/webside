@@ -7,7 +7,7 @@ import BackToTop from 'components/BackToTop';
 import Footer from 'pages/Home/Footer';
 import JobApplication from './job-application'
 // import { JobParameter } from './types'
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
 
 
 const Blog = () => {
