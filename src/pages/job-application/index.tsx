@@ -6,12 +6,12 @@ import BackToTop from 'components/BackToTop';
 // import hero from 'assets/images/4b7001f0-21bb-4aad-b685-e4d0210f26cd.webp';
 import Footer from 'pages/Home/Footer';
 import JobApplication from './job-application'
-import { JobParameter } from './types'
+// import { JobParameter } from './types'
 import { useLocation } from 'react-router-dom'
 
 
 const Blog = () => {
-    const location = useLocation();
+    // const location = useLocation();
     // const jobParams = (location.state as JobParameter[]) || [];
     return (
          <>
