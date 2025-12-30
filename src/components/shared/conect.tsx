@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import FeatherIcon from 'feather-icons-react';
+// import { Link } from 'react-router-dom';
+// import FeatherIcon from 'feather-icons-react';
 
 import hero from 'assets/images/digital-transformation-background.jpg.png'; // ✅ imported as a module
 

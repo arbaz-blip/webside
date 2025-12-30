@@ -14,9 +14,9 @@ import Connect from 'components/shared/Connect';
 // import { jobListings } from './data'
 import Job from './jobs'
 import SEO from '../../components/SEO';
-type JobProps = {
-    jobParameters: JobParameter[]
-}
+// type JobProps = {
+//     jobParameters: JobParameter[]
+// }
 
 const Blog = () => {
     const [jobs, setJobs] = useState<JobParameter[]>([]);

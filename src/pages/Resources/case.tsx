@@ -10,7 +10,7 @@ import picture2 from '../../assets/images/predictive-intelligence-distributed-op
 import picture4 from '../../assets/images/enterprise-data-foundations-2025-cinergie.png'
 import picture5 from '../../assets/images/enterprise-architecture-modernisation-cinergie.png'
 import picture6 from '../../assets/images/digital-transformation-operating-model-cinergie.png'
-import Connect from 'components/shared/Connect';
+// import Connect from 'components/shared/Connect';
 
 const Resources = () => {
   const teamResources = [

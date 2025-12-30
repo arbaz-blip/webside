@@ -12,7 +12,7 @@ import { useLocation } from 'react-router-dom'
 
 const Blog = () => {
     const location = useLocation();
-    const jobParams = (location.state as JobParameter[]) || [];
+    // const jobParams = (location.state as JobParameter[]) || [];
     return (
          <>
             <div
