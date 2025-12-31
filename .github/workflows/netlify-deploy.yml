@@ -22,7 +22,11 @@ jobs:
         run: npm install --legacy-peer-deps
       - name: Build React App
         run: CI=false npm run build
+      - name: Install deps
+        run: yarn install
 
+      - name: Build
+        run: yarn build
 
 
       - name: Deploy to Netlify
