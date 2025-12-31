@@ -10,6 +10,7 @@ import picture2 from '../../assets/images/predictive-intelligence-distributed-op
 import picture4 from '../../assets/images/enterprise-data-foundations-2025-cinergie.png'
 import picture5 from '../../assets/images/enterprise-architecture-modernisation-cinergie.png'
 import picture6 from '../../assets/images/digital-transformation-operating-model-cinergie.png'
+import picture7 from '../../assets/images/why-ai-pilots-fail-to-scale-cinergie.png'
 // import Connect from 'components/shared/Connect';
 
 const Resources = () => {
@@ -77,7 +78,7 @@ const Resources = () => {
       badge: "NEW",
       tags: ["#Enterprise Data", "#Data Governance"]
     },
-     {
+    {
       slug: "resources/Enterprise-Architecture-Modernization",
       title: "Enterprise Architecture Modernization for Scalable Growth ",
       desc: "Modernizing enterprise architecture to enable scalability, resilience, and seamless integration across evolving business systems.",
@@ -86,7 +87,7 @@ const Resources = () => {
       badge: "NEW",
       tags: ["#System Modernization", "#Scalable Platforms"]
     },
-     {
+    {
       slug: "resources/Why-Digital-Transformation-Fails",
       title: "Why Digital Transformation Fails Without an Operating Model",
       desc: "Digital transformation fails without a clear operating model.",
@@ -94,6 +95,15 @@ const Resources = () => {
       alt: "Cinergie Digital operating model framework for executing digital transformation with clarity, governance, and accountability.",
       badge: "NEW",
       tags: ["#ExecutionFramework"]
+    },
+    {
+      slug: "resources/Why-AI-Pilots-Fail-To-Scale",
+      title: "Why AI Pilots Fail to Scale in Enterprises ",
+      desc: "Why AI pilots succeed but fail to scale—and the foundations enterprises need for sustainable AI in production.",
+      img: picture7,
+      alt: "Cinergie Digital insights on why AI pilots fail to scale and how enterprises can move AI into production.",
+      badge: "NEW",
+      tags: ["#Enterprise AI", "#AI Deployment", "#AI Scaling"]
     }
   ];
 
@@ -292,7 +302,7 @@ const Resources = () => {
             </div>
 
 
-  <div className="right-column">
+            <div className="right-column">
               <Link to={`/${teamResources[7].slug}`} className="resource-card-link">
                 <div className="resource-card">
                   <div className="card-image">
@@ -319,8 +329,32 @@ const Resources = () => {
           </div>
 
           {/* Row 2: Small left, Long right (FLIPPED) */}
-          <div className="services-grid services-grid-flipped">
+          <div className="services-grid">
             <div className="left-column">
+              <Link to={`/${teamResources[9].slug}`} className="resource-card-link">
+                <div className="resource-card">
+                  <div className="card-image">
+                    <img src={teamResources[9].img} alt={teamResources[9].alt} />
+                    <div className="metric-badge">{teamResources[9].badge}</div>
+                  </div>
+                  <div className="resource-content">
+                    <h3 className="fw-medium subheading" style={{ fontFamily: 'Garet' }}>{teamResources[9].title}</h3>
+                    <p style={{ fontFamily: 'Garet' }}>{teamResources[9].desc}</p>
+
+                    <div className="resource-footer">
+                      <span className="cta-link" style={{ fontFamily: 'Garet', paddingRight: '10px' }}>Read More →</span>
+
+                      <div className="labels">
+                        {teamResources[9].tags.map((tag, i) => (
+                          <span key={i} className="label">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="right-column">
               <Link to={`/${teamResources[8].slug}`} className="resource-card-link">
                 <div className="resource-card">
                   <div className="card-image">

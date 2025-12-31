@@ -32,6 +32,7 @@ const whydigitaltransformationfails = React.lazy(() => import('../pages/Resource
 const nintex = React.lazy(() => import('../pages/Products/nintex'));
 const bct = React.lazy(() => import('../pages/Products/bct'));
 const akinon = React.lazy(() => import('../pages/Products/akinon'));
+const whyaipilotsfailtoscale = React.lazy(() => import('../pages/Resources/why-ai-pilots-fail-to-scale'));
 // const tibco = React.lazy(() => import('../pages/solutions/tibco'));
 // const singlestore = React.lazy(() => import('../pages/solutions/singlestore'));
 // // const yellow = React.lazy(() => import('../pages/solutions/yellow-ai'));
@@ -139,14 +140,18 @@ const AllRoutes = () => {
             path: '/resources/2025-enterprise-data-foundations-for-ai-success',
             element: <LoadComponent component={enterpriseDataFoundations} />
         },
-  {
+        {
             path: '/resources/Enterprise-Architecture-Modernization',
             element: <LoadComponent component={enterprisearchitecturemodernization} />
         },
-        
-         {
+
+        {
             path: '/resources/Why-Digital-Transformation-Fails',
             element: <LoadComponent component={whydigitaltransformationfails} />
+        },
+        {
+            path: '/resources/Why-AI-Pilots-Fail-To-Scale',
+            element: <LoadComponent component={whyaipilotsfailtoscale} />
         },
         {
             path: '/Resources',
