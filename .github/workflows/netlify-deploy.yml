@@ -23,7 +23,8 @@ jobs:
       - name: Build React App
         run: CI=false npm run build
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
+
 
       - name: Build
         run: npm run build
